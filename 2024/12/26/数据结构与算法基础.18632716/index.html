@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>数据结构与算法基础 | Shenle</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="数据结构与算法基础">
+<meta property="og:url" content="https://github.com/2575451471/2575451471.github.io/2024/12/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80.18632716/index.html">
+<meta property="og:site_name" content="Shenle">
+<meta property="og:locale">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140748837-1670625892.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140814261-1129941830.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140829152-524126919.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140841192-1671231071.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140856502-260724900.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140907132-1479447052.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140936471-267156122.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140946823-556115847.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141004301-630586186.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141028405-1411185380.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141042690-1032592974.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141130095-1700508162.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141139214-808567108.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141155757-2090768868.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141212621-775870234.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141226289-790240847.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141237552-143389515.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141258128-1015496679.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141319107-810799321.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141412547-729571704.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141426441-2105284687.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141436793-1139720363.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141447432-575499299.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141459190-1171399637.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141513497-570585138.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141525321-1209521997.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141533444-743408046.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141542707-113654271.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141620387-1979244197.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141633379-877175281.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141654601-1352613951.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141709264-1731228494.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141722502-1676144114.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141746270-687183381.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141808195-2102778920.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141822696-722310809.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141832707-1844551597.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141855871-883320052.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141918384-1238156023.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141943978-524809394.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142000724-2117362843.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142010762-1317205879.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142021044-1715699961.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142032321-1750786870.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142042150-827998634.png">
+<meta property="article:published_time" content="2024-12-26T06:22:00.000Z">
+<meta property="article:modified_time" content="2025-02-14T20:26:54.365Z">
+<meta property="article:author" content="shenle">
+<meta property="article:tag" content="上课笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140748837-1670625892.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Shenle" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/header.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">shenle</a></h1>
+		</hgroup>
+
+		
+			<p class="header-subtitle"></p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">Archives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/2575451471" title="github">github</a>
+					        
+								<a class="cnblogs" target="_blank" href="https://www.cnblogs.com/shenleblog" title="cnblogs">cnblogs</a>
+					        
+								<a class="qq" target="_blank" href="https://img2023.cnblogs.com/blog/3084836/202502/3084836-20250215043636691-2144966981.jpg" title="qq">qq</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1941325363&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">上课笔记</a> <a href="/tags/%E5%B0%8F%E8%AE%B0/" style="font-size: 15px;">小记</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F32/" style="font-size: 15px;">嵌入式32</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F51/" style="font-size: 10px;">嵌入式51</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8Fti/" style="font-size: 10px;">嵌入式ti</a> <a href="/tags/%E6%99%BA%E8%83%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B/" style="font-size: 10px;">智能车竞赛</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 20px;">编程语言</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">噜啦啦!</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/header.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">Archives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/2575451471" title="github">github</a>
+			        
+						<a class="cnblogs" target="_blank" href="https://www.cnblogs.com/shenleblog" title="cnblogs">cnblogs</a>
+			        
+						<a class="qq" target="_blank" href="https://img2023.cnblogs.com/blog/3084836/202502/3084836-20250215043636691-2144966981.jpg" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-数据结构与算法基础.18632716" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2024/12/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80.18632716/" class="article-date">
+  	<time datetime="2024-12-26T06:22:00.000Z" itemprop="datePublished">2024-12-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据结构与算法基础
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/" rel="tag">上课笔记</a></li></ul>
+	</div>
+
+        
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2024/12/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80.18632716/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="数据结构与算法基础">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+<span id="more"></span>
+
+
+
+
+<h1 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h1><h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><ol>
+<li>数值型数据：整数，实数</li>
+<li>非数值型数据：文字、图像、图形、声音</li>
+</ol>
+<p>由数据元素组成</p>
+<h2 id="数据元素"><a href="#数据元素" class="headerlink" title="数据元素"></a>数据元素</h2><p>数据的基本单位：元素，记录，结点，顶点</p>
+<p>是集合的个体</p>
+<h2 id="数据项"><a href="#数据项" class="headerlink" title="数据项"></a>数据项</h2><p>构成数据元素的不可分割的最小单位</p>
+<h2 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h2><p>性质相同的数据元素的集合，数据的一个子集</p>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>数据元素相互之间的关系称为结构</p>
+<p>数据结构是带结构的数据元素的集合</p>
+<p>数据结构包括：</p>
+<ul>
+<li>数据的逻辑结构（数据元素之间的逻辑关系）</li>
+<li>数据的存储结构（数据元素及其关系在计算机内存中的表示-映像）</li>
+<li>数据的运算和实现（对数据元素可以施加的操作以及这些操作在相应的存储结构上的实现）</li>
+</ul>
+<h3 id="数据结构的两个层次"><a href="#数据结构的两个层次" class="headerlink" title="数据结构的两个层次"></a>数据结构的两个层次</h3><h4 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h4><p>数据元素之间的逻辑关系</p>
+<p>与数据的存储无关，独立于计算机</p>
+<p>是从具体问题抽象出来的数学模型</p>
+<h4 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h4><p>数据元素及其关系在计算机存储器中的结构</p>
+<h4 id="两者关系"><a href="#两者关系" class="headerlink" title="两者关系"></a>两者关系</h4><p>存储结构是逻辑关系的映像与元素本身的映像</p>
+<p>逻辑结构是数据皆否的抽象，存储结构是数据结构的实现</p>
+<h2 id="逻辑结构的种类"><a href="#逻辑结构的种类" class="headerlink" title="逻辑结构的种类"></a>逻辑结构的种类</h2><h3 id="1-线性结构"><a href="#1-线性结构" class="headerlink" title="1.线性结构"></a>1.线性结构</h3><p>线性表，栈，队列，串</p>
+<h3 id="1-非线性结构"><a href="#1-非线性结构" class="headerlink" title="1.非线性结构"></a>1.非线性结构</h3><p>树，图</p>
+<p>2.集合结构</p>
+<p>2.线性结构</p>
+<p>2.树形结构</p>
+<p>2.图状结构</p>
+<h2 id="四种基本的存储结构"><a href="#四种基本的存储结构" class="headerlink" title="四种基本的存储结构"></a>四种基本的存储结构</h2><p>顺序存储结构：连续存储单元存储数据</p>
+<p>链式存储结构：任意存储单元存储数据，指针</p>
+<p>索引存储结构：建立附加索引表</p>
+<p>散列存储结构（哈希）：根据关键字计算出位置</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据类型是一组性质相同的值的集合以及定义于这个值集合上的一组操作的总称</p>
+<p>数据类型&#x3D;值的集合+值集合上的一些操作</p>
+<p>int,char,float,double等基本数据类型</p>
+<p>数组，结构，共用体，枚举等构造数据类型</p>
+<p>指针，空类型</p>
+<p>typedef自定义数据类型</p>
+<p>数据类型约束了常量或变量的取值范围和操作</p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140748837-1670625892.png" alt="img"></p>
+<h2 id="抽象数据类型（ADT）"><a href="#抽象数据类型（ADT）" class="headerlink" title="抽象数据类型（ADT）"></a>抽象数据类型（ADT）</h2><p>是指一个数据模型以及定义在此数据模型上的一组操作</p>
+<p>（不考虑在计算机内部的具体存储结构与运算的具体实现算法）</p>
+<h3 id="抽象数据类型的形式定义"><a href="#抽象数据类型的形式定义" class="headerlink" title="抽象数据类型的形式定义"></a>抽象数据类型的形式定义</h3><p>D  S  P(D是数据对象，S是D上的关系集,P是对D的基本操作集)</p>
+<p>数据对象，数据关系的定义用伪代码描述</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">	数据对象：&lt;数据对象的定义&gt;</span><br><span class="line">	数据关系：&lt;数据关系的定义&gt;</span><br><span class="line">	基本操作：&lt;基本操作的定义&gt;</span><br><span class="line">&#125;ADT 抽象数据类型名</span><br></pre></td></tr></table></figure>
+
+<p>基本操作的定义格式：</p>
+<ul>
+<li>基本操作名（参数表）为操作提供输入值，引用参数以&amp;打头，除了可以提供输入值外，还将返回操作结果</li>
+<li>初始条件：（初始条件描述）描述操作执行之前数据结构和参数应该满足的条件，若不满足则操作失败，并返回相应出错消息，若初始条件是空，则省略</li>
+<li>操作结果：（操作结果描述）如果操作正常完成之后，数据结构的变化状况和应该返回的结果</li>
+</ul>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140814261-1129941830.png" alt="img"><br><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140829152-524126919.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140841192-1671231071.png" alt="img"></p>
+<p>抽象数据类型可以通过固有的数据类型（如整型，实型，字符型）来表示和实现</p>
+<p>注：可以使用类C语言（介于伪码和C语言之间）作为描述工具</p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140856502-260724900.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140907132-1479447052.png" alt="img"></p>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>对特定问题求解方法和步骤的一种描述，是指令的有限序列</p>
+<h3 id="算法的描述"><a href="#算法的描述" class="headerlink" title="算法的描述"></a>算法的描述</h3><ul>
+<li>自然语言：英语，中文</li>
+<li>流程图：传统流程图，NS流程图</li>
+<li>伪代码，类语言：C语言</li>
+<li>程序代码：</li>
+</ul>
+<h3 id="算法与程序"><a href="#算法与程序" class="headerlink" title="算法与程序"></a>算法与程序</h3><p>一个问题可以有多种算法</p>
+<p>程序是用某种程序设计语言对算法的具体实现</p>
+<h3 id="算法特性"><a href="#算法特性" class="headerlink" title="算法特性"></a>算法特性</h3><ul>
+<li>有穷性</li>
+<li>确定性</li>
+<li>可行性</li>
+<li>零个或多个输入</li>
+<li>一个或者多个输出</li>
+</ul>
+<h3 id="算法设计的要求"><a href="#算法设计的要求" class="headerlink" title="算法设计的要求"></a>算法设计的要求</h3><ul>
+<li>正确性</li>
+<li>可读性</li>
+<li>健壮性</li>
+<li>高效性</li>
+</ul>
+<h3 id="算法效率"><a href="#算法效率" class="headerlink" title="算法效率"></a>算法效率</h3><ul>
+<li>时间效率</li>
+<li>空间效率</li>
+</ul>
+<h4 id="算法时间效率的度量"><a href="#算法时间效率的度量" class="headerlink" title="算法时间效率的度量"></a>算法时间效率的度量</h4><p>算法时间效率可以用依据该算法变只的程序在计算机上执行所消耗的时间来度量</p>
+<ul>
+<li>事后统计</li>
+<li>事前分析：算法运行时间&#x3D;一个简单操作所需的时间*简单操作次数</li>
+</ul>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140936471-267156122.png" alt="img"></p>
+<p>（每条语句的执行次数也叫语句频度）</p>
+<p>算法运行时间只考虑语句频度即可</p>
+<p>最终只比较数量级（最高项）：算法时间复杂度的渐进表示法</p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226140946823-556115847.png" alt="img"></p>
+<ul>
+<li>最坏时间复杂度</li>
+<li>平均时间复杂度</li>
+<li>最好时间复杂度（一般考虑最坏和平均）</li>
+</ul>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141004301-630586186.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141028405-1411185380.png" alt="img"><br><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141042690-1032592974.png" alt="img"></p>
+<h4 id="算法空间效率的度量"><a href="#算法空间效率的度量" class="headerlink" title="算法空间效率的度量"></a>算法空间效率的度量</h4><p>空间复杂度：算法所需存储空间的度量</p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141130095-1700508162.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141139214-808567108.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141155757-2090768868.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141212621-775870234.png" alt="img"></p>
+<h1 id="类C语言操作"><a href="#类C语言操作" class="headerlink" title="类C语言操作"></a>类C语言操作</h1><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141226289-790240847.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141237552-143389515.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141258128-1015496679.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141319107-810799321.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141412547-729571704.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141426441-2105284687.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141436793-1139720363.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141447432-575499299.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141459190-1171399637.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141513497-570585138.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141525321-1209521997.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141533444-743408046.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141542707-113654271.png" alt="img"></p>
+<h1 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h1><h2 id="线性表的定义和特点"><a href="#线性表的定义和特点" class="headerlink" title="线性表的定义和特点"></a>线性表的定义和特点</h2><p>线性表是具有相同特性的数据元素的一个有限序列</p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141620387-1979244197.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141633379-877175281.png" alt="img"></p>
+<h2 id="线性表的案例引入"><a href="#线性表的案例引入" class="headerlink" title="线性表的案例引入"></a>线性表的案例引入</h2><h2 id="线性表的类型定义"><a href="#线性表的类型定义" class="headerlink" title="线性表的类型定义"></a>线性表的类型定义</h2><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141654601-1352613951.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141709264-1731228494.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141722502-1676144114.png" alt="img"></p>
+<h2 id="线性表的顺序表示和实现"><a href="#线性表的顺序表示和实现" class="headerlink" title="线性表的顺序表示和实现"></a>线性表的顺序表示和实现</h2><p>（线性表有顺序存储结构和链式存储结构）</p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141746270-687183381.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141808195-2102778920.png" alt="img"><br><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141822696-722310809.png" alt="img"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> LIST_INIT_SIZE 100 <span class="comment">//线性表存储空间的初始分配量</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	ElemType elem[LIST_INIT_SIZE];</span><br><span class="line">	<span class="type">int</span> length;<span class="comment">//当前长度</span></span><br><span class="line">&#125;SqlList;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141832707-1844551597.png" alt="img"></p>
+<p>eg</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAXSIZE 1000<span class="comment">//多项式可能达到的最大长度</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span><span class="comment">//多项式非零项的定义</span></span><br><span class="line">    <span class="type">float</span> p;<span class="comment">//系数</span></span><br><span class="line">    <span class="type">float</span> e;<span class="comment">//指数</span></span><br><span class="line">&#125;Polynomial;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Polynomial *elem;<span class="comment">//存储空间的基地址</span></span><br><span class="line">    <span class="type">int</span> length;<span class="comment">//多项式中当前项的个数</span></span><br><span class="line">&#125;SqList;<span class="comment">//多项式的顺序存储结构类型为SqList</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141855871-883320052.png" alt="img"></p>
+<h3 id="线性表的基本操作"><a href="#线性表的基本操作" class="headerlink" title="线性表的基本操作"></a>线性表的基本操作</h3><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141918384-1238156023.png" alt="img"></p>
+<h4 id="线性表的初始化"><a href="#线性表的初始化" class="headerlink" title="线性表的初始化"></a>线性表的初始化</h4><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226141943978-524809394.png" alt="img"></p>
+<h4 id="销毁线性表"><a href="#销毁线性表" class="headerlink" title="销毁线性表"></a>销毁线性表</h4><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142000724-2117362843.png" alt="img"></p>
+<h4 id="清空线性表"><a href="#清空线性表" class="headerlink" title="清空线性表"></a>清空线性表</h4><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142010762-1317205879.png" alt="img"></p>
+<h4 id="求线性表的长度"><a href="#求线性表的长度" class="headerlink" title="求线性表的长度"></a>求线性表的长度</h4><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142021044-1715699961.png" alt="img"></p>
+<h4 id="判断线性表是否为空"><a href="#判断线性表是否为空" class="headerlink" title="判断线性表是否为空"></a>判断线性表是否为空</h4><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142032321-1750786870.png" alt="img"></p>
+<h4 id="顺序表的取值"><a href="#顺序表的取值" class="headerlink" title="顺序表的取值"></a>顺序表的取值</h4><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226142042150-827998634.png" alt="img"></p>
+<h4 id="按值查找"><a href="#按值查找" class="headerlink" title="按值查找"></a>按值查找</h4><h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">InitList</span><span class="params">(LinkNode*&amp; L)</span>   <span class="comment">//初始化链表线性表</span></span><br><span class="line">&#123;</span><br><span class="line">    L = (LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">    L-&gt;next = <span class="literal">NULL</span>;     <span class="comment">//创建头节点，将其next域置为NULL</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CreateListR</span><span class="params">(LinkNode*&amp; L, ElemType a[],<span class="type">int</span> n)</span><span class="comment">//链表尾插法</span></span><br><span class="line">&#123;</span><br><span class="line">    LinkNode* s,*r;</span><br><span class="line">    L=(LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));<span class="comment">//分配空间,创建头节点</span></span><br><span class="line">    r = L; <span class="comment">//r始终指向尾节点，初始时指向头节点</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)        <span class="comment">//循环建立数据节点</span></span><br><span class="line">    &#123;</span><br><span class="line">        s = (LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));<span class="comment">//分配空间</span></span><br><span class="line">        s-&gt;data = a[i];    <span class="comment">//创建数据节点s</span></span><br><span class="line">        r-&gt;next = s;       <span class="comment">//将节点s插入到节点r之后</span></span><br><span class="line">        r = s;</span><br><span class="line">    &#125;</span><br><span class="line">    r-&gt;next = <span class="literal">NULL</span>; <span class="comment">//将尾节点的next域置为NULL</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CreateListF</span><span class="params">(LinkNode*&amp; L, ElemType a[], <span class="type">int</span> n)</span><span class="comment">//链表头插法</span></span><br><span class="line">&#123;</span><br><span class="line">    LinkNode* s;</span><br><span class="line">    L = (LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));      <span class="comment">//分配空间</span></span><br><span class="line">    L-&gt;next = <span class="literal">NULL</span>;                               <span class="comment">//创建头节点，将其next域设置为NULL</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)                   <span class="comment">//循环建立数据节点s</span></span><br><span class="line">    &#123;</span><br><span class="line">        s = (LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));  <span class="comment">//分配空间</span></span><br><span class="line">        s-&gt;data = a[i];                           <span class="comment">//创建数据节点s</span></span><br><span class="line">        s-&gt;next = L-&gt;next;                        <span class="comment">//将节点s插入原首节点前，头节点后</span></span><br><span class="line">        L-&gt;next = s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  </span><br><span class="line">     </span><br><span class="line"><span class="type">void</span> <span class="title function_">DestroyList</span><span class="params">(LinkNode *&amp;L)</span>   <span class="comment">//销毁链表形线性表</span></span><br><span class="line">&#123;</span><br><span class="line">    LinkNode *pre=L,*p=L-&gt;next;  <span class="comment">//pre指向节点p的前驱节点</span></span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)               <span class="comment">//遍历单链表L</span></span><br><span class="line">    &#123;                 </span><br><span class="line">        <span class="built_in">free</span>(p);                <span class="comment">//释放pre节点</span></span><br><span class="line">        pre=p;                  <span class="comment">//pre,p同步后移一个节点</span></span><br><span class="line">        p=pre-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(pre);                 <span class="comment">//循环结束时p为NULL，pre指向尾节点，释放它</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">ListEmpty</span><span class="params">(LinkNode *L)</span>  <span class="comment">//判断链表形线性表是否为空表</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> (L-&gt;next==<span class="literal">NULL</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">ListLength</span><span class="params">(LinkNode *L)</span>  <span class="comment">//求链表形线性表的长度</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> n=<span class="number">0</span>;</span><br><span class="line">    LinkNode *p=L;          <span class="comment">//p指向头节点，n置为0（即头节点的序号为0）</span></span><br><span class="line">    <span class="keyword">while</span>(p-&gt;next!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        n++;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (n);           <span class="comment">//循环结束，p指向尾节点，其序号n为节点个数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">DispList</span><span class="params">(LinkNode *L)</span>  <span class="comment">//输出链表形线性表</span></span><br><span class="line">&#123;</span><br><span class="line">    LinkNode *p=L-&gt;next;    <span class="comment">//p指向首节点</span></span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>)          <span class="comment">//p不为NULL,输出p节点的data域</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,p-&gt;data);</span><br><span class="line">        p=p-&gt;next;         <span class="comment">//p指向下一个节点</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">GetElem</span><span class="params">(LinkNode *L,<span class="type">int</span> i,ElemType &amp;e)</span>  <span class="comment">//按序号求链表形顺序表中元素</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> j=<span class="number">0</span>;</span><br><span class="line">    LinkNode *p=L;         <span class="comment">//p指向头节点，j置为0（即头节点的序号是0）</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">//i错误返回假</span></span><br><span class="line">    <span class="keyword">while</span>(j&lt;i&amp;&amp;p!=<span class="literal">NULL</span>)    <span class="comment">//查找第i个节点p</span></span><br><span class="line">    &#123;</span><br><span class="line">        j++;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)           <span class="comment">//不存在第i个数据节点，返回false</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span>                  <span class="comment">//存在第i个数据节点，返回true</span></span><br><span class="line">    &#123;</span><br><span class="line">        e=p-&gt;data;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">LocateElem</span><span class="params">(LinkNode *L,ElemType e)</span>  <span class="comment">//按元素查找链表形顺序表中的元素</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">1</span>;</span><br><span class="line">    LinkNode *p=L-&gt;next;       <span class="comment">//p指向首节点，i置为1（即首节点的序号是1）</span></span><br><span class="line">    <span class="keyword">while</span>(p!=<span class="literal">NULL</span>&amp;&amp;p-&gt;data!=e)<span class="comment">//查找data值为e的节点，其序号是i</span></span><br><span class="line">    &#123;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)               <span class="comment">//不存在值为e的节点，返回0</span></span><br><span class="line">    <span class="keyword">return</span> (<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">else</span>                      <span class="comment">//存在值为e的节点，返回其逻辑序号i</span></span><br><span class="line">    <span class="keyword">return</span> (i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">ListInsert</span><span class="params">(LinkNode *&amp; L,<span class="type">int</span> i,ElemType e)</span>   <span class="comment">//在链表形顺序表中第i个位置插入数据元素e</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> j=<span class="number">0</span>;</span><br><span class="line">    LinkNode *p=L,*s;  <span class="comment">//p指向头节点，j置为0（即头节点的序号为0）</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;=<span class="number">0</span>)<span class="keyword">return</span> <span class="literal">false</span>;  <span class="comment">//i错误返回false</span></span><br><span class="line">    <span class="keyword">while</span>(j&lt;i<span class="number">-1</span>&amp;&amp;p!=<span class="literal">NULL</span>)  <span class="comment">//查找第i-1个节点</span></span><br><span class="line">    &#123;</span><br><span class="line">        j++;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)  <span class="comment">//未找到第i-1个节点p，返回false</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span>        <span class="comment">//找到第i-1个节点p，插入新节点并返回true</span></span><br><span class="line">    &#123;</span><br><span class="line">        s=(LinkNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkNode));</span><br><span class="line">        s-&gt;data=e; <span class="comment">//创建新节点s,将其data域置为e</span></span><br><span class="line">        s-&gt;next=p-&gt;next;  <span class="comment">//将节点s插入到节点p之后</span></span><br><span class="line">        p-&gt;next=s;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="title function_">ListDelete</span><span class="params">(LinkNode *&amp; L,<span class="type">int</span> i,ElemType &amp; e)</span>  <span class="comment">//在链表形顺序表中删除第i个数据元素，并且把值赋给e</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> j=<span class="number">0</span>;</span><br><span class="line">    LinkNode *p=L,*q;  <span class="comment">//p指向头节点，j置为0（即头节点的序号为0）</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;=<span class="number">0</span>)<span class="keyword">return</span> <span class="literal">false</span>;  <span class="comment">//i错误返回false</span></span><br><span class="line">    <span class="keyword">while</span>(j&lt;i<span class="number">-1</span>&amp;&amp;p!=<span class="literal">NULL</span>)  <span class="comment">//查找第i-1个节点p</span></span><br><span class="line">    &#123;</span><br><span class="line">        j++;</span><br><span class="line">        p=p-&gt;next;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)  <span class="comment">//未找到第i-1个节点p，返回false</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">else</span>        <span class="comment">//找到第i-1个节点p</span></span><br><span class="line">    &#123; </span><br><span class="line">        q=p-&gt;next;  <span class="comment">//q指向第i个节点</span></span><br><span class="line">        <span class="keyword">if</span>(q==<span class="literal">NULL</span>)  <span class="comment">//若不存在第i个节点，返回false</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        e=q-&gt;data;</span><br><span class="line">        p-&gt;next=q-&gt;next;  <span class="comment">//从单链表删除q节点</span></span><br><span class="line">        <span class="built_in">free</span>(q);  <span class="comment">//释放q节点</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;  <span class="comment">//返回true表示成功删除第i个节点</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/01/03/vscode+vim%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0.18642576/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          vscode+vim配置小记
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2025 shenle
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

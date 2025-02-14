@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>opencv自学 | Shenle</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="opencv自学">
+<meta property="og:url" content="https://github.com/2575451471/2575451471.github.io/2025/01/13/opencv%E8%87%AA%E5%AD%A6.18668658/index.html">
+<meta property="og:site_name" content="Shenle">
+<meta property="og:locale">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202501/3084836-20250113161948829-361946646.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202501/3084836-20250113153135865-897396092.png">
+<meta property="article:published_time" content="2025-01-13T15:20:00.000Z">
+<meta property="article:modified_time" content="2025-02-14T20:26:54.411Z">
+<meta property="article:author" content="shenle">
+<meta property="article:tag" content="智能车竞赛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img2023.cnblogs.com/blog/3084836/202501/3084836-20250113161948829-361946646.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Shenle" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/header.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">shenle</a></h1>
+		</hgroup>
+
+		
+			<p class="header-subtitle"></p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">Archives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/2575451471" title="github">github</a>
+					        
+								<a class="cnblogs" target="_blank" href="https://www.cnblogs.com/shenleblog" title="cnblogs">cnblogs</a>
+					        
+								<a class="qq" target="_blank" href="https://img2023.cnblogs.com/blog/3084836/202502/3084836-20250215043636691-2144966981.jpg" title="qq">qq</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1941325363&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">上课笔记</a> <a href="/tags/%E5%B0%8F%E8%AE%B0/" style="font-size: 15px;">小记</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F32/" style="font-size: 15px;">嵌入式32</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F51/" style="font-size: 10px;">嵌入式51</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8Fti/" style="font-size: 10px;">嵌入式ti</a> <a href="/tags/%E6%99%BA%E8%83%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B/" style="font-size: 10px;">智能车竞赛</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 20px;">编程语言</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">噜啦啦!</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/header.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">Archives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/2575451471" title="github">github</a>
+			        
+						<a class="cnblogs" target="_blank" href="https://www.cnblogs.com/shenleblog" title="cnblogs">cnblogs</a>
+			        
+						<a class="qq" target="_blank" href="https://img2023.cnblogs.com/blog/3084836/202502/3084836-20250215043636691-2144966981.jpg" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-opencv自学.18668658" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2025/01/13/opencv%E8%87%AA%E5%AD%A6.18668658/" class="article-date">
+  	<time datetime="2025-01-13T15:20:00.000Z" itemprop="datePublished">2025-01-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      opencv自学
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%99%BA%E8%83%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B/" rel="tag">智能车竞赛</a></li></ul>
+	</div>
+
+        
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2025/01/13/opencv%E8%87%AA%E5%AD%A6.18668658/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="opencv自学">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+<span id="more"></span>
+
+
+
+<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><blockquote>
+<p>使用c++学习<br>边读代码边用ai自学  </p>
+</blockquote>
+<hr>
+<h2 id="calibration-cpp"><a href="#calibration-cpp" class="headerlink" title="calibration.cpp"></a>calibration.cpp</h2><blockquote>
+<p>根据定义类逐个了解<br>注：一开始看错了，以为是保存视频的cpp，结果是标定畸变的cpp</p>
+</blockquote>
+<hr>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202501/3084836-20250113161948829-361946646.png" alt="img"><br>12*9的棋盘格，12行9列  （代码中是Size sizeBoard &#x3D; Size(11, 8);  ）（哪里理解有误？）   </p>
+<h3 id="std-string"><a href="#std-string" class="headerlink" title="std::string"></a>std::string</h3><p>std::string 是标准C++库中的一个类，用于表示和操作字符串。<br><code>string imagesFolder = &quot;../res/calibration/temp/&quot;;       // 打开标定图像</code>    </p>
+<hr>
+<p>举例：读取图象文件</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#<span class="meta">#<span class="keyword">include</span> <span class="string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line">#<span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    std::string imagePath = <span class="string">&quot;path/to/your/image.jpg&quot;</span>;  <span class="comment">// 图像文件路径</span></span><br><span class="line">    cv::Mat image = cv::<span class="built_in">imread</span>(imagePath);            <span class="comment">// 读取图像</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (image.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        std::cerr &lt;&lt; <span class="string">&quot;Could not open or find the image!&quot;</span> &lt;&lt; std::endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cv::<span class="built_in">imshow</span>(<span class="string">&quot;Image&quot;</span>, image);                       <span class="comment">// 显示图像</span></span><br><span class="line">    cv::<span class="built_in">waitKey</span>(<span class="number">0</span>);                                  <span class="comment">// 等待按键事件</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Size"><a href="#Size" class="headerlink" title="Size"></a>Size</h3><p>Size 是OpenCV中用于表示尺寸的结构体，包含 width 和 height 两个成员。<br>在相机标定过程中，Size 被用来表示标定板的角点数（如 Size sizeBoard &#x3D; Size(11, 8); 表示标定板有11行8列角点）和标定板上每个棋盘格的边长（如 Size sizeSquare &#x3D; Size(20, 20); 表示每个棋盘格的边长为20x20毫米）。<br> Size 也被用来存储图像的尺寸，如代码中的 Size sizeImage;。在读取图像后，可以通过 imageInput.cols 和 imageInput.rows 获取图像的宽度和高度，并赋值给 sizeImage 的 width 和 height 成员。  </p>
+<hr>
+<h3 id="Mat"><a href="#Mat" class="headerlink" title="Mat"></a>Mat</h3><blockquote>
+<p>代表了一个n维的密集数值单通道或多通道数组，可以用来存储图像、矩阵、直方图    </p>
+</blockquote>
+<blockquote>
+<p>创建Mat</p>
+<blockquote>
+<p>构造函数：<code>Mat image = Mat(rows, cols, type, Scalar(value));</code><br>图像文件读取：<code>Mat image = imread(filePath);</code><br>复制现有Mat对象：<code>Mat imageCopy = image.clone();</code> 或 <code>Mat imageCopy = image;</code>（注意：后者是浅拷贝，仅复制头部）  </p>
+</blockquote>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Mat cameraMatrix = <span class="built_in">Mat</span>(<span class="number">3</span>, <span class="number">3</span>, CV_32FC1, Scalar::<span class="built_in">all</span>(<span class="number">0</span>)); <span class="comment">//创建一个3x3的浮点型矩阵，用于存储摄像机的内参矩阵。</span></span><br><span class="line"></span><br><span class="line">Mat distCoeffs = <span class="built_in">Mat</span>(<span class="number">1</span>, <span class="number">5</span>, CV_32FC1, Scalar::<span class="built_in">all</span>(<span class="number">0</span>)); <span class="comment">//创建一个1x5的浮点型矩阵，用于存储相机的畸变系数。</span></span><br><span class="line"></span><br><span class="line">Mat imageInput = <span class="built_in">imread</span>(imagesPath[i]); <span class="comment">//从文件读取图像，存储为Mat类型。</span></span><br><span class="line"></span><br><span class="line">Mat imageGray; <span class="built_in">cvtColor</span>(imageInput, imageGray, CV_RGB2GRAY); <span class="comment">//将彩色图像转换为灰度图像。</span></span><br><span class="line"></span><br><span class="line">Mat mapx = <span class="built_in">Mat</span>(sizeImage, CV_32FC1); 和 Mat mapy = <span class="built_in">Mat</span>(sizeImage, CV_32FC1); <span class="comment">//创建用于图像矫正的重映射参数矩阵。</span></span><br><span class="line"><span class="comment">/*************************************************************************************************************/</span></span><br><span class="line"><span class="comment">//Scalar 是一个用于表示四通道数值的结构体，通常用于指定颜色、像素值或其他需要四个数值的情况。</span></span><br><span class="line"><span class="comment">//尽管 Scalar 可以用于多通道数据，但在许多情况下，特别是当处理灰度图像或单通道数据时，我们只需要一个数值。</span></span><br><span class="line"><span class="comment">//Scalar::all(0) 是一个便捷的方法，用于创建一个所有通道值都设置为0的 Scalar 对象。这在初始化图像矩阵、设置像素值为黑色等方面非常有用。</span></span><br><span class="line"><span class="comment">//使用 CV_32FC1 表示这个矩阵是32位浮点数单通道矩阵。</span></span><br></pre></td></tr></table></figure>
+<h3 id="vector-c-内容"><a href="#vector-c-内容" class="headerlink" title="vector(c++内容)"></a>vector(c++内容)</h3><p>一种序列容器，它允许你在运行时动态地插入和删除元素。<br>vector 是基于数组的数据结构，但它可以自动管理内存，这意味着你不需要手动分配和释放内存。  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 创建一个空的整数向量</span></span><br><span class="line">    std::vector&lt;<span class="type">int</span>&gt; myVector;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 添加元素到向量中</span></span><br><span class="line">    myVector.<span class="built_in">push_back</span>(<span class="number">3</span>);</span><br><span class="line">    myVector.<span class="built_in">push_back</span>(<span class="number">7</span>);</span><br><span class="line">    myVector.<span class="built_in">push_back</span>(<span class="number">11</span>);</span><br><span class="line">    myVector.<span class="built_in">push_back</span>(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//vector&lt;String&gt; imagesPath; 这行代码定义了一个名为 imagesPath 的变量，该变量是一个 vector 容器，用于存储 String 类型的元素。</span></span><br><span class="line"> string imagesFolder = <span class="string">&quot;../res/calibration/temp/&quot;</span>;       <span class="comment">// 打开标定图像</span></span><br><span class="line">vector&lt;String&gt; imagesPath;</span><br><span class="line"><span class="function">Display <span class="title">display</span><span class="params">(<span class="number">2</span>)</span></span>;                    <span class="comment">// 初始化UI显示窗口</span></span><br><span class="line"><span class="built_in">glob</span>(imagesFolder, imagesPath, <span class="literal">false</span>); <span class="comment">// OpenCV提取文件夹中的所有文件</span></span><br><span class="line"><span class="comment">//imagesPath 被用来存储一系列图像文件的路径。</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202501/3084836-20250113153135865-897396092.png" alt="img"></p>
+<hr>
+<h3 id="Display"><a href="#Display" class="headerlink" title="Display"></a>Display</h3><blockquote>
+<p>赛鼠自定义类</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @brief UI综合图像绘制</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Display</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">bool</span> enable = <span class="literal">false</span>; <span class="comment">// 显示窗口使能</span></span><br><span class="line">    <span class="type">int</span> sizeWindow = <span class="number">1</span>;  <span class="comment">// 窗口数量</span></span><br><span class="line">    cv::Mat imgShow;     <span class="comment">// 窗口图像</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @brief 显示窗口初始化</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * @param size 窗口数量(1~7)</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="built_in">Display</span>(<span class="type">const</span> <span class="type">int</span> size)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (size &lt;= <span class="number">0</span> || size &gt; <span class="number">7</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// cv::namedWindow(&quot;ICAR&quot;, WINDOW_NORMAL);                // 图像名称</span></span><br><span class="line">        <span class="comment">// cv::resizeWindow(&quot;ICAR&quot;, COLSIMAGE * size, ROWSIMAGE); // 分辨率</span></span><br><span class="line"></span><br><span class="line">        imgShow = cv::Mat::<span class="built_in">zeros</span>(ROWSIMAGE, COLSIMAGE * size, CV_8UC3);</span><br><span class="line">        enable = <span class="literal">true</span>;</span><br><span class="line">        sizeWindow = size;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @brief 设置新窗口属性</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * @param index 窗口序号</span></span><br><span class="line"><span class="comment">     * @param name 窗口名称</span></span><br><span class="line"><span class="comment">     * @param img 显示图像</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">setNewWindow</span><span class="params">(<span class="type">int</span> index, string name, Mat img)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// 数据溢出保护</span></span><br><span class="line">        <span class="keyword">if</span> (!enable || index &lt;= <span class="number">0</span> || index &gt; sizeWindow)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (img.cols &lt;= <span class="number">0</span> || img.rows &lt;= <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        Mat imgDraw = img.<span class="built_in">clone</span>();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (imgDraw.<span class="built_in">type</span>() == CV_8UC1) <span class="comment">// 非RGB类型的图像</span></span><br><span class="line">            <span class="built_in">cvtColor</span>(imgDraw, imgDraw, cv::COLOR_GRAY2BGR);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 图像缩放</span></span><br><span class="line">        <span class="keyword">if</span> (imgDraw.cols != COLSIMAGE || imgDraw.rows != ROWSIMAGE)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">float</span> fx = COLSIMAGE / imgDraw.cols;</span><br><span class="line">            <span class="type">float</span> fy = ROWSIMAGE / imgDraw.rows;</span><br><span class="line">            <span class="keyword">if</span> (fx &lt;= fy)</span><br><span class="line">                <span class="built_in">resize</span>(imgDraw, imgDraw, <span class="built_in">Size</span>(COLSIMAGE, ROWSIMAGE), fx, fx);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="built_in">resize</span>(imgDraw, imgDraw, <span class="built_in">Size</span>(COLSIMAGE, ROWSIMAGE), fy, fy);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 限制图片标题长度</span></span><br><span class="line">        string text = <span class="string">&quot;[&quot;</span> + <span class="built_in">to_string</span>(index) + <span class="string">&quot;] &quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (name.<span class="built_in">length</span>() &gt; <span class="number">15</span>)</span><br><span class="line">            text = text + name.<span class="built_in">substr</span>(<span class="number">0</span>, <span class="number">15</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            text = text + name;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">putText</span>(imgDraw, text, <span class="built_in">Point</span>(<span class="number">10</span>, <span class="number">20</span>), cv::FONT_HERSHEY_TRIPLEX, <span class="number">0.5</span>, cv::<span class="built_in">Scalar</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">0.5</span>);</span><br><span class="line"></span><br><span class="line">        Rect placeImg = <span class="built_in">cvRect</span>(COLSIMAGE * (index - <span class="number">1</span>), <span class="number">0</span>, COLSIMAGE, ROWSIMAGE);</span><br><span class="line">        imgDraw.<span class="built_in">copyTo</span>(<span class="built_in">imgShow</span>(placeImg));</span><br><span class="line"></span><br><span class="line">        <span class="built_in">savePicture</span>(img); <span class="comment">// 保存图像</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @brief 融合后的图像显示</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">show</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (enable)</span><br><span class="line">            <span class="built_in">imshow</span>(<span class="string">&quot;ICAR&quot;</span>, imgShow);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Display <span class="title">display</span><span class="params">(<span class="number">2</span>)</span></span>;</span><br><span class="line"><span class="comment">//定义一个名叫display的Display对象，根据构造函数初始化为2个窗口。</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">Display</span>(<span class="type">const</span> <span class="type">int</span> size)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (size &lt;= <span class="number">0</span> || size &gt; <span class="number">7</span>)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// cv::namedWindow(&quot;ICAR&quot;, WINDOW_NORMAL);                // 图像名称</span></span><br><span class="line">        <span class="comment">// cv::resizeWindow(&quot;ICAR&quot;, COLSIMAGE * size, ROWSIMAGE); // 分辨率</span></span><br><span class="line"></span><br><span class="line">        imgShow = cv::Mat::<span class="built_in">zeros</span>(ROWSIMAGE, COLSIMAGE * size, CV_8UC3);</span><br><span class="line">        enable = <span class="literal">true</span>;</span><br><span class="line">        sizeWindow = size;</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="comment">//#define COLSIMAGE 320    // 图像的列数</span></span><br><span class="line"><span class="comment">// #define ROWSIMAGE 240    // 图像的行数</span></span><br><span class="line"><span class="comment">//CV_8UC3:::CV_8U：这表示数据类型是8位无符号整数（unsigned char），范围从0到255   C3：这表示通道数为3。在彩色图像处理中，三个通道通常对应于红色（R）、绿色（G）和蓝色（B），即RGB颜色空间</span></span><br></pre></td></tr></table></figure>
+<h3 id="glob"><a href="#glob" class="headerlink" title="glob"></a>glob</h3><blockquote>
+<p>glob 函数用于查找符合特定模式的文件路径。  </p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">glob</span><span class="params">(<span class="type">const</span> string&amp; pattern, vector&lt;String&gt;&amp; result, <span class="type">bool</span> recursive = <span class="literal">false</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>pattern：要搜索的文件模式。这可以是一个包含通配符（如 * 和 ?）的字符串，用于匹配多个文件。</p>
+<p>result：一个 vector<String> 类型的容器，用于存储匹配到的文件路径。</p>
+<p>recursive：一个布尔值，指示搜索是否应递归地进入子文件夹。如果设置为 true，则 glob 将搜索指定文件夹及其所有子文件夹中的文件；如果设置为 false，则仅搜索指定文件夹中的文件。  </p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">glob</span>(imagesFolder, imagesPath, <span class="literal">false</span>); <span class="comment">// OpenCV提取文件夹中的所有文件</span></span><br><span class="line"><span class="comment">//这行代码的作用是搜索 imagesFolder 指定的文件夹，并将该文件夹中所有文件的路径存储在 imagesPath 容器中。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="struct-stat"><a href="#struct-stat" class="headerlink" title="struct stat"></a>struct stat</h3><blockquote>
+<p>C++编程中，struct stat 是一个结构体，用于存储文件的状态信息。  </p>
+</blockquote>
+<p>这个结构体定义在POSIX标准中，并且在许多Unix-like系统（包括Linux和macOS）以及Windows的Cygwin环境中都是可用的。它包含了关于文件的各种信息，如文件大小、修改时间、权限等。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">stat</span> buffer;</span><br><span class="line"><span class="comment">//这行代码声明了一个名为 buffer 的 struct stat 类型的变量。这个变量将用于存储通过 stat 函数调用获取的文件状态信息。</span></span><br><span class="line">string filename = <span class="built_in">getFilename</span>(imagesPath[i]);</span><br><span class="line">string img_path = <span class="string">&quot;../res/calibration/corners/&quot;</span> + filename;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">stat</span>(img_path.<span class="built_in">c_str</span>(), &amp;buffer) != <span class="number">0</span>) <span class="comment">// 判断文件夹是否存在</span></span><br><span class="line">&#123;</span><br><span class="line">    string command;</span><br><span class="line">    command = <span class="string">&quot;mkdir -p ../res/calibration/corners/&quot;</span>;</span><br><span class="line">    <span class="built_in">system</span>(command.<span class="built_in">c_str</span>()); <span class="comment">// 利用os创建文件夹</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// img_path.c_str() 将 std::string 类型的 img_path 转换为C风格的字符串（即 const char*），因为 stat 函数需要这种类型的参数。</span></span><br><span class="line"><span class="comment">// &amp;buffer 是 struct stat 类型变量 buffer 的地址，stat 函数将把获取到的文件状态信息存储在这里。</span></span><br><span class="line"><span class="comment">// 如果 stat 函数返回非零值，通常表示指定的文件或文件夹不存在。在这种情况下，代码会创建一个新的文件夹。</span></span><br><span class="line"><span class="comment">// 总之，struct stat buffer; 这行代码声明了一个用于存储文件状态信息的变量，而后续的 stat 函数调用则利用这个变量来检查文件或文件夹的存在性。</span></span><br></pre></td></tr></table></figure>
+<p>struct stat 是一个结构体，包含了文件或目录的各种状态信息，如文件大小、修改时间、权限等。这个结构体的具体字段可能因操作系统而异，但通常包含以下一些基本字段：</p>
+<p>st_size：文件大小（以字节为单位）。</p>
+<p>st_mode：文件类型和权限。</p>
+<p>st_mtime：最后修改时间。</p>
+<p>st_ctime：最后状态改变时间。</p>
+<p>st_uid：文件所有者的用户ID。</p>
+<p>st_gid：文件所有者的组ID。</p>
+<h3 id="stat函数"><a href="#stat函数" class="headerlink" title="stat函数"></a>stat函数</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">stat</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *pathname, <span class="keyword">struct</span> stat *buf)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>pathname：这是一个指向以null结尾的字符串的指针，表示要检查的文件或目录的路径。</p>
+<p>buf：这是一个指向 struct stat 类型的指针，函数将把获取到的文件或目录的状态信息存储在这个结构体中。</p>
+<hr>
+<h3 id="img-path-c-str"><a href="#img-path-c-str" class="headerlink" title="img_path.c_str()"></a>img_path.c_str()</h3><p>C++中，std::string 类型是标准库提供的一个用于表示和操作字符串的类。然而，C语言风格的函数（如POSIX系统调用和某些C库函数）通常要求字符串参数是C风格的字符串，即以null结尾的字符数组（char* 类型）。</p>
+<p>std::string 类提供了一个成员函数 c_str()，该函数返回一个指向C风格字符串的指针，该字符串与 std::string 对象的内容相同。这样，您就可以将 std::string 对象传递给需要C风格字符串参数的函数了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">string img_path = <span class="string">&quot;../res/calibration/corners/&quot;</span> + filename;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">stat</span>(img_path.<span class="built_in">c_str</span>(), &amp;buffer) != <span class="number">0</span>) <span class="comment">// 判断文件夹是否存在</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 创建文件夹的代码</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// img_path 是一个 std::string 类型的变量，存储了图像文件的完整路径。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// img_path.c_str() 调用了 std::string 类的 c_str() 成员函数，返回了一个指向与 img_path 内容相同的C风格字符串的指针。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// stat 函数是一个POSIX系统调用，用于获取文件或目录的状态信息。它需要一个C风格的字符串作为文件路径参数。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 因此，img_path.c_str() 在这里的作用是将 std::string 类型的 img_path 转换为C风格的字符串，以便将其作为参数传递给 stat 函数。这样，stat 函数就能够正确地解析文件路径并获取相应的状态信息了。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Point2f"><a href="#Point2f" class="headerlink" title="Point2f"></a>Point2f</h3><p>在OpenCV库中，Point2f 是一个用于表示二维点的类，其中“2”表示点的维度（即x和y坐标），“f”表示坐标值的数据类型为浮点数（float）。Point2f 类定义在 opencv2&#x2F;core.hpp 头文件中，是OpenCV核心模块的一部分。</p>
+<hr>
+<h3 id="imread"><a href="#imread" class="headerlink" title="imread"></a>imread</h3><blockquote>
+<p>在OpenCV库中，imread 函数用于从指定文件路径读取图像。  </p>
+</blockquote>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Mat <span class="title">imread</span><span class="params">(<span class="type">const</span> std::string&amp; filename, <span class="type">int</span> flags = IMREAD_COLOR)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>filename：这是一个字符串参数，表示要读取的图像文件的路径。</p>
+<p>flags：这是一个可选的整数参数，用于指定读取图像的方式。默认情况下，它的值为 IMREAD_COLOR（即1），表示以彩色模式读取图像。如果设置为 IMREAD_GRAYSCALE（即0），则以灰度模式读取图像；如果设置为 IMREAD_UNCHANGED（即-1），则包括图像的alpha通道（如果存在）。<strong>可以不填写</strong></p>
+<p>imread 函数返回一个 Mat 对象，该对象包含了读取的图像数据。如果图像文件成功读取，Mat 对象将包含图像的有效数据；如果读取失败（例如，文件不存在或路径错误），Mat 对象将是一个空矩阵。</p>
+<hr>
+<h3 id="vector和vector"><a href="#vector和vector" class="headerlink" title="vector&lt;vector&gt;和vector"></a>vector&lt;vector<Point2f>&gt;和vector<Point2f></h3><p>vector&lt;vector<Point2f>&gt; pointsCorners<br>类型：这是一个二维向量，其中每个元素都是一个 vector<Point2f> 类型的向量。</p>
+<p>用途：用于存储多张图像中检测到的所有角点坐标。外层的 vector 存储每张图像的角点信息，内层的 vector 存储单张图像中所有角点的坐标。</p>
+<p>结构：可以想象成一个表格，其中每一行代表一张图像的角点信息，每一列代表一个角点的坐标（x和y）。</p>
+<hr>
+<p>vector<Point2f> pointCorners<br>类型：这是一个一维向量，其中每个元素都是一个 Point2f 类型的对象。</p>
+<p>用途：用于存储单张图像中检测到的角点坐标。</p>
+<p>结构：可以想象成一个一维数组，其中每个元素代表一个角点的坐标（x和y）。</p>
+<hr>
+<p>在代码中，pointsCorners 被初始化并用于存储所有图像的角点信息。在循环处理每张图像时，会创建一个临时的 pointCorners 向量来存储当前图像的角点坐标。如果当前图像中的角点数量符合要求（即角点数量等于标定板上的角点总数），则将这些角点坐标添加到 pointsCorners 中。  </p>
+<hr>
+<h3 id="findChessboardCorners"><a href="#findChessboardCorners" class="headerlink" title="findChessboardCorners"></a>findChessboardCorners</h3><blockquote>
+<p>黑盒  </p>
+</blockquote>
+<p>findChessboardCorners 函数是OpenCV库中用于检测图像中棋盘格角点的一个重要函数。该函数通常用于相机标定过程中，以提取标定板（棋盘格）的角点信息。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">findChessboardCorners</span><span class="params">(InputArray image, Size patternSize, OutputArray corners,</span></span></span><br><span class="line"><span class="params"><span class="function">                           <span class="type">int</span> flags=CALIB_CB_ADAPTIVE_THRESH+CALIB_CB_NORMALIZE_IMAGE)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>image：输入图像，应为8位灰度图像或彩色图像。</p>
+<p>patternSize：棋盘格的内角点数量，包括行数和列数。例如，一个8x8的棋盘格应使用Size(8,8)。</p>
+<p>corners：检测到的角点输出，通常是一个std::vector<a href="cv::Point2f">cv::Point2f</a>类型的对象。</p>
+<p>flags：可选参数，用于指定检测角点时的附加选项。默认为CALIB_CB_ADAPTIVE_THRESH和CALIB_CB_NORMALIZE_IMAGE的组合，这有助于在光照不均的情况下更好地检测角点。</p>
+<hr>
+<p>函数返回一个布尔值，指示是否成功检测到足够数量的角点。如果返回true，则corners向量中将包含检测到的角点坐标；如果返回false，则表示检测失败，可能是因为图像中不存在棋盘格或角点数量不足。</p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Size sizeBoard = <span class="built_in">Size</span>(<span class="number">11</span>, <span class="number">8</span>);   <span class="comment">// 标定板的角点数(行,列)</span></span><br><span class="line">vector&lt;Point2f&gt; pointCorners; <span class="comment">// 用于存储单张图像中检测到的角点坐标</span></span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">findChessboardCorners</span>(imageInput, sizeBoard, pointCorners)) <span class="comment">// 尝试检测图像中的棋盘格角点</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 如果检测到角点，则进行后续处理...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 如果未检测到角点，则输出错误信息并退出程序</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="cvtColor"><a href="#cvtColor" class="headerlink" title="cvtColor"></a>cvtColor</h3><blockquote>
+<p>黑盒  </p>
+</blockquote>
+<p>cvtColor 函数是OpenCV库中用于颜色空间转换的一个常用函数。该函数能够将图像从一个颜色空间转换到另一个颜色空间，比如从RGB颜色空间转换到灰度颜色空间。  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Mat imageGray;</span><br><span class="line"><span class="built_in">cvtColor</span>(imageInput, imageGray, CV_RGB2GRAY);</span><br><span class="line"><span class="comment">//这里，imageInput是源图像（彩色图像），imageGray是目标图像（灰度图像），而CV_RGB2GRAY是指定的转换代码，表示将图像从RGB颜色空间转换到灰度颜色空间。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">cvtColor</span><span class="params">(InputArray src, OutputArray dst, <span class="type">int</span> code, <span class="type">int</span> dstCn=<span class="number">0</span> )</span></span>;</span><br><span class="line"><span class="comment">// src：输入图像，可以是Mat类型的对象，表示源图像。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// dst：输出图像，也是Mat类型的对象，表示转换后的图像。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// code：转换代码，指定了颜色空间转换的类型。例如，CV_RGB2GRAY表示从RGB颜色空间转换到灰度颜色空间。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// dstCn：目标图像的通道数，如果参数为0，则由src和code决定。</span></span><br></pre></td></tr></table></figure>
+<h3 id="find4QuadCornerSubpix"><a href="#find4QuadCornerSubpix" class="headerlink" title="find4QuadCornerSubpix"></a>find4QuadCornerSubpix</h3><blockquote>
+<p>黑盒</p>
+</blockquote>
+<p>find4QuadCornerSubpix 是 OpenCV 库中提供的一个函数，  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">find4QuadCornerSubpix</span><span class="params">(InputArray image, InputOutputArray corners,</span></span></span><br><span class="line"><span class="params"><span class="function">                           Size winSize, Size zeroZone,</span></span></span><br><span class="line"><span class="params"><span class="function">                           TermCriteria criteria)</span></span>;</span><br><span class="line"><span class="comment">// image：输入图像，应为灰度图像。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// corners：输入/输出向量，包含初步检测到的角点坐标。函数执行后，这些坐标将被更新为亚像素级别的精确位置。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// winSize：搜索窗口的尺寸。该窗口用于在每个角点周围进行搜索，以找到更精确的位置。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// zeroZone：死区尺寸，表示在搜索窗口中央的一个区域，该区域内的像素在角点位置估计时将被忽略。这有助于减少由于噪声或图像不均匀性引起的误差。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// criteria：迭代终止条件，包括最大迭代次数、角点位置变化的阈值等。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">find4QuadCornerSubpix</span>(imageGray, pointCorners, <span class="built_in">Size</span>(<span class="number">5</span>, <span class="number">5</span>), <span class="built_in">Size</span>(<span class="number">-1</span>,<span class="number">-1</span>),</span><br><span class="line">                      <span class="built_in">TermCriteria</span>(CV_TERMCRIT_EPS+CV_TERMCRIT_ITER, <span class="number">30</span>, <span class="number">0.1</span>));</span><br><span class="line"><span class="comment">// 这里，imageGray 是输入的灰度图像，pointCorners 是包含初步检测到的角点坐标的向量。Size(5, 5) 指定了搜索窗口的大小为 5x5 像素，Size(-1,-1) 表示不使用死区（即整个搜索窗口都将被考虑），而 TermCriteria 则设置了迭代终止条件：最多迭代 30 次，或直到角点位置的变化小于 0.1 像素。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="cv-namedWindow"><a href="#cv-namedWindow" class="headerlink" title="cv::namedWindow"></a>cv::namedWindow</h3><blockquote>
+<p>黑盒<br>在OpenCV库中，cv::namedWindow 函数用于创建一个窗口，该窗口可以用于显示图像或视频流。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在提供的代码片段中，cv::namedWindow 函数被用来创建一个名为 &quot;Corners&quot; 的窗口，并且允许用户调整窗口大小：</span></span><br><span class="line">std::string windowName = <span class="string">&quot;Corners&quot;</span>;</span><br><span class="line">cv::<span class="built_in">namedWindow</span>(windowName, WINDOW_NORMAL); <span class="comment">// 创建一个允许用户调整大小的窗口</span></span><br><span class="line"><span class="built_in">imshow</span>(<span class="string">&quot;Corners&quot;</span>, imageInput);              <span class="comment">// 在窗口中显示图像</span></span><br><span class="line"><span class="comment">// 这里，windowName 是一个字符串变量，存储了窗口的名称 &quot;Corners&quot;。cv::namedWindow 函数使用这个名称创建一个窗口，并通过 WINDOW_NORMAL 标志允许用户手动调整窗口大小。随后，imshow 函数被用来在这个窗口中显示 imageInput 图像。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">namedWindow</span><span class="params">(<span class="type">const</span> std::string&amp; winname, <span class="type">int</span> flags = WINDOW_AUTOSIZE)</span></span>;</span><br><span class="line"><span class="comment">// winname：窗口的名称，它是一个字符串，用于唯一标识窗口。在后续的图像处理操作中，你可以通过这个名字来引用这个窗口。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// flags：窗口创建标志，它是一个可选参数，默认值为WINDOW_AUTOSIZE。这个参数可以控制窗口的大小和属性。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 标志选项</span></span><br><span class="line"><span class="comment">// WINDOW_AUTOSIZE：窗口大小自动调整以适应显示的图像大小。如果图像大小改变，窗口大小也会相应改变。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// WINDOW_NORMAL：用户可以调整窗口大小。这是与WINDOW_AUTOSIZE相对的一个选项，允许用户手动调整窗口的大小。</span></span><br></pre></td></tr></table></figure>
+<h3 id="system"><a href="#system" class="headerlink" title="system"></a>system</h3><p>system 函数被用来执行操作系统命令，  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">system</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *command)</span></span>;</span><br><span class="line"><span class="comment">// command：一个指向以 null 结尾的字符串的指针，该字符串包含了要执行的命令。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string command = <span class="string">&quot;mkdir -p ../res/calibration/corners/&quot;</span>;</span><br><span class="line"><span class="built_in">system</span>(command.<span class="built_in">c_str</span>());</span><br><span class="line"><span class="comment">// 这里，command 是一个字符串变量，存储了要执行的命令 &quot;mkdir -p ../res/calibration/corners/&quot;。mkdir 是 Unix/Linux 系统中用于创建目录的命令，-p 选项表示如果父目录不存在，则一并创建它们。command.c_str() 将 std::string 类型的 command 转换为 const char* 类型，因为 system 函数需要一个 C 风格的字符串参数。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="imwrite"><a href="#imwrite" class="headerlink" title="imwrite"></a>imwrite</h3><p>在OpenCV库中，imwrite 函数用于将图像保存到指定的文件路径  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">imwrite</span><span class="params">(<span class="type">const</span> std::string&amp; filename, InputArray img,</span></span></span><br><span class="line"><span class="params"><span class="function">             <span class="type">const</span> std::vector&lt;<span class="type">int</span>&gt;&amp; params = std::vector&lt;<span class="type">int</span>&gt;())</span></span>;</span><br><span class="line"><span class="comment">// filename：图像文件的路径和名称，包括文件扩展名（如 .jpg、.png 等），它决定了图像的保存格式。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// img：要保存的图像，通常是一个 Mat 类型的对象。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// params：特定于格式的保存参数，是一个可选参数。对于大多数格式来说，这个参数可以省略。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">imwrite</span>(img_path, imageInput);</span><br><span class="line"><span class="comment">// 这里，img_path 是一个字符串变量，存储了图像文件的完整路径和名称。imageInput 是一个 Mat 类型的对象，包含了要保存的图像数据。通过调用 imwrite 函数，imageInput 中的图像数据将被写入到 img_path 指定的文件中。</span></span><br></pre></td></tr></table></figure>
+<h3 id="imshow"><a href="#imshow" class="headerlink" title="imshow"></a>imshow</h3><p>在OpenCV库中，imshow 函数用于在窗口中显示图像  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">imshow</span><span class="params">(<span class="type">const</span> std::string&amp; winname, InputArray mat)</span></span>;</span><br><span class="line"><span class="comment">// winname：窗口名称，它是一个字符串，用于指定显示图像的窗口。如果窗口不存在，imshow 会创建一个新窗口；如果窗口已存在，则会在该窗口中显示图像。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// mat：要显示的图像，通常是一个 Mat 类型的对象。这个图像会被显示在指定的窗口中。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">imshow</span>(<span class="string">&quot;Corners&quot;</span>, imageInput);              <span class="comment">// 在名为 &quot;Corners&quot; 的窗口中显示图像</span></span><br><span class="line"><span class="comment">// 这里，&quot;Corners&quot; 是窗口的名称，imageInput 是要显示的图像数据。通过调用 imshow 函数，imageInput 中的图像将被显示在名为 &quot;Corners&quot; 的窗口中。</span></span><br></pre></td></tr></table></figure>
+<h3 id="waitKey"><a href="#waitKey" class="headerlink" title="waitKey"></a>waitKey</h3><p>waitKey 函数通常与 imshow 函数一起使用，用于控制图像显示窗口的持续时间以及处理键盘事件。   </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">waitKey</span><span class="params">(<span class="type">int</span> delay = <span class="number">0</span>)</span></span>;</span><br><span class="line"><span class="comment">// delay：等待键盘事件的时间（以毫秒为单位）。如果 delay 大于 0，函数将等待指定的时间；如果 delay 等于 0，函数将无限期地等待，直到有键盘事件发生。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">waitKey</span>(<span class="number">500</span>); <span class="comment">// 停顿500ms</span></span><br><span class="line"><span class="comment">// 这里，waitKey 函数被调用时传入了参数 500，表示函数将等待 500 毫秒。在这 500 毫秒内，如果用户按下任意键，函数将立即返回按键的 ASCII 码；如果没有按键事件发生，函数将在 500 毫秒后返回 -1。</span></span><br></pre></td></tr></table></figure>
+<h3 id="calibrateCamera"><a href="#calibrateCamera" class="headerlink" title="calibrateCamera"></a>calibrateCamera</h3><blockquote>
+<p>黑盒  </p>
+</blockquote>
+<p>calibrateCamera 是 OpenCV 中用于相机标定的核心函数，它根据已知的三维世界坐标和对应的二维图像坐标来计算相机的内参矩阵、畸变系数、旋转向量和平移向量。在提供的代码片段中，calibrateCamera 函数被用来开始标定过程。  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">double</span> <span class="title">calibrateCamera</span><span class="params">(InputArrayOfArrays objectPoints,</span></span></span><br><span class="line"><span class="params"><span class="function">                       InputArrayOfArrays imagePoints,</span></span></span><br><span class="line"><span class="params"><span class="function">                       Size imageSize,</span></span></span><br><span class="line"><span class="params"><span class="function">                       InputOutputArray cameraMatrix,</span></span></span><br><span class="line"><span class="params"><span class="function">                       InputOutputArray distCoeffs,</span></span></span><br><span class="line"><span class="params"><span class="function">                       OutputArrayOfArrays rvecs,</span></span></span><br><span class="line"><span class="params"><span class="function">                       OutputArrayOfArrays tvecs,</span></span></span><br><span class="line"><span class="params"><span class="function">                       <span class="type">int</span> flags = <span class="number">0</span>,</span></span></span><br><span class="line"><span class="params"><span class="function">                       TermCriteria criteria = TermCriteria(TermCriteria::COUNT + TermCriteria::EPS, <span class="number">30</span>, <span class="number">1e-6</span>))</span></span>;</span><br><span class="line"><span class="comment">// objectPoints：三维世界坐标点的集合，每个元素是一个包含多个 Point3f 对象的向量，表示一幅图像中所有角点的三维坐标。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// imagePoints：二维图像坐标点的集合，每个元素是一个包含多个 Point2f 对象的向量，表示一幅图像中所有角点的二维坐标。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// imageSize：图像的大小，通常使用 Size(width, height) 来表示。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// cameraMatrix：输入/输出参数，相机的内参矩阵（3x3）。如果提供的是一个空矩阵，函数将自动初始化它。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// distCoeffs：输入/输出参数，相机的畸变系数（1x5或1x8）。如果提供的是一个空矩阵，函数将自动初始化它。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// rvecs：输出参数，每幅图像的旋转向量。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// tvecs：输出参数，每幅图像的平移向量。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// flags：标定方法的标志，可以是0或者以下标志的组合：</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// CALIB_USE_INTRINSIC_GUESS：使用提供的 cameraMatrix 和 distCoeffs 作为初始猜测值，而不是自动初始化。</span></span><br><span class="line"><span class="comment">// CALIB_FIX_PRINCIPAL_POINT：主点已经固定，不会改变。此时，它应该位于图像的中心。</span></span><br><span class="line"><span class="comment">// CALIB_FIX_ASPECT_RATIO：假设 fx 和 fy 是固定的，并且它们的比值与输入的内参矩阵中的比值相同。</span></span><br><span class="line"><span class="comment">// CALIB_ZERO_TANGENT_DIST：切向畸变系数（p1, p2）被设置为零，并保持为零。</span></span><br><span class="line"><span class="comment">// CALIB_FIX_K1,...,CALIB_FIX_K6：对应的径向畸变系数在优化过程中保持不变。</span></span><br><span class="line"><span class="comment">// CALIB_RATIONAL_MODEL：启用畸变的理性模型（8个系数）。</span></span><br><span class="line"><span class="comment">// CALIB_THIN_PRISM_MODEL：启用薄棱镜畸变模型（12个系数）。</span></span><br><span class="line"><span class="comment">// CALIB_FIX_S1_S2_S3_S4：薄棱镜畸变系数在优化过程中保持不变。</span></span><br><span class="line"><span class="comment">// CALIB_TILTED_MODEL：启用倾斜传感器模型（12个系数）。</span></span><br><span class="line"><span class="comment">// criteria：迭代优化算法的终止条件。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">calibrateCamera</span>(pointsObject, pointsCorners, sizeImage, cameraMatrix, distCoeffs, rvecsMat, tvecsMat, <span class="number">0</span>);</span><br><span class="line"><span class="comment">// 这里，pointsObject 是三维世界坐标点的集合，pointsCorners 是二维图像坐标点的集合，sizeImage 是图像的大小，cameraMatrix 是相机的内参矩阵（初始化为全零矩阵），distCoeffs 是相机的畸变系数（初始化为全零矩阵），rvecsMat 用于存储每幅图像的旋转向量，tvecsMat 用于存储每幅图像的平移向量，0 表示使用默认的标定方法标志。</span></span><br></pre></td></tr></table></figure>
+<h3 id="fout"><a href="#fout" class="headerlink" title="fout"></a>fout</h3><p>在 C++ 编程中，cout 和 fout 是两种不同的输出流，它们用于将信息输出到不同的目的地。  </p>
+<ol>
+<li>cout 是标准输出流（std::ostream 的一个实例），通常用于将信息输出到控制台或终端。</li>
+</ol>
+<hr>
+<ol start="2">
+<li>fout</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 类型：fout 是一个文件输出流（std::ofstream 的一个实例），用于将信息写入到文件中。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 用途：fout 通常用于将程序的关键输出、报告或数据保存到磁盘上的文件中，以便后续分析、存档或共享。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例：在提供的代码片段中，fout 被用来将相机标定的分辨率写入到 assessment.txt 文件中：</span></span><br><span class="line"><span class="function">ofstream <span class="title">fout</span><span class="params">(<span class="string">&quot;../res/calibration/assessment.txt&quot;</span>)</span></span>; <span class="comment">// 打开文件用于写入</span></span><br><span class="line">fout &lt;&lt; <span class="string">&quot;相机标定分辨率: &quot;</span> &lt;&lt; sizeImage.width &lt;&lt; <span class="string">&quot;x&quot;</span> &lt;&lt; sizeImage.height &lt;&lt; <span class="string">&quot;</span></span><br><span class="line"><span class="string">&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 目的地不同：cout 输出到控制台，而 fout 输出到文件。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 用途不同：cout 多用于即时调试和显示结果，fout 多用于持久化保存数据和报告。</span></span><br></pre></td></tr></table></figure>
+<h3 id="projectPoints"><a href="#projectPoints" class="headerlink" title="projectPoints"></a>projectPoints</h3><p>projectPoints 是 OpenCV 库中用于相机标定的一个重要函数，它根据相机的内参矩阵、畸变系数、旋转向量和平移向量，将三维空间中的点投影到二维图像平面上。 </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">projectPoints</span><span class="params">(InputArray objectPoints,</span></span></span><br><span class="line"><span class="params"><span class="function">                   InputArray rvec,</span></span></span><br><span class="line"><span class="params"><span class="function">                   InputArray tvec,</span></span></span><br><span class="line"><span class="params"><span class="function">                   InputArray cameraMatrix,</span></span></span><br><span class="line"><span class="params"><span class="function">                   InputArray distCoeffs,</span></span></span><br><span class="line"><span class="params"><span class="function">                   OutputArray imagePoints,</span></span></span><br><span class="line"><span class="params"><span class="function">                   OutputArray jacobian = noArray(),</span></span></span><br><span class="line"><span class="params"><span class="function">                   <span class="type">double</span> aspectRatio = <span class="number">0</span>)</span></span>;</span><br><span class="line"><span class="comment">// objectPoints：输入参数，三维空间中的点，通常是一个包含多个 Point3f 对象的向量。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// rvec：输入参数，旋转向量，表示相机相对于世界坐标系的旋转。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// tvec：输入参数，平移向量，表示相机相对于世界坐标系的平移。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// cameraMatrix：输入参数，相机的内参矩阵。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// distCoeffs：输入参数，相机的畸变系数。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// imagePoints：输出参数，投影到图像平面上的二维点，通常是一个包含多个 Point2f 对象的向量。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// jacobian：可选输出参数，雅可比矩阵，通常不需要。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// aspectRatio：可选参数，用于设置图像像素的纵横比，如果设置为 0，则使用 cameraMatrix 中的值。</span></span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;Point3f&gt; tempPointSet = pointsObject[i];</span><br><span class="line"><span class="built_in">projectPoints</span>(tempPointSet, rvecsMat[i], tvecsMat[i], cameraMatrix, distCoeffs, pointsImage);</span><br><span class="line"><span class="comment">// 这里，tempPointSet 包含了三维空间中标定板上的角点坐标，rvecsMat[i] 和 tvecsMat[i] 分别表示第 i 幅图像的旋转向量和平移向量，cameraMatrix 是相机的内参矩阵，distCoeffs 是相机的畸变系数。函数执行后，pointsImage 将包含这些三维点投影到第 i 幅图像平面上的二维点坐标。</span></span><br></pre></td></tr></table></figure>
+<h2 id="collection-cpp"><a href="#collection-cpp" class="headerlink" title="collection.cpp"></a>collection.cpp</h2><h3 id="遥控手柄宏"><a href="#遥控手柄宏" class="headerlink" title="遥控手柄宏"></a>遥控手柄宏</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Joystick</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> JS_EVENT_BUTTON = <span class="number">0x01</span>; <span class="comment">// 遥控手柄宏：按钮类型 按下/释放</span></span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> JS_EVENT_AXIS = <span class="number">0x02</span>;   <span class="comment">// 遥控手柄宏：摇杆类型</span></span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> JS_EVENT_INIT = <span class="number">0x80</span>;   <span class="comment">// 遥控手柄宏：设备初始状态</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @brief 遥控手柄事件数据结构</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">EventJoy</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">unsigned</span> <span class="type">int</span> time;    <span class="comment">// 手柄触发时间：ms</span></span><br><span class="line">        <span class="type">short</span> value;          <span class="comment">// 操控值</span></span><br><span class="line">        <span class="type">unsigned</span> <span class="type">char</span> type;   <span class="comment">// 操控类型：按键/摇杆</span></span><br><span class="line">        <span class="type">unsigned</span> <span class="type">char</span> number; <span class="comment">// 编号</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">EventJoy</span> joy;</span><br><span class="line">    <span class="type">int</span> idFileJoy = <span class="number">0</span>;</span><br><span class="line">    std::unique_ptr&lt;std::thread&gt; threadJoy; <span class="comment">// 遥控手柄子线程</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="type">bool</span> sampleMore = <span class="literal">false</span>;   <span class="comment">// 连续图像采样使能</span></span><br><span class="line">    <span class="type">bool</span> sampleOnce = <span class="literal">false</span>;   <span class="comment">// 单次图像采样使能</span></span><br><span class="line">    <span class="type">float</span> speed = <span class="number">0</span>;           <span class="comment">// 车速：m/s</span></span><br><span class="line">    <span class="type">float</span> servo = PWMSERVOMID; <span class="comment">// 打舵：PWM</span></span><br><span class="line">    <span class="type">bool</span> ahead = <span class="literal">true</span>;         <span class="comment">// 车辆速度方向:默认向前</span></span><br><span class="line">    <span class="type">bool</span> uartSend = <span class="literal">false</span>;     <span class="comment">// 串口发送使能</span></span><br><span class="line">    <span class="type">bool</span> buzzer = <span class="literal">false</span>;       <span class="comment">// 提示音效</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @brief 解析函数</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="built_in">Joystick</span>(<span class="type">void</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 遥控手柄启动</span></span><br><span class="line">        idFileJoy = <span class="built_in">open</span>(<span class="string">&quot;/dev/input/js0&quot;</span>, O_RDONLY);</span><br><span class="line">        joy.number = <span class="number">0</span>;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @brief 遥控手柄线程关闭</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">close</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        threadJoy-&gt;<span class="built_in">join</span>();</span><br><span class="line">        <span class="comment">// close(idFileJoy);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @brief 遥控手柄子线程启动</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">start</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        threadJoy = std::<span class="built_in">make_unique</span>&lt;std::thread&gt;([<span class="keyword">this</span>]()</span><br><span class="line">                                                  &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">threadJoystick</span>();</span><br><span class="line">        &#125; &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * @brief 游戏手柄控制-多线程任务</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">threadJoystick</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">read</span>(idFileJoy, &amp;joy, <span class="built_in">sizeof</span>(joy));</span><br><span class="line">        <span class="type">int</span> type = JS_EVENT_BUTTON | JS_EVENT_INIT;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (joy.type == JS_EVENT_AXIS) <span class="comment">// 摇杆</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// cout &lt;&lt; &quot;AXIS: &quot; &lt;&lt; to_string(joy.number) &lt;&lt; &quot; | &quot; &lt;&lt; to_string(joy.value) &lt;&lt; endl;</span></span><br><span class="line">            <span class="keyword">switch</span> (joy.number)</span><br><span class="line">            &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>: <span class="comment">// 方向控制</span></span><br><span class="line">                servo = PWMSERVOMID + joy.value * (PWMSERVOMID - PWMSERVOMIN) / <span class="number">32767</span>;</span><br><span class="line">                uartSend = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">5</span>: <span class="comment">// 两档速度选择:慢速档</span></span><br><span class="line">                <span class="keyword">if</span> (joy.value &gt;= <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (ahead)</span><br><span class="line">                        speed = <span class="number">0.3</span>;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                        speed = <span class="number">-0.3</span>;</span><br><span class="line">                    uartSend = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    speed = <span class="number">0.0</span>;</span><br><span class="line">                    uartSend = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">7</span>:                <span class="comment">// 速度方向控制</span></span><br><span class="line">                <span class="keyword">if</span> (joy.value &lt; <span class="number">0</span>) <span class="comment">// 向前</span></span><br><span class="line">                &#123;</span><br><span class="line">                    ahead = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">if</span> (speed &lt; <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        speed = -speed;</span><br><span class="line">                        uartSend = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    buzzer = <span class="literal">true</span>; <span class="comment">// 蜂鸣器音效</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (joy.value &gt; <span class="number">1</span>) <span class="comment">// 向后</span></span><br><span class="line">                &#123;</span><br><span class="line">                    ahead = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">if</span> (speed &gt; <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        speed = -speed;</span><br><span class="line">                        uartSend = <span class="literal">true</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    buzzer = <span class="literal">true</span>; <span class="comment">// 蜂鸣器音效</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (joy.type == JS_EVENT_BUTTON) <span class="comment">// 按键</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// cout &lt;&lt; &quot;BUTTON: &quot; &lt;&lt; to_string(joy.number) &lt;&lt; &quot; | &quot; &lt;&lt; to_string(joy.value) &lt;&lt; endl;</span></span><br><span class="line">            <span class="keyword">switch</span> (joy.number)</span><br><span class="line">            &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">5</span>: <span class="comment">// 两档速度选择: 高速档</span></span><br><span class="line">                <span class="keyword">if</span> (joy.value &gt;= <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (ahead)</span><br><span class="line">                        speed = <span class="number">0.5</span>;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                        speed = <span class="number">-0.5</span>;</span><br><span class="line">                    uartSend = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    speed = <span class="number">0.0</span>;</span><br><span class="line">                    uartSend = <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>: <span class="comment">// 开始单次采图</span></span><br><span class="line">                <span class="keyword">if</span> (joy.value == <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    buzzer = <span class="literal">true</span>;     <span class="comment">// 蜂鸣器音效</span></span><br><span class="line">                    sampleOnce = <span class="literal">true</span>; <span class="comment">// 开启单张采图使能</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>: <span class="comment">// 开始连续采图</span></span><br><span class="line">                <span class="keyword">if</span> (joy.value == <span class="number">1</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    buzzer = <span class="literal">true</span>;     <span class="comment">// 蜂鸣器音效</span></span><br><span class="line">                    sampleMore = <span class="literal">true</span>; <span class="comment">// 开启连续采图使能</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>:                 <span class="comment">// 停止采图</span></span><br><span class="line">                <span class="keyword">if</span> (joy.value == <span class="number">1</span>) <span class="comment">// 关闭采图使能</span></span><br><span class="line">                &#123;</span><br><span class="line">                    sampleMore = <span class="literal">false</span>;</span><br><span class="line">                    sampleOnce = <span class="literal">false</span>;</span><br><span class="line">                    buzzer = <span class="literal">true</span>; <span class="comment">// 蜂鸣器音效</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">default</span>: <span class="comment">// 任意键停止运动</span></span><br><span class="line">                speed = <span class="number">0</span>;</span><br><span class="line">                uartSend = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="private（私有部分）"><a href="#private（私有部分）" class="headerlink" title="private（私有部分）:"></a>private（私有部分）:</h4><ol>
+<li>JS_EVENT_BUTTON  按钮类型</li>
+<li>JS_EVENT_AXIS  摇杆类型</li>
+<li>JS_EVENT_INIT  设备初始状态</li>
+<li>EventJoy结构体的joy  游戏手柄事件结构体(触发时间time，操控值value，操控类型type，操控编号number)  </li>
+<li>idFileJoy：文件描述符  </li>
+<li>threadJoy：子线程指针  (详情如下)</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">std::unique_ptr&lt;std::thread&gt; threadJoy; <span class="comment">// 遥控手柄子线程</span></span><br><span class="line"><span class="comment">//用于定义一个指向 std::thread 的智能指针</span></span><br><span class="line"><span class="comment">//std::unique_ptr 是 C++11 引入的一种智能指针，用于管理动态分配的对象。它保证每个动态分配的对象只能有一个所有者，当所有者（std::unique_ptr）被销毁时，它所管理的对象也会被自动销毁。</span></span><br><span class="line"><span class="comment">//std::thread 是 C++11 标准库中的一个类，用于表示一个可执行的线程。通过 std::thread，我们可以创建并管理独立的线程，这些线程可以并行执行不同的任务。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="public（公有部分）"><a href="#public（公有部分）" class="headerlink" title="public（公有部分）:"></a>public（公有部分）:</h4><ol>
+<li>bool sampleMore &#x3D; false;   &#x2F;&#x2F; 连续图像采样使能</li>
+<li>bool sampleOnce &#x3D; false;   &#x2F;&#x2F; 单次图像采样使能</li>
+<li>float speed &#x3D; 0;           &#x2F;&#x2F; 车速：m&#x2F;s</li>
+<li>float servo &#x3D; PWMSERVOMID; &#x2F;&#x2F; 打舵：PWM</li>
+<li>bool ahead &#x3D; true;         &#x2F;&#x2F; 车辆速度方向:默认向前</li>
+<li>bool uartSend &#x3D; false;     &#x2F;&#x2F; 串口发送使能</li>
+<li>bool buzzer &#x3D; false;       &#x2F;&#x2F; 提示音效</li>
+<li>同名构造函数joystick()—&gt;让文件描述符idFileJoy指向手柄事件（初始化）  </li>
+<li>关闭线程threadJoy</li>
+<li>开启线程threadJoy</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="type">void</span> <span class="title">start</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        threadJoy = std::<span class="built_in">make_unique</span>&lt;std::thread&gt;([<span class="keyword">this</span>]()</span><br><span class="line">                                                  &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">threadJoystick</span>();</span><br><span class="line">        &#125; &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// 该线程将不断调用 threadJoystick 方法来处理遥控手柄的输入事件。</span></span><br><span class="line"><span class="comment">//std::make_unique&lt;std::thread&gt;([this]()&#123;...&#125;)：使用 std::make_unique 创建一个 std::thread 对象的唯一指针，并将其赋值给 threadJoy。这里使用了 C++11 引入的 lambda 表达式作为线程函数的参数。</span></span><br><span class="line"><span class="comment">//[this]：lambda 表达式捕获列表中的 this 关键字表示捕获当前 Joystick 对象的指针，使得在 lambda 函数内部可以访问 Joystick 类的成员变量和方法。</span></span><br><span class="line"><span class="comment">//while (1) &#123; threadJoystick(); &#125;：线程函数是一个无限循环，不断调用 threadJoystick 方法。这意味着一旦线程启动，它将持续运行，不断读取和处理遥控手柄的输入事件，直到 Joystick 对象被销毁且 threadJoy 被自动销毁，从而终止线程。</span></span><br></pre></td></tr></table></figure>
+<ol start="11">
+<li>遥控线程任务threadJoystick</li>
+</ol>
+<h4 id="lambda表达式："><a href="#lambda表达式：" class="headerlink" title="lambda表达式："></a>lambda表达式：</h4><p>Lambda 表达式是 C++11 引入的一种简洁的定义匿名函数对象的方式。它们可以捕获外部变量，并用于需要函数对象的场合，如算法的标准库函数或作为线程函数。</p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">start</span><span class="params">(<span class="type">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    threadJoy = std::<span class="built_in">make_unique</span>&lt;std::thread&gt;([<span class="keyword">this</span>]()</span><br><span class="line">                                              &#123;</span><br><span class="line">        <span class="keyword">while</span> (<span class="number">1</span>) </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">threadJoystick</span>();</span><br><span class="line">        &#125; &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// [this]：捕获列表中的 this 关键字表示捕获当前 Joystick 对象的指针。这使得在 Lambda 表达式内部可以访问 Joystick 类的成员变量和方法。</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="主函数部分"><a href="#主函数部分" class="headerlink" title="主函数部分"></a>主函数部分</h3><h4 id="shared-ptr"><a href="#shared-ptr" class="headerlink" title="shared_ptr"></a>shared_ptr<Uart></h4><p>shared_ptr<Uart> uart &#x3D; make_shared<Uart>(“&#x2F;dev&#x2F;ttyUSB0”); &#x2F;&#x2F; 初始化串口驱动  </p>
+<hr>
+<p>语句用于创建一个指向 Uart 类实例的智能指针 uart，并通过构造函数传递设备文件路径 &#x2F;dev&#x2F;ttyUSB0 来初始化串口驱动。  </p>
+<h4 id="VideoCapture"><a href="#VideoCapture" class="headerlink" title="VideoCapture"></a>VideoCapture</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function">VideoCapture <span class="title">capture</span><span class="params">(<span class="string">&quot;/dev/video0&quot;</span>)</span></span>;</span><br><span class="line"><span class="comment">//VideoCapture capture(&quot;/dev/video0&quot;); 语句用于初始化一个 VideoCapture 对象，该对象用于从指定的视频源（在本例中是 /dev/video0）捕获视频帧。</span></span><br><span class="line"><span class="comment">//VideoCapture：这是 OpenCV 库中用于视频捕获的类。它提供了从摄像头、视频文件等视频源捕获视频帧的功能。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//通过调用 capture.isOpened() 方法来检查摄像头是否成功初始化。</span></span><br><span class="line"><span class="comment">//调用 capture.read(frame) 方法来从摄像头捕获视频帧，其中 frame 是一个 Mat 类型的对象，用于存储捕获到的图像数据。</span></span><br><span class="line"><span class="comment">//调用 capture.set() 方法来设置捕获属性，如图像的分辨率、帧率等。</span></span><br></pre></td></tr></table></figure>
+<h4 id="putText"><a href="#putText" class="headerlink" title="putText"></a>putText</h4><p>putText 是 OpenCV 库中的一个函数，用于在图像上指定位置添加文本。  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">putText</span>(frame, <span class="built_in">to_string</span>(index), <span class="built_in">Point</span>(<span class="number">10</span>, <span class="number">30</span>), cv::FONT_HERSHEY_TRIPLEX, <span class="number">1</span>, cv::<span class="built_in">Scalar</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">254</span>), <span class="number">1</span>, CV_AA); <span class="comment">// 显示图片保存序号</span></span><br><span class="line"><span class="comment">// imshow(&quot;ingFrame&quot;, frame);</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// frame：这是一个 Mat 类型的对象，代表要在其上添加文本的图像。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// to_string(index)：这是要添加到图像上的文本内容，这里使用 to_string 函数将整数 index 转换为字符串。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Point(10, 30)：这指定了文本在图像上的起始位置，其中 (10, 30) 分别表示文本左下角的 x 和 y 坐标。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// cv::FONT_HERSHEY_TRIPLEX：这是文本的字体类型。OpenCV 提供了多种字体类型，如 FONT_HERSHEY_SIMPLEX、FONT_HERSHEY_PLAIN 等。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1：这是字体的大小（缩放因子），可以根据需要调整。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// cv::Scalar(0, 0, 254)：这是文本的颜色，这里使用的是 BGR 格式，表示蓝色。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1：这是文本的线条粗细。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// CV_AA：这是抗锯齿标志，用于改善文本的渲染质量。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="img2video-cpp"><a href="#img2video-cpp" class="headerlink" title="img2video.cpp"></a>img2video.cpp</h2><ol>
+<li>帧率（frame_fps）：20帧&#x2F;s</li>
+<li>帧宽（frame_width）：每一帧的宽度，这里设置为320像素。</li>
+<li>帧高（frame_height）：每一帧的高度，这里设置为240像素。</li>
+</ol>
+<h3 id="VideoWriter"><a href="#VideoWriter" class="headerlink" title="VideoWriter"></a>VideoWriter</h3><p>在OpenCV中，VideoWriter类用于创建视频文件并向其中写入帧。它是处理视频输出的核心类。  </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">writer = <span class="built_in">VideoWriter</span>(<span class="string">&quot;../res/samples/sample.mp4&quot;</span>, <span class="built_in">CV_FOURCC</span>(<span class="string">&#x27;P&#x27;</span>, <span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;M&#x27;</span>, <span class="string">&#x27;1&#x27;</span>),</span><br><span class="line">                     frame_fps, <span class="built_in">Size</span>(frame_width, frame_height), <span class="literal">true</span>);</span><br><span class="line"><span class="comment">// 这行代码初始化了VideoWriter对象writer，其参数意义如下：</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第一个参数：&quot;../res/samples/sample.mp4&quot;，指定输出视频文件的路径和名称。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二个参数：CV_FOURCC(&#x27;P&#x27;, &#x27;I&#x27;, &#x27;M&#x27;, &#x27;1&#x27;)，指定视频编解码器的四字符代码（Four-Character Code, FOURCC）。&#x27;P&#x27;, &#x27;I&#x27;, &#x27;M&#x27;, &#x27;1&#x27;对应的是MPEG-1编解码器。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三个参数：frame_fps，指定视频的帧率，即每秒播放的帧数。在此代码中，帧率为20帧/秒。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第四个参数：Size(frame_width, frame_height)，指定视频帧的大小。Size是一个结构体，用于存储宽度和高度。在此代码中，帧的宽度为320像素，高度为240像素。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第五个参数：true，指定视频是否为彩色。true表示彩色视频，false表示灰度视频。</span></span><br></pre></td></tr></table></figure>
+<h3 id="writer-img"><a href="#writer-img" class="headerlink" title="writer &lt;&lt; img"></a>writer &lt;&lt; img</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  writer &lt;&lt; img;</span><br><span class="line"><span class="comment">//在img2video.cpp文件中，writer &lt;&lt; img;语句的作用是将img对象（一个Mat类型的图像）写入到之前通过VideoWriter对象writer初始化的视频文件中</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// writer对象：这是一个VideoWriter类型的对象，用于创建和写入视频文件。它已经在之前的代码中通过指定文件名、编解码器、帧率、帧大小和是否为彩色视频等参数进行了初始化。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// img对象：这是一个Mat类型的对象，代表一个图像。它通过imread函数从指定路径读取图像数据。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 循环结构：writer &lt;&lt; img;语句位于一个循环内部，该循环遍历一系列图像文件，并将它们逐个写入视频文件。</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/01/14/git%E5%AD%A6%E4%B9%A0.18633977/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">&lt;</strong>
+      <div class="article-nav-title">
+        
+          git学习
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/01/12/C++%E5%AD%A6%E4%B9%A0.18664576/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++学习</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2025 shenle
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C语言总笔记 | Shenle</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="C语言总笔记">
+<meta property="og:url" content="https://github.com/2575451471/2575451471.github.io/2025/02/15/C%E8%AF%AD%E8%A8%80%E6%80%BB%E7%AC%94%E8%AE%B0.18631720/index.html">
+<meta property="og:site_name" content="Shenle">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic.leetcode.cn/1680316893-oPmRdd-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%80%9D%E8%B7%AF.png">
+<meta property="og:image" content="https://img-blog.csdn.net/20180226001828381">
+<meta property="og:image" content="https://assets.leetcode.com/uploads/2022/12/14/binaryytreeedrawio-2.png">
+<meta property="og:image" content="https://pic.leetcode-cn.com/1615691379-TPWDJp-image.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023555541-1361764848.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023630143-950481288.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023650077-743926018.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023713303-1424274716.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023749029-1513305415.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023820389-2106563607.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023840599-2012547527.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023859734-190944554.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023926753-1399102749.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023943123-224640960.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226024003257-1856686428.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226024014653-708063090.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226024055346-468212515.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226024111422-1055591209.png">
+<meta property="article:published_time" content="2025-02-14T19:15:00.000Z">
+<meta property="article:modified_time" content="2025-02-14T20:26:54.334Z">
+<meta property="article:author" content="shenle">
+<meta property="article:tag" content="编程语言">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.leetcode.cn/1680316893-oPmRdd-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%80%9D%E8%B7%AF.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Shenle" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/header.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+			<h1 class="header-author"><a href="/">shenle</a></h1>
+		</hgroup>
+
+		
+			<p class="header-subtitle"></p>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">Home</a></li>
+				        
+							<li><a href="/archives">Archives</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/2575451471" title="github">github</a>
+					        
+								<a class="cnblogs" target="_blank" href="https://www.cnblogs.com/shenleblog" title="cnblogs">cnblogs</a>
+					        
+								<a class="qq" target="_blank" href="https://img2023.cnblogs.com/blog/3084836/202502/3084836-20250215043636691-2144966981.jpg" title="qq">qq</a>
+					        
+						</div>
+						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1941325363&auto=1&height=66"></iframe>
+							</div>
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">上课笔记</a> <a href="/tags/%E5%B0%8F%E8%AE%B0/" style="font-size: 15px;">小记</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F32/" style="font-size: 15px;">嵌入式32</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F51/" style="font-size: 10px;">嵌入式51</a> <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8Fti/" style="font-size: 10px;">嵌入式ti</a> <a href="/tags/%E6%99%BA%E8%83%BD%E8%BD%A6%E7%AB%9E%E8%B5%9B/" style="font-size: 10px;">智能车竞赛</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" style="font-size: 20px;">编程语言</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">噜啦啦!</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/header.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">Home</a></li>
+		        
+					<li><a href="/archives">Archives</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/2575451471" title="github">github</a>
+			        
+						<a class="cnblogs" target="_blank" href="https://www.cnblogs.com/shenleblog" title="cnblogs">cnblogs</a>
+			        
+						<a class="qq" target="_blank" href="https://img2023.cnblogs.com/blog/3084836/202502/3084836-20250215043636691-2144966981.jpg" title="qq">qq</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-C语言总笔记.18631720" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2025/02/15/C%E8%AF%AD%E8%A8%80%E6%80%BB%E7%AC%94%E8%AE%B0.18631720/" class="article-date">
+  	<time datetime="2025-02-14T19:15:00.000Z" itemprop="datePublished">2025-02-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C语言总笔记
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag">编程语言</a></li></ul>
+	</div>
+
+        
+
+        
+          
+<div class="counter-tag counter">
+    <span id="/2025/02/15/C%E8%AF%AD%E8%A8%80%E6%80%BB%E7%AC%94%E8%AE%B0.18631720/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="C语言总笔记">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <meta name="referrer" content="no-referrer"/>
+<span id="more"></span>
+
+
+
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="优先级最高的并不是真正意思上的运算符"><a href="#优先级最高的并不是真正意思上的运算符" class="headerlink" title="优先级最高的并不是真正意思上的运算符"></a><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E4%BC%98%E5%85%88%E7%BA%A7&spm=1001.2101.3001.7020">优先级</a>最高的并不是真正意思上的运算符</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>优先级</td>
+<td>运算符</td>
+<td>名称或含义</td>
+<td>使用形式</td>
+<td>结合方向</td>
+<td>说明</td>
+</tr>
+<tr>
+<td>1</td>
+<td>[ ]</td>
+<td>数字下标</td>
+<td>数组名[常量表达式]</td>
+<td>左到右</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>（ ）</td>
+<td>圆括号</td>
+<td>（表达式)&#x2F;函数名（形参表）</td>
+<td>左到右</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>.</td>
+<td>成员选择(对象)</td>
+<td>对象.成员名</td>
+<td>左到右</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>-&gt;</td>
+<td>成员选择(指针)</td>
+<td>对象指针-&gt;成员名</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="单目运算符"><a href="#单目运算符" class="headerlink" title="单目运算符"></a>单目<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%BF%90%E7%AE%97%E7%AC%A6&spm=1001.2101.3001.7020">运算符</a></h2><table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>运算符</th>
+<th>名称或含义</th>
+<th>使用形式</th>
+<th>结合方向</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>-</td>
+<td>负号运算符</td>
+<td>-表达式</td>
+<td>右到左</td>
+</tr>
+<tr>
+<td>2</td>
+<td>（类型）</td>
+<td>强制类型转换</td>
+<td>（数据类型）表达式</td>
+<td>右到左</td>
+</tr>
+<tr>
+<td>3</td>
+<td>++</td>
+<td>自增运算符</td>
+<td>++变量名&#x2F;变量名++</td>
+<td>右到左</td>
+</tr>
+<tr>
+<td>4</td>
+<td>- -</td>
+<td>自减运算符</td>
+<td>–变量名&#x2F;变量名–</td>
+<td>右到左</td>
+</tr>
+<tr>
+<td>5</td>
+<td>*</td>
+<td>取值运算符</td>
+<td>*指针变量</td>
+<td>右到左</td>
+</tr>
+<tr>
+<td>6</td>
+<td>&amp;</td>
+<td>取地址运算符</td>
+<td>&amp;变量名</td>
+<td>右到左</td>
+</tr>
+<tr>
+<td>7</td>
+<td>！</td>
+<td>逻辑非运算符</td>
+<td>！表达式</td>
+<td>右到左</td>
+</tr>
+<tr>
+<td>8</td>
+<td>~</td>
+<td>按位取反运算符</td>
+<td>~表达式</td>
+<td>右到左</td>
+</tr>
+<tr>
+<td>9</td>
+<td>sizeof</td>
+<td>长度运算符</td>
+<td>sizeof(表达式)</td>
+<td>右到左</td>
+</tr>
+</tbody></table>
+<h2 id="双目运算符"><a href="#双目运算符" class="headerlink" title="双目运算符"></a>双目运算符</h2><table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>运算符</th>
+<th>名称或含义</th>
+<th>使用形式</th>
+<th>结合方向</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>&#x2F;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>*</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>%</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>​	</p>
+<table>
+<thead>
+<tr>
+<th>优先级问题</th>
+<th>表达式</th>
+<th>经常误认为的结果</th>
+<th>实际结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.的优先级高于*</td>
+<td>*p.f</td>
+<td>p所指对象的字段f</td>
+<td>对p取f偏移，作为指针，然后进行解除引用操作，*（p.f）</td>
+</tr>
+<tr>
+<td>（）高于[ ]</td>
+<td>int (*ap)[n]</td>
+<td>xxxx</td>
+<td>ap是指向一个具有 n个int数组的指针</td>
+</tr>
+<tr>
+<td>[ ]高于 *</td>
+<td>int *ap[ ]</td>
+<td>ap是个指向int数组的指针，int(*ap)[ ]</td>
+<td>ap是个元素为int指针的数组 int *(ap[ ])</td>
+</tr>
+<tr>
+<td>函数( )高于*</td>
+<td>int *fp( )</td>
+<td>fp是个函数指针，所指函数返回int。int(*fp)( )</td>
+<td>fp是个函数，返回int *， int * (fp())</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;和!&#x3D;高于位操作</td>
+<td>（val &amp; mask !&#x3D;0）</td>
+<td>(val &amp; mask) !&#x3D; 0</td>
+<td>val &amp; (mask!&#x3D;0)</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;和!&#x3D;高于赋值符</td>
+<td>c &#x3D; getchar( ) !&#x3D; EOF</td>
+<td>(c &#x3D; getchar())!&#x3D;EOF</td>
+<td>c &#x3D; (getchar !&#x3D; EOF)</td>
+</tr>
+<tr>
+<td>算术运算符高于移位运算符</td>
+<td>msb&lt;&lt; 4 + lsb</td>
+<td>(mab&lt;&lt;4) +lsb</td>
+<td>msb&lt;&lt;(4+lsb)</td>
+</tr>
+</tbody></table>
+<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Quick_Sort</span><span class="params">(<span class="type">int</span> *arr, <span class="type">int</span> begin, <span class="type">int</span> end)</span><span class="comment">//快速排序,升序</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(begin &gt; end)<span class="comment">//只有一个数，基准确定，递归的出口</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="type">int</span> tmp = arr[begin];</span><br><span class="line">    <span class="type">int</span> i = begin;</span><br><span class="line">    <span class="type">int</span> j = end;</span><br><span class="line">    <span class="keyword">while</span>(i != j)&#123;</span><br><span class="line">        <span class="keyword">while</span>(arr[j] &gt;= tmp &amp;&amp; j &gt; i)</span><br><span class="line">            j--;</span><br><span class="line">        <span class="keyword">while</span>(arr[i] &lt;= tmp &amp;&amp; j &gt; i)</span><br><span class="line">            i++;</span><br><span class="line">        <span class="keyword">if</span>(j &gt; i)&#123;</span><br><span class="line">            <span class="type">int</span> t = arr[i];</span><br><span class="line">            arr[i] = arr[j];</span><br><span class="line">            arr[j] = t;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    arr[begin] = arr[i];</span><br><span class="line">    arr[i] = tmp;</span><br><span class="line">    Quick_Sort(arr, begin, i<span class="number">-1</span>);<span class="comment">//递归，对基准数的左边进行相同操作</span></span><br><span class="line">    Quick_Sort(arr, i+<span class="number">1</span>, end);<span class="comment">//递归，对基准数的右边进行相同操作</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> <span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>*a,<span class="type">const</span> <span class="type">void</span>*b)</span></span><br><span class="line"> &#123;</span><br><span class="line">     <span class="keyword">return</span> *(<span class="type">int</span>*)a&gt;*(<span class="type">int</span>*)b;<span class="comment">//大于升序，小于反之</span></span><br><span class="line"> &#125;</span><br><span class="line">qsort(nums,numsSize,<span class="keyword">sizeof</span>(<span class="type">int</span>),cmp);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二维数组的快速排序"><a href="#二维数组的快速排序" class="headerlink" title="二维数组的快速排序"></a>二维数组的快速排序</h2><p>原题：输入：score &#x3D; [[10,6,9,1],[7,5,11,2],[4,8,3,15]], k &#x3D; 2<br>输出：[[7,5,11,2],[10,6,9,1],[4,8,3,15]]<br>解释：在上图中，S 表示学生，E 表示考试。</p>
+<ul>
+<li>下标为 1 的学生在第 2 场考试取得的分数为 11 ，这是考试的最高分，所以 TA 需要排在第一。</li>
+<li>下标为 0 的学生在第 2 场考试取得的分数为 9 ，这是考试的第二高分，所以 TA 需要排在第二。</li>
+<li>下标为 2 的学生在第 2 场考试取得的分数为 3 ，这是考试的最低分，所以 TA 需要排在第三。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> sortCol;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *a, <span class="type">const</span> <span class="type">void</span> *b)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (*(<span class="type">int</span>**)b)[sortCol] - (*(<span class="type">int</span>**)a)[sortCol];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>** <span class="title function_">sortTheStudents</span><span class="params">(<span class="type">int</span>** score, <span class="type">int</span> scoreSize, <span class="type">int</span>* scoreColSize, <span class="type">int</span> k, <span class="type">int</span>* returnSize, <span class="type">int</span>** returnColumnSizes)</span>&#123;</span><br><span class="line">    sortCol = k;</span><br><span class="line">    qsort(score,scoreSize,<span class="keyword">sizeof</span>(<span class="type">int</span>*),cmp);</span><br><span class="line">    *returnSize = scoreSize;</span><br><span class="line">    *returnColumnSizes = scoreColSize;</span><br><span class="line">    <span class="keyword">return</span> score;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><h2 id="双指针用法"><a href="#双指针用法" class="headerlink" title="双指针用法"></a>双指针用法</h2><h2 id="注意：避免访问未初始化的指针"><a href="#注意：避免访问未初始化的指针" class="headerlink" title="注意：避免访问未初始化的指针"></a>注意：避免访问未初始化的指针</h2><p>eg：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> *a;<span class="comment">//未初始化的指针</span></span><br><span class="line"><span class="type">int</span> *a=&amp;b;<span class="comment">//初始化的指针</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数组的名字是数组第一个元素的地址"><a href="#数组的名字是数组第一个元素的地址" class="headerlink" title="数组的名字是数组第一个元素的地址"></a>数组的名字是数组第一个元素的地址</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d %d %d %d %d</span></span><br><span class="line"><span class="string">&quot;</span>,*a,*(a+<span class="number">1</span>),*(a+<span class="number">2</span>),*(a+<span class="number">3</span>),*(a+<span class="number">4</span>));</span><br><span class="line"><span class="comment">//result:1 2 3 4 5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="用指针直接定义一个字符串，用下标逐个获取每个元素"><a href="#用指针直接定义一个字符串，用下标逐个获取每个元素" class="headerlink" title="用指针直接定义一个字符串，用下标逐个获取每个元素"></a>用指针直接定义一个字符串，用下标逐个获取每个元素</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *str=<span class="string">&quot;i love you!&quot;</span>;</span><br><span class="line"><span class="type">int</span> i,len;</span><br><span class="line">len=<span class="built_in">strlen</span>(str);</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;len;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>,str[i]);</span><br><span class="line">    <span class="comment">//or printf(&quot;%c&quot;,*(str+i));</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//redult: i love you!</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数组和指针的区别"><a href="#数组和指针的区别" class="headerlink" title="数组和指针的区别"></a>数组和指针的区别</h2><p>数组名只是一个地址，不可修改。而指针变量是一个左值，是可修改的</p>
+<h2 id="指针数组"><a href="#指针数组" class="headerlink" title="指针数组"></a>指针数组</h2><p>存放指针变量的数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> b=<span class="number">2</span>;</span><br><span class="line"><span class="type">int</span> c=<span class="number">3</span>;</span><br><span class="line"><span class="type">int</span> d<span class="number">-4</span>;</span><br><span class="line"><span class="type">int</span> e=<span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> p*[<span class="number">5</span>]=&#123;&amp;a,&amp;b,&amp;c,&amp;d,&amp;e&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> *p2[<span class="number">5</span>]=&#123;<span class="string">&quot;虽然说&quot;</span>,<span class="string">&quot;人生&quot;</span>,<span class="string">&quot;并没有&quot;</span>,<span class="string">&quot;什么意义&quot;</span>,<span class="string">&quot;但是爱情&quot;</span>&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>,p2[<span class="number">3</span>]);<span class="comment">//p2[3]指向字符串，*p2[3]指向字符</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数组指针"><a href="#数组指针" class="headerlink" title="数组指针"></a>数组指针</h2><p>&#x2F;&#x2F;指向整个数组的指针</p>
+<p>&#x2F;&#x2F;之前的指针指向的是数组某个元素的地址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> temp[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line"> <span class="type">int</span> (*p)[<span class="number">5</span>]=&amp;temp;<span class="comment">//*p是一个指针，需要给指针一个地址,这里的数组指针指向的是整个数组，所以给整个数组的地址&amp;temp,而不是temp(第一个数组元素的地址==数组名)</span></span><br><span class="line"><span class="type">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,*(*p+i));<span class="comment">//*p指向&amp;temp,&amp;temp+i指向每个元素的地址，再对其取值运算得到每个元素的值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//一个大地址（整个数组）里嵌套了五个小地址（五个数组元素）</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二维数组和指针"><a href="#二维数组和指针" class="headerlink" title="二维数组和指针"></a>二维数组和指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> <span class="type">int</span> <span class="built_in">array</span>[<span class="number">5</span>][<span class="number">5</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="comment">//理解：array是二维数组名，是指向包含五个元素的数组的指针</span></span><br><span class="line"><span class="comment">//*(array+1)   ==   array[1]</span></span><br><span class="line"><span class="comment">//因为数组名是第一个元素的地址</span></span><br><span class="line"><span class="comment">//*(array+1) -&gt; array[1] -&gt; &amp;(array[1][0]);</span></span><br><span class="line"><span class="comment">//**(array+1)=*(*(array+1)+0)-&gt; array[1][0];</span></span><br><span class="line"><span class="comment">//*(*(array+2)+3) -&gt; array[2][3];</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*(<span class="built_in">array</span>+i)   ==   <span class="built_in">array</span>[i];</span><br><span class="line">*(*(<span class="built_in">array</span>+i)+j) == <span class="built_in">array</span>[i][j];</span><br><span class="line">*(*(*(<span class="built_in">array</span>+i)+j)+k)==<span class="built_in">array</span>[i][j][k];</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组指针和二维数组"><a href="#数组指针和二维数组" class="headerlink" title="数组指针和二维数组"></a>数组指针和二维数组</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="built_in">array</span>[<span class="number">2</span>][<span class="number">3</span>]=&#123;&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>&#125;,&#123;<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;&#125;;</span><br><span class="line"><span class="type">int</span> (*p)[<span class="number">3</span>]=<span class="built_in">array</span>;</span><br><span class="line"><span class="comment">//此时p和array基本一致</span></span><br><span class="line">*(<span class="built_in">array</span>+i)==*(p+i)   ==   <span class="built_in">array</span>[i];</span><br><span class="line">*(*(<span class="built_in">array</span>+i)+j)==*(*(p+i)+j) == <span class="built_in">array</span>[i][j];</span><br><span class="line">*(*(*(<span class="built_in">array</span>+i)+j)+k)==                      *(*(*(p+i)+j)+k)==<span class="built_in">array</span>[i][j][k];</span><br></pre></td></tr></table></figure>
+
+<h2 id="void指针和NULL指针"><a href="#void指针和NULL指针" class="headerlink" title="void指针和NULL指针"></a>void指针和NULL指针</h2><p>&#x2F;&#x2F;void指针，通用指针</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num=<span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> *p1=&amp;num;</span><br><span class="line"><span class="type">char</span> *p2=<span class="string">&quot;你好&quot;</span>;</span><br><span class="line"><span class="type">void</span> *p3;</span><br><span class="line">p3=p2;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p</span></span><br><span class="line"><span class="string">&quot;</span>,p3);</span><br><span class="line">p3=p1;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%p&quot;</span>,p3);</span><br></pre></td></tr></table></figure>
+
+<h1 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h1><p> 递归和回溯相辅相成</p>
+<p>(纯暴力，不高效)</p>
+<p>组合问题</p>
+<p>切割问题</p>
+<p>子集问题</p>
+<p>排列问题</p>
+<p>棋盘问题</p>
+<p>抽象为树形结构</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">backtracking</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span>(终止条件)</span><br><span class="line">	&#123;</span><br><span class="line">	 收集结果</span><br><span class="line">	 <span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(集合的元素集)<span class="comment">//单层搜索逻辑</span></span><br><span class="line">	&#123;</span><br><span class="line">	处理节点;</span><br><span class="line">	递归函数;</span><br><span class="line">	回溯操作；<span class="comment">//撤销处理节点的情况</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> count;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">findTargetSumWays</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    count = <span class="number">0</span>;</span><br><span class="line">    backtrack(nums, numsSize, target, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//例子</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">backtrack</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numSize, <span class="type">int</span> target, <span class="type">int</span> index, <span class="type">int</span> sum)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (index == numSize) &#123;</span><br><span class="line">        <span class="keyword">if</span> (sum == target) &#123;</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        backtrack(nums, numSize, target, index + <span class="number">1</span>, sum + nums[index]);</span><br><span class="line">        backtrack(nums, numSize, target, index + <span class="number">1</span>, sum - nums[index]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h1><p> <img src="https://pic.leetcode.cn/1680316893-oPmRdd-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%80%9D%E8%B7%AF.png" alt="滑动窗口思路.png"> </p>
+<p>（属于双指针）</p>
+<h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><p>高效的散列，俗称哈希(基于快速存取的角度设计的，典型的空间换时间的做法)</p>
+<p>通过把关键码值key（编号）映射到表中一个位置（数组的下标）来访问记录，以加快访问的速度。这个映射函数就叫做散列函数，存放记录的数组叫做散列表</p>
+<table>
+<thead>
+<tr>
+<th>键KEY</th>
+<th>组员的编号，如1，5，19……</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>值VALUE</td>
+<td>组员的其他信息（包含姓名，年龄，战斗力等等）</td>
+</tr>
+<tr>
+<td>索引</td>
+<td>数组的下标0，1，2，3，4（用以快速定位和检索数据）</td>
+</tr>
+<tr>
+<td>哈希桶</td>
+<td>保存索引的数组（链表或者数组）数组成员为每一个索引值相同的多个元素</td>
+</tr>
+<tr>
+<td>哈希函数</td>
+<td>将文件编号映射到索引上，采用求余法。如：文件编号 19</td>
+</tr>
+</tbody></table>
+<p>1eg</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> DEFAULT_SIZE  16<span class="comment">//索引数组的大小</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">ListNode</span>//定义一个链表</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> _<span class="title">ListNode</span> *<span class="title">next</span>;</span><span class="comment">//链表指向下一个元素</span></span><br><span class="line">    <span class="type">int</span> key;<span class="comment">//键值</span></span><br><span class="line">    <span class="type">void</span> *data;<span class="comment">//数据value</span></span><br><span class="line">&#125;ListNode;</span><br><span class="line"><span class="keyword">typedef</span> ListNode *List;<span class="comment">//当做一个链表用</span></span><br><span class="line"><span class="keyword">typedef</span> ListNode *Element;<span class="comment">//当作一个元素（两者概念不一样，但实际时同一个东西）</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">HashTable</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> TableSize;</span><br><span class="line">    List *Thelists; <span class="comment">//不知道哈希桶有多少个，动态分配</span></span><br><span class="line">&#125;HashTable;</span><br><span class="line"><span class="comment">/*根据key计算索引，定位哈希桶的位置*/</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">Hash</span><span class="params">(<span class="type">int</span> key,<span class="type">int</span> TableSize)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> (key%TableSize);<span class="comment">//求余定位</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//哈希表初始化</span></span><br><span class="line">HashiTable *<span class="title function_">InitHash</span><span class="params">(<span class="type">int</span> TableSize)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>;</span><br><span class="line">    HashTable *hTable = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span>(TableSize&lt;=<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        TableSize=DEFAULT_SIZE;</span><br><span class="line">    &#125;</span><br><span class="line">    hTable=(HashTable*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(HashTable));</span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">NULL</span>==hTable)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;HashTable malloc error.</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    hTable-&gt;TableSize=TableSize;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//为哈希桶分配内存空间，其为一个指针数组</span></span><br><span class="line">    hTable-&gt;Thelists=(List*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(List)*TableSize);</span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">NULL</span>=hTable-&gt;Thelists)</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h1><p>有序升序数组查找target,没有则返回-1</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">search</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i=<span class="number">0</span>,j=numsSize<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=j)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> temp=i+(j-i)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[temp]==target)<span class="keyword">return</span> temp;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[temp]&gt;target)</span><br><span class="line">        &#123;</span><br><span class="line">            j=temp<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[temp]&lt;target)</span><br><span class="line">        &#123;</span><br><span class="line">            i=temp+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p>暴力直接建树</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;<span class="comment">//节点存储的数据</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">left</span>;</span><span class="comment">//节点指向下一个左边的节点</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">right</span>;</span><span class="comment">//节点指向下一个右边的节点</span></span><br><span class="line">&#125;Node;   <span class="comment">//将 struct node 简写成 Node;</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">preorder</span><span class="params">(Node* node)</span></span><br><span class="line">&#123;<span class="comment">//先序遍历,先走根再走左边再走右边(根-&gt;左-&gt;右)</span></span><br><span class="line">    <span class="keyword">if</span>(node!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d</span></span><br><span class="line"><span class="string">&quot;</span>,node-&gt;data);<span class="comment">//这里不能用node.data,因为这里node是一个指针，node-&gt;data相当于（*node）.data;</span></span><br><span class="line">        preorder(node-&gt;left);<span class="comment">//遍历node的左边</span></span><br><span class="line">        preorder(node-&gt;right);<span class="comment">//遍历node的右边</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">inorder</span><span class="params">(Node* node)</span></span><br><span class="line">&#123;<span class="comment">//中序遍历,先走左边再走根再走右边(左-&gt;根-&gt;右)</span></span><br><span class="line">    <span class="keyword">if</span>(node!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        inorder(node-&gt;left);<span class="comment">//遍历node的左边</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d</span></span><br><span class="line"><span class="string">&quot;</span>,node-&gt;data);<span class="comment">//这里不能用node.data,因为这里node是一个指针，node-&gt;data相当于（*node）.data;</span></span><br><span class="line">        inorder(node-&gt;right);<span class="comment">//遍历node的右边</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">postorder</span><span class="params">(Node* node)</span></span><br><span class="line">&#123;<span class="comment">//后序遍历,先走左边再走右边再走根(左-&gt;右-&gt;根)</span></span><br><span class="line">    <span class="keyword">if</span>(node!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        postorder(node-&gt;left);<span class="comment">//遍历node的左边</span></span><br><span class="line">        postorder(node-&gt;right);<span class="comment">//遍历node的右边</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d</span></span><br><span class="line"><span class="string">&quot;</span>,node-&gt;data);<span class="comment">//这里不能用node.data,因为这里node是一个指针，node-&gt;data相当于（*node）.data;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span><span class="comment">//主函数</span></span><br><span class="line">&#123;</span><br><span class="line">    Node n1,n2,n3,n4;<span class="comment">//定义四个节点</span></span><br><span class="line">    n1.data=<span class="number">5</span>;</span><br><span class="line">    n2.data=<span class="number">6</span>;</span><br><span class="line">    n3.data=<span class="number">7</span>;</span><br><span class="line">    n4.data=<span class="number">8</span>;<span class="comment">//赋值四个节点所存储的数据</span></span><br><span class="line">    </span><br><span class="line">    n1.left=&amp;n2;<span class="comment">//n1的左下节点指向n2；</span></span><br><span class="line">    n1.right=&amp;n3;<span class="comment">//n1的右边连着n3；</span></span><br><span class="line">    n2.left=&amp;n4;<span class="comment">//n2的左边连着n4</span></span><br><span class="line">    n2.right=<span class="literal">NULL</span>;<span class="comment">//安全点</span></span><br><span class="line">    n3.left=<span class="literal">NULL</span>;<span class="comment">//安全点</span></span><br><span class="line">    n3.right=<span class="literal">NULL</span>;<span class="comment">//安全点</span></span><br><span class="line">    n4.left=<span class="literal">NULL</span>;<span class="comment">//安全点</span></span><br><span class="line">    n4.right=<span class="literal">NULL</span>;<span class="comment">//安全点  </span></span><br><span class="line">    </span><br><span class="line">    preorder(&amp;n1);<span class="comment">//放根节点（不能直接放n1,n1是结构变量，应该放指针，也就是放该结构变量的地址）answer:5 6 8 7</span></span><br><span class="line">     inorder(&amp;n1);<span class="comment">//放根节点（不能直接放n1,n1是结构变量，应该放指针，也就是放该结构变量的地址）answer:8 6 5 7</span></span><br><span class="line">    postorder(&amp;n1);<span class="comment">//放根节点（不能直接放n1,n1是结构变量，应该放指针，也就是放该结构变量的地址）answer:8 6 7 5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Binary Search Tree:二叉搜索树（BST）：降低搜索复杂度</p>
+<p>特点：每一个根节点一定比左节点大，比右节点小</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> data;<span class="comment">//节点存储的数据</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">left</span>;</span><span class="comment">//节点指向下一个左边的节点</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span>* <span class="title">right</span>;</span><span class="comment">//节点指向下一个右边的节点</span></span><br><span class="line">&#125;Node;   <span class="comment">//将 struct node 简写成 Node;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    Node *root;<span class="comment">//要访问树的话只要访问到这棵树的根节点就行</span></span><br><span class="line">&#125;Tree;</span><br><span class="line"><span class="type">void</span> <span class="title function_">insert</span><span class="params">(Tree *tree,<span class="type">int</span> value)</span><span class="comment">//往一棵树里面插入一个数字value</span></span><br><span class="line">&#123;<span class="comment">//将value包装成一个节点</span></span><br><span class="line">    Node *node=<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(Node));<span class="comment">//动态分配，当这段子函数退出时，这个node不会被程序销毁掉</span></span><br><span class="line">    node-&gt;data=value<span class="comment">//在该节点内存入value值</span></span><br><span class="line">    node-&gt;left=<span class="literal">NULL</span><span class="comment">//新节点，左右都没有东西    </span></span><br><span class="line">    node-&gt;left=<span class="literal">NULL</span><span class="comment">//新节点，左右都没有东西        </span></span><br><span class="line">    </span><br><span class="line">        <span class="keyword">if</span>(tree-&gt;root==<span class="literal">NULL</span>)<span class="comment">//如果树本身就是空的话</span></span><br><span class="line">        &#123;</span><br><span class="line">            tree-&gt;root=node;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="comment">//如果树不是空的</span></span><br><span class="line">        &#123;</span><br><span class="line">			Node *temp=tree-&gt;root;<span class="comment">//定义一个临时节点等于树根和value作比较，</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><h2 id="实例：链表的中间节点"><a href="#实例：链表的中间节点" class="headerlink" title="实例：链表的中间节点"></a>实例：链表的中间节点</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">输出：[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">解释：链表只有一个中间结点，值为 <span class="number">3</span> 。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> ListNode* <span class="title function_">middleNode</span><span class="params">(<span class="keyword">struct</span> ListNode* head)</span>&#123;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>*<span class="title">p</span>=</span>head,*q=head;</span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="literal">NULL</span>&amp;&amp;p-&gt;next!=<span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            p=p-&gt;next-&gt;next;</span><br><span class="line">            q=q-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> q;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="实例：合并两个有序链表"><a href="#实例：合并两个有序链表" class="headerlink" title="实例：合并两个有序链表"></a>实例：合并两个有序链表</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：l1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>], l2 = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">输出：[<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> ListNode* <span class="title function_">mergeTwoLists</span><span class="params">(<span class="keyword">struct</span> ListNode* list1, <span class="keyword">struct</span> ListNode* list2)</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">list3</span>=</span>(<span class="keyword">struct</span> ListNode*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> ListNode));</span><br><span class="line">    list3-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>*<span class="title">p</span>=</span>list3,*head=list3;</span><br><span class="line">    <span class="keyword">while</span>(list1!=<span class="literal">NULL</span>&amp;&amp;list2!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(list1-&gt;val&lt;=list2-&gt;val)</span><br><span class="line">        &#123;</span><br><span class="line">            p-&gt;next=list1;</span><br><span class="line">            list1=list1-&gt;next;</span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">           p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">             p-&gt;next=list2;</span><br><span class="line">            list2=list2-&gt;next;</span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">           p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(list1==<span class="literal">NULL</span>&amp;&amp;list2!=<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">         p-&gt;next=list2;</span><br><span class="line">            list2=list2-&gt;next;</span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">           p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(list1!=<span class="literal">NULL</span>&amp;&amp;list2==<span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">         p-&gt;next=list1;</span><br><span class="line">            list1=list1-&gt;next;</span><br><span class="line">            p=p-&gt;next;</span><br><span class="line">           p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> head-&gt;next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二叉链表层序遍历"><a href="#二叉链表层序遍历" class="headerlink" title="二叉链表层序遍历"></a>二叉链表层序遍历</h2><p> <img src="https://img-blog.csdn.net/20180226001828381" alt="img"> </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*题目：</span></span><br><span class="line"><span class="comment">给你一棵二叉树的根节点 root 和一个正整数 k 。</span></span><br><span class="line"><span class="comment">树中的 层和 是指 同一层 上节点值的总和。</span></span><br><span class="line"><span class="comment">返回树中第 k 大的层和（不一定不同）。如果树少于 k 层，则返回 -1 。</span></span><br><span class="line"><span class="comment">注意，如果两个节点与根节点的距离相同，则认为它们在同一层。*/</span></span><br></pre></td></tr></table></figure>
+
+<p> <img src="https://assets.leetcode.com/uploads/2022/12/14/binaryytreeedrawio-2.png" alt="img"> </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     struct TreeNode *right;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a,<span class="type">const</span> <span class="type">void</span>* b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//return *(long long int *)b-*(long long int *)a;//不写这条</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> x =  *(<span class="type">long</span> <span class="type">long</span> *)b;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> y = *(<span class="type">long</span> <span class="type">long</span> *)a;</span><br><span class="line">    <span class="keyword">if</span> (x == y) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (x &gt; y) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="title function_">kthLargestLevelSum</span><span class="params">(<span class="keyword">struct</span> TreeNode* root, <span class="type">int</span> k)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> <span class="type">int</span> sz[<span class="number">100000</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">//计算每一层数值</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span>* <span class="title">t</span>[2][40000];</span></span><br><span class="line"><span class="comment">//定义一个二维数组存放每一层的指针,</span></span><br><span class="line"><span class="comment">//我的想法是不把树存成线性的,而是分层存放</span></span><br><span class="line"><span class="comment">//由于有的样例层数过多所以要哈希一次</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;<span class="number">40000</span>;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            t[i][j]=<span class="literal">NULL</span>;<span class="comment">//初始化</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    t[<span class="number">0</span>][<span class="number">0</span>]=root;<span class="comment">//第一个放进去</span></span><br><span class="line">    <span class="keyword">if</span>(root==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> <span class="type">int</span> ceng=<span class="number">0</span>;<span class="comment">//计算多少层</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> <span class="type">int</span> next=<span class="number">0</span>;<span class="comment">//用于存放下一层</span></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> <span class="type">int</span> l=<span class="number">0</span>;<span class="comment">//用于遍历当前层</span></span><br><span class="line">    <span class="keyword">while</span>(t[ceng%<span class="number">2</span>][<span class="number">0</span>]!=<span class="literal">NULL</span>)<span class="comment">//循环条件是当前层得有东西</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(t[ceng%<span class="number">2</span>][l]==<span class="literal">NULL</span>)<span class="comment">//当当前层走到结尾时,要换层</span></span><br><span class="line">      &#123;</span><br><span class="line">        t[ceng%<span class="number">2</span>][<span class="number">0</span>]=<span class="literal">NULL</span>;<span class="comment">//给当前用于判断是否要循环的头指针给NULL了</span></span><br><span class="line">        ceng++;</span><br><span class="line">        next=<span class="number">0</span>;<span class="comment">//初始化</span></span><br><span class="line">        l=<span class="number">0</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">      &#123;</span><br><span class="line">          <span class="comment">//有东西就放到下一层</span></span><br><span class="line">          <span class="keyword">if</span>(t[ceng%<span class="number">2</span>][l]-&gt;left!=<span class="literal">NULL</span>)  </span><br><span class="line">          t[(ceng+<span class="number">1</span>)%<span class="number">2</span>][next++]=t[(ceng)%<span class="number">2</span>][l]-&gt;left;</span><br><span class="line">          <span class="keyword">if</span>(t[ceng%<span class="number">2</span>][l]-&gt;right!=<span class="literal">NULL</span>) </span><br><span class="line">          t[(ceng+<span class="number">1</span>)%<span class="number">2</span>][next++]=t[(ceng)%<span class="number">2</span>][l]-&gt;right;</span><br><span class="line">          <span class="comment">//同时计算这一层的数值</span></span><br><span class="line">          sz[ceng]+=t[ceng%<span class="number">2</span>][l]-&gt;val;</span><br><span class="line">          <span class="keyword">if</span>(l&gt;<span class="number">0</span>) t[ceng%<span class="number">2</span>][l]=<span class="literal">NULL</span>;</span><br><span class="line">          <span class="comment">//给搜索过的地方置空,但保留判断循环的头部指针</span></span><br><span class="line">          l++;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    qsort(sz,ceng,<span class="keyword">sizeof</span>(sz[<span class="number">0</span>]),cmp);<span class="comment">//从小到大排列</span></span><br><span class="line">    <span class="keyword">if</span>(k&gt;ceng) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> sz[k<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h1><p>位运算的由来<br>在计算机里面，任何数据最终都是用数字来表示的（不管是我们平时用的软件，看的图片，视频，还是文字）。<br>并且计算机运算单元只认识高低电位，转化成我们认识的逻辑，也就是 0 1 。</p>
+<p>这就是导致计算机里面任何数据最终都是用二进制（0 1）来保存的数字。只是我们平时看到的图片、文字、软件都只从二进行数字转化而来的。</p>
+<p>位运算符</p>
+<p>![1679829103586](C:\Users\86177\AppData\Roaming\Typora	ypora-user-images\1679829103586.png)</p>
+<p> <img src="https://pic.leetcode-cn.com/1615691379-TPWDJp-image.png" alt="image.png"> </p>
+<h2 id="常用位操作"><a href="#常用位操作" class="headerlink" title="常用位操作"></a>常用位操作</h2><p>判断奇偶<br>(x &amp; 1) &#x3D;&#x3D; 1 —等价—&gt; (x % 2 &#x3D;&#x3D; 1)<br>(x &amp; 1) &#x3D;&#x3D; 0 —等价—&gt; (x % 2 &#x3D;&#x3D; 0)<br>x &#x2F; 2 —等价—&gt; x &gt;&gt; 1<br>x &amp;&#x3D; (x - 1) ——&gt; 把x最低位的二进制1给去掉<br>x &amp; -x —–&gt; 得到最低位的1<br>x &amp; <del>x —–&gt; 0<br>指定位置的位运算<br>将X最右边的n位清零：x &amp; (</del>0 &lt;&lt; n)<br>获取x的第n位值：(x &gt;&gt; n) &amp; 1<br>获取x的第n位的幂值：x &amp; (1 &lt;&lt; n)<br>仅将第n位置为1：x | (1 &lt;&lt; n)<br>仅将第n位置为0：x &amp; (<del>(1 &lt;&lt; n))<br>将x最高位至第n位（含）清零：x &amp; ((1 &lt;&lt; n) - 1)<br>将第n位至第0位（含）清零：x &amp; (</del>((1 &lt;&lt; (n + 1)) - 1))<br>异或结合律</p>
+<p>x ^ 0 &#x3D; x, x ^ x &#x3D; 0<br>x ^ (<del>0) &#x3D; ~x, x ^ (</del>x) &#x3D; ~0<br>a ^ b &#x3D; c, a ^ c &#x3D; b, b ^ c &#x3D; a</p>
+<p>(有没有点乘法结合律的意思)<br>字母表示：(a ^ b) ^ c &#x3D; a ^ (b ^ c)<br>图形表示：(☆ ^ ◇) ^ △ &#x3D; ☆ ^ (◇ ^ △)</p>
+<h2 id="UINT32-C"><a href="#UINT32-C" class="headerlink" title="UINT32_C"></a>UINT32_C</h2><p> UINT32_C是一个宏，它定义了<a target="_blank" rel="noopener" href="https://www.itbaoku.cn/tag/types">类型</a>uint_least32_t的整数常数. </p>
+<p>c - 1 &lt;&lt; 31不能用 ‘int’类型表示吗？</p>
+<p>在此代码上</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">uint32_t</span> z;</span><br><span class="line">z = <span class="number">1</span> &lt;&lt; <span class="number">31</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>最佳答案</strong></p>
+<p>使1无符号:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">uint32_t</span> z;</span><br><span class="line">z = UINT32_C(<span class="number">1</span>) &lt;&lt; <span class="number">31</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="异或交换"><a href="#异或交换" class="headerlink" title="异或交换"></a>异或交换</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x=<span class="number">10</span>,y=<span class="number">7</span>;</span><br><span class="line">x=x^y;</span><br><span class="line">y=x^y;</span><br><span class="line">x=x^y;</span><br><span class="line"><span class="comment">//此时x=7,y=10;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个函数功能：返回输入数据中，<strong>二进制中‘1’的个数</strong>。</p>
+<p>对于不同的使用类型，可以采用采用以下函数：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">__builtin_popcount = <span class="type">int</span></span><br><span class="line">__builtin_popcountl = <span class="type">long</span> <span class="type">int</span></span><br><span class="line">__builtin_popcountll = <span class="type">long</span> <span class="type">long</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-builtin-ctz-buitlin-ctzll"><a href="#1-builtin-ctz-buitlin-ctzll" class="headerlink" title="1  __builtin_ctz( )  &#x2F;  __buitlin_ctzll( )"></a>1  __builtin_ctz( )  &#x2F;  __buitlin_ctzll( )</h2><p>用法：返回括号内数的二进制表示形式中末尾0的个数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x=__builtin_ctz(<span class="number">64</span>);</span><br><span class="line"> <span class="comment">//64--&gt;1000000</span></span><br><span class="line"> <span class="comment">//x=6;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-builtin-clz-builtin-clzll"><a href="#2-builtin-clz-builtin-clzll" class="headerlink" title="2 __builtin_clz( )  &#x2F;  __builtin_clzll( )"></a>2 __builtin_clz( )  &#x2F;  __builtin_clzll( )</h2><p>注：ll指long long,是64位</p>
+<p>用法：返回括号内数的二进制表示形式中前导0的个数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x=__builtin_clz(<span class="number">63</span>);</span><br><span class="line"> <span class="comment">//63--&gt;0000 0000 0000 0000 0000 0000 0011 1111;</span></span><br><span class="line"> <span class="comment">//x=26;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-builtin-popcount"><a href="#3-builtin-popcount" class="headerlink" title="3 __builtin_popcount( )"></a>3 __builtin_popcount( )</h2><p>用法：返回括号内数的二进制表示形式中1的个数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x= __builtin_popcount(<span class="number">4095</span>);</span><br><span class="line"> <span class="comment">//4095--&gt;1111 1111 1111;</span></span><br><span class="line"> <span class="comment">//x=12;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-builtin-parity"><a href="#4-builtin-parity" class="headerlink" title="4 __builtin_parity( )"></a>4 __builtin_parity( )</h2><p>用法：返回括号内数的二进制表示形式中1的个数的奇偶性（偶：0，奇：1）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="type">int</span> x=__builtin_parity(<span class="number">1</span>);</span><br><span class="line">  <span class="comment">//x=1;</span></span><br><span class="line"><span class="comment">//输出：1</span></span><br><span class="line"><span class="comment">//1里面有1个1，所以当然输出1咯。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-builtin-ffs"><a href="#5-builtin-ffs" class="headerlink" title="5 __builtin_ffs( )"></a>5 __builtin_ffs( )</h2><p>用法：返回括号内数的二进制表示形式中最后一个1在第几位（从后往前）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="type">int</span> x=__builtin_ffs(<span class="number">84</span>);</span><br><span class="line">  <span class="comment">//x=3;</span></span><br><span class="line"><span class="comment">//输出：3</span></span><br><span class="line"><span class="comment">//84=(101100)，所以是3。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-builtin-sqrt"><a href="#6-builtin-sqrt" class="headerlink" title="6 __builtin_sqrt( )"></a>6 __builtin_sqrt( )</h2><p>用法：快速开平方。(8位)</p>
+<h2 id="7-builtin-sqrtf"><a href="#7-builtin-sqrtf" class="headerlink" title="7 __builtin_sqrtf( )"></a>7 __builtin_sqrtf( )</h2><p>用法：快速开平方。（4位）</p>
+<p>来自陕西</p>
+<h1 id="C语言刷题常用基础知识"><a href="#C语言刷题常用基础知识" class="headerlink" title="C语言刷题常用基础知识"></a>C语言刷题常用基础知识</h1><h2 id="一、数组"><a href="#一、数组" class="headerlink" title="一、数组"></a>一、数组</h2><ol>
+<li><p>数组的申请</p>
+<p>a. 一维数组的申请</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* num = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<p>b. 二维数组的申请</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>** num = (<span class="type">int</span>**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>*) * <span class="number">10</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    num[i] = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>c. 数组都赋0值</p>
+<p>对于malloc申请的数组要这样：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* num = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">10</span>);</span><br><span class="line"><span class="built_in">memset</span>(num, <span class="number">0</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<p>对于非malloc申请的数组要这样:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>(num, <span class="number">0</span>, <span class="keyword">sizeof</span>(num));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>比较函数(入参为malloc申请的数组)</p>
+<p>a. 一维数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a, <span class="type">const</span> <span class="type">void</span>* b)</span> &#123;</span><br><span class="line">    <span class="type">int</span>* aa = (<span class="type">int</span>*)a;</span><br><span class="line">    <span class="type">int</span>* bb = (<span class="type">int</span>*)b;</span><br><span class="line">    <span class="comment">//return *aa - *bb; //从小到大排序</span></span><br><span class="line">    <span class="keyword">return</span> *bb - *aa; <span class="comment">//从大到小排序</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>b. 二维数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设数组是2列</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a, <span class="type">const</span> <span class="type">void</span>* b)</span> &#123;</span><br><span class="line">    <span class="type">int</span>* aa = *(<span class="type">int</span>**)a;</span><br><span class="line">    <span class="type">int</span>* bb = *(<span class="type">int</span>**)b;</span><br><span class="line">    <span class="comment">//0列相同时，比较1列</span></span><br><span class="line">    <span class="keyword">if</span> (aa[<span class="number">0</span>] == bb[<span class="number">0</span>]) &#123;</span><br><span class="line">        <span class="comment">//return aa[1] - bb[1]; //从小到大排序</span></span><br><span class="line">        <span class="keyword">return</span> bb[<span class="number">1</span>] - aa[<span class="number">1</span>]; <span class="comment">//从大到小排序</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//0列不相同时</span></span><br><span class="line">    <span class="comment">//return aa[1] - bb[1]; //从小到大排序</span></span><br><span class="line">    <span class="keyword">return</span> bb[<span class="number">1</span>] - aa[<span class="number">1</span>]; <span class="comment">//从大到小排序</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>比较函数有了后，就可以进行排序，用qsort</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如对 int* nums 进行排序，数组大小为10，比较函数为cmp</span></span><br><span class="line"><span class="comment">//第一个参数为数组，第二个参数为数组大小，第三个参数为数组里单个元素的大小，第四个参数为比较函数cmp</span></span><br><span class="line">qsort(nums, <span class="number">10</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>), cmp); </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>力扣实现函数中</p>
+<p>int* returnSize</p>
+<p>及</p>
+<p>int** returnColumnSize</p>
+<p>的说明</p>
+<p>int* returnSize 用来存二维数组的行的大小，用指针是方面时实修改大小，比如有10行，就这样写：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*returnSize = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<p>int** returnColumnSize 用来存二维数组列的大小，这里是用二维指针存，第一维用来指向这个数组，第二维用来指向每列的大小，给returnColumnSize赋值的时候要先申请空间，比如有size列，每列大小都为10，就这样写：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*returnColumnSize = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">    (*returnColumnSize)[i] = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>** <span class="title function_">myMalloc</span><span class="params">(<span class="type">int</span> r, <span class="type">int</span> c, <span class="type">int</span>* returnSize, <span class="type">int</span>** returnColumnSizes)</span>&#123;</span><br><span class="line">    <span class="type">int</span>** ret = (<span class="type">int</span>**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>*) * r);</span><br><span class="line">    *returnColumnSizes = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * r);</span><br><span class="line">    *returnSize = r;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)&#123;</span><br><span class="line">        ret[i] = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * c);</span><br><span class="line">        (*returnColumnSizes)[i] = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i,j;</span><br><span class="line">    <span class="type">int</span> r = imageSize;</span><br><span class="line">    <span class="type">int</span> c = imageColSize[<span class="number">0</span>];</span><br><span class="line">    <span class="type">int</span>** ret = myMalloc(r,c,returnSize,returnColumnSizes);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二、字符串"><a href="#二、字符串" class="headerlink" title="二、字符串"></a>二、字符串</h2><p>常用字符串函数有如下这些：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">strstr</span>(arr, tmp); <span class="comment">//在arr中从左到右查找第一个tmp，找到返回tmp开头的字符串的指针</span></span><br><span class="line"><span class="built_in">strchr</span>(arr, ch); <span class="comment">//在arr判断是否有ch这个字符，没有的话返回NULL，有的话返回非空</span></span><br><span class="line"><span class="built_in">strcmp</span>(arr1, arr2); <span class="comment">//比较arr1和arr2的大小，arr1大返回正值，arr1小返回负值，arr1和arr2相等返回0</span></span><br><span class="line"><span class="built_in">strcpy</span>(arr, tmp, tmp_size); <span class="comment">//把tmp字符串复制到arr字符串里</span></span><br><span class="line"><span class="built_in">strcat</span>(arr, tmp); <span class="comment">//将tmp字符串拼接到arr字符串的末尾</span></span><br><span class="line">strtok(arr, tmp); <span class="comment">//按tmp分割字符串arr，返回第一个分割的部分</span></span><br></pre></td></tr></table></figure>
+
+<p>这里把完整的分割字符串过程写一下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//strtok会使原字符串arr会变化成去掉第一个分割后的剩余字符串，所以分割前请先复制原串</span></span><br><span class="line"><span class="comment">//这里假设被分割成row个，每个的长度最长为col，用out来存每个分割部分</span></span><br><span class="line"><span class="type">char</span>** out = (<span class="type">char</span>**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>*) * row);</span><br><span class="line"><span class="type">int</span> idx = <span class="number">0</span>;</span><br><span class="line"><span class="type">char</span>* p = strtok(arr, tmp);</span><br><span class="line"><span class="keyword">while</span> (p != <span class="literal">NULL</span>) &#123;</span><br><span class="line">    out[idx] = (<span class="type">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">char</span>) * (col + <span class="number">1</span>)); <span class="comment">//加1是字符串有结尾字符&#x27;/0&#x27;</span></span><br><span class="line">    out[idx++] = p;</span><br><span class="line">    p = strtok(<span class="literal">NULL</span>, tmp); <span class="comment">//这里要用NULL</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>三、指针</strong><br>指针是C语言中比较常用的类型，也是C语言的灵魂，也是难点，出错点。主要还是知道到底想要表达什么意思也就自然而然了。指针是地址的意思，不同类型的变量所需地址空间大小不一样，所以也就需要区分不同类型的指针。“*”表示指针，“&amp;”表示取地址。<strong>在判断指针是指向什么类型的时候，可以把变量去掉，剩下的就是指针所指向的。</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   <span class="type">int</span>* a; <span class="comment">//指向整型的指针，指向 int*</span></span><br><span class="line">   <span class="type">int</span>** a; <span class="comment">//指向整型指针的指针，指向 int**</span></span><br><span class="line">   <span class="type">int</span>* a[n]; <span class="comment">//指针数组，每个数组成员都是一个整型指针，int*，总共有n个指针</span></span><br><span class="line">   (<span class="type">int</span>*)a[n]; <span class="comment">//数组指针，指向数组的指针，指向(int*)[]，总共就1个指针</span></span><br><span class="line">   <span class="type">int</span>* <span class="title function_">func</span><span class="params">()</span>; <span class="comment">//指针函数，函数的返回值是1个指针</span></span><br><span class="line">   (<span class="type">int</span>*)func(); <span class="comment">//函数指针，指向函数的指针，指向(int*)()，总共就1个指针</span></span><br><span class="line">说明：指针类型的变量的值是随时变化的，相当于全局变量，所以在函数传参数的时候，如果要实时保留值的变化，就传入指针类型变量或者全局变量。</span><br></pre></td></tr></table></figure>
+
+<p>与指针相关的数据结构，如列表、树等，在后面算法总结中再书写。</p>
+<h1 id="C语言快速比较两数大小——fmax，fmin函数"><a href="#C语言快速比较两数大小——fmax，fmin函数" class="headerlink" title="C语言快速比较两数大小——fmax，fmin函数"></a>C语言快速比较两数大小——fmax，fmin函数</h1><h1 id="分配函数"><a href="#分配函数" class="headerlink" title="分配函数"></a>分配函数</h1><h2 id="malloc"><a href="#malloc" class="headerlink" title="malloc"></a>malloc</h2><ol>
+<li><p>数组的申请</p>
+<p>a. 一维数组的申请</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* num = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<p>b. 二维数组的申请</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>** num = (<span class="type">int</span>**)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>*) * <span class="number">10</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    num[i] = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">10</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>c. 数组都赋0值</p>
+<p>对于malloc申请的数组要这样：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>* num = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">10</span>);</span><br><span class="line"><span class="built_in">memset</span>(num, <span class="number">0</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<p>对于非malloc申请的数组要这样:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num[<span class="number">10</span>];</span><br><span class="line"><span class="built_in">memset</span>(num, <span class="number">0</span>, <span class="keyword">sizeof</span>(num));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>比较函数(入参为malloc申请的数组)</p>
+<p>a. 一维数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a, <span class="type">const</span> <span class="type">void</span>* b)</span> &#123;</span><br><span class="line">    <span class="type">int</span>* aa = (<span class="type">int</span>*)a;</span><br><span class="line">    <span class="type">int</span>* bb = (<span class="type">int</span>*)b;</span><br><span class="line">    <span class="comment">//return *aa - *bb; //从小到大排序</span></span><br><span class="line">    <span class="keyword">return</span> *bb - *aa; <span class="comment">//从大到小排序</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>b. 二维数组</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设数组是2列</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">cmp</span><span class="params">(<span class="type">const</span> <span class="type">void</span>* a, <span class="type">const</span> <span class="type">void</span>* b)</span> &#123;</span><br><span class="line">    <span class="type">int</span>* aa = *(<span class="type">int</span>**)a;</span><br><span class="line">    <span class="type">int</span>* bb = *(<span class="type">int</span>**)b;</span><br><span class="line">    <span class="comment">//0列相同时，比较1列</span></span><br><span class="line">    <span class="keyword">if</span> (aa[<span class="number">0</span>] == bb[<span class="number">0</span>]) &#123;</span><br><span class="line">        <span class="comment">//return aa[1] - bb[1]; //从小到大排序</span></span><br><span class="line">        <span class="keyword">return</span> bb[<span class="number">1</span>] - aa[<span class="number">1</span>]; <span class="comment">//从大到小排序</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//0列不相同时</span></span><br><span class="line">    <span class="comment">//return aa[1] - bb[1]; //从小到大排序</span></span><br><span class="line">    <span class="keyword">return</span> bb[<span class="number">1</span>] - aa[<span class="number">1</span>]; <span class="comment">//从大到小排序</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>比较函数有了后，就可以进行排序，用qsort</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//比如对 int* nums 进行排序，数组大小为10，比较函数为cmp</span></span><br><span class="line"><span class="comment">//第一个参数为数组，第二个参数为数组大小，第三个参数为数组里单个元素的大小，第四个参数为比较函数cmp</span></span><br><span class="line">qsort(nums, <span class="number">10</span>, <span class="keyword">sizeof</span>(<span class="type">int</span>), cmp); </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>力扣实现函数中</p>
+<p>int* returnSize及int** returnColumnSize 的说明</p>
+<p>int* returnSize 用来存二维数组的行的大小，用指针是方面时实修改大小，比如有10行，就这样写：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*returnSize = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+
+<p>int** returnColumnSize 用来存二维数组列的大小，这里是用二维指针存，第一维用来指向这个数组，第二维用来指向每列的大小，给returnColumnSize赋值的时候要先申请空间，比如有size列，每列大小都为10，就这样写：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*returnColumnSize = (<span class="type">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * size);</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">    (*returnColumnSize)[i] = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="realloc"><a href="#realloc" class="headerlink" title="realloc"></a>realloc</h2><p> C 库函数 <strong>void *realloc(void *ptr, size_t size)</strong> 尝试重新调整之前调用 <strong>malloc</strong> 或 <strong>calloc</strong> 所分配的 <strong>ptr</strong> 所指向的内存块的大小。 </p>
+<ul>
+<li><strong>ptr</strong> – 指针指向一个要重新分配内存的内存块，该内存块之前是通过调用 malloc、calloc 或 realloc 进行分配内存的。如果为空指针，则会分配一个新的内存块，且函数返回一个指向它的指针。</li>
+<li><strong>size</strong> – 内存块的新的大小，以字节为单位。如果大小为 0，且 ptr 指向一个已存在的内存块，则 ptr 所指向的内存块会被释放，并返回一个空指针。</li>
+</ul>
+<p> 该函数返回一个指针 ，指向重新分配大小的内存。如果请求失败，则返回 NULL。 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"> </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="type">char</span> *str;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 最初的内存分配 */</span></span><br><span class="line">   str = (<span class="type">char</span> *) <span class="built_in">malloc</span>(<span class="number">15</span>);</span><br><span class="line">   <span class="built_in">strcpy</span>(str, <span class="string">&quot;runoob&quot;</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;String = %s,  Address = %p</span></span><br><span class="line"><span class="string">&quot;</span>, str, str);</span><br><span class="line"> </span><br><span class="line">   <span class="comment">/* 重新分配内存 */</span></span><br><span class="line">   str = (<span class="type">char</span> *) <span class="built_in">realloc</span>(str, <span class="number">25</span>);</span><br><span class="line">   <span class="built_in">strcat</span>(str, <span class="string">&quot;.com&quot;</span>);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;String = %s,  Address = %p</span></span><br><span class="line"><span class="string">&quot;</span>, str, str);</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">free</span>(str);</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//String = runoob,  Address = 0x7fa2f8c02b10</span></span><br><span class="line"><span class="comment">//String = runoob.com,  Address = 0x7fa2f8c02b10</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="typedef的4种用法"><a href="#typedef的4种用法" class="headerlink" title="typedef的4种用法"></a>typedef的4种用法</h2><h4 id="1-为基本数据类型定义新的类型名"><a href="#1-为基本数据类型定义新的类型名" class="headerlink" title="1) 为基本数据类型定义新的类型名"></a>1) 为基本数据类型定义新的类型名</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">int</span> COUNT;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-为自定义数据类型（结构体、共用体和枚举类型）定义简洁的类型名称"><a href="#2-为自定义数据类型（结构体、共用体和枚举类型）定义简洁的类型名称" class="headerlink" title="2) 为自定义数据类型（结构体、共用体和枚举类型）定义简洁的类型名称"></a>2) 为自定义数据类型（结构体、共用体和枚举类型）定义简洁的类型名称</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">tagPoint</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">double</span> x;</span><br><span class="line">    <span class="type">double</span> y;</span><br><span class="line">    <span class="type">double</span> z;</span><br><span class="line">&#125; Point;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-为数组定义简洁的类型名称"><a href="#3-为数组定义简洁的类型名称" class="headerlink" title="3) 为数组定义简洁的类型名称"></a>3) 为数组定义简洁的类型名称</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> INT_ARRAY_100[<span class="number">100</span>];</span><br><span class="line">INT_ARRAY_100 arr;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-为指针定义简洁的名称"><a href="#4-为指针定义简洁的名称" class="headerlink" title="4) 为指针定义简洁的名称"></a>4) 为指针定义简洁的名称</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">char</span>* PCHAR;</span><br><span class="line">PCHAR pa;</span><br></pre></td></tr></table></figure>
+
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><h1 id="enum-枚举"><a href="#enum-枚举" class="headerlink" title="enum(枚举)"></a>enum(枚举)</h1><p>枚举是 C 语言中的一种基本数据类型，用于定义一组具有离散值的常量。，它可以让数据更简洁，更易读。</p>
+<p>枚举类型通常用于为程序中的一组相关的常量取名字，以便于程序的可读性和维护性。</p>
+<p>定义一个枚举类型，需要使用 <strong>enum</strong> 关键字，后面跟着枚举类型的名称，以及用大括号 <strong>{}</strong> 括起来的一组枚举常量。每个枚举常量可以用一个标识符来表示，也可以为它们指定一个整数值，如果没有指定，那么默认从 <strong>0</strong> 开始递增。</p>
+<p>枚举语法定义格式为：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span>　枚举名　&#123;</span>枚举元素<span class="number">1</span>,枚举元素<span class="number">2</span>,……&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">DAY</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">      MON=<span class="number">1</span>, TUE, WED, THU, FRI, SAT, SUN</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h1 id="函数指针和结构体函数指针"><a href="#函数指针和结构体函数指针" class="headerlink" title="函数指针和结构体函数指针"></a>函数指针和结构体函数指针</h1><h2 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h2><p>指针指向的是函数的入口地址</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">callback_c</span><span class="params">()</span><span class="comment">//被回调的函数</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;callback to c</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">callback_d</span><span class="params">()</span><span class="comment">//被回调的函数</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;callback to d</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">call_b</span><span class="params">(<span class="type">void</span> (*cb)())</span><span class="comment">//参数是函数指针，指向函数的入口地址</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//1.做其他……事情</span></span><br><span class="line">    <span class="comment">//2.调用回调函数</span></span><br><span class="line">    <span class="keyword">if</span>(cb!=<span class="literal">NULL</span>)cb();<span class="comment">//函数指针</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//以上简单，以下复杂</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//和回调函数最大的区别是后面是否携带参数</span></span><br><span class="line"><span class="type">void</span> not_fun_pointer)(<span class="type">void</span> *arg)<span class="comment">//空类型指针——不确定类型指针</span></span><br><span class="line">&#123;                               <span class="comment">//可以赋值任意变量类型的指针  int* arg,float* arg……</span></span><br><span class="line">	                        <span class="comment">//传递进来的*不做要求，需要在函数里面对它的类型大小等做判断，不然就会出错</span></span><br><span class="line">	<span class="comment">//假设当作int处理</span></span><br><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="keyword">if</span>(arg==<span class="literal">NULL</span>)<span class="keyword">return</span>;<span class="comment">//判断空</span></span><br><span class="line">a=*(<span class="type">int</span>*)arg;<span class="comment">//首先进行强制类型转换,(int*)强制说明指针指向的类型是int类型，*说明这是指针指向地址的内容</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;not_fun_pointer:%d</span></span><br><span class="line"><span class="string">&quot;</span>,a);</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> x=<span class="number">1</span>;</span><br><span class="line">    <span class="type">float</span> y=<span class="number">2.0f</span>;</span><br><span class="line">    <span class="type">char</span> ch=<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    not_fun_pointer(&amp;y);<span class="comment">//传递进去是float *,强制转换出错-&gt;打印出错</span></span><br><span class="line">    not_fun_pointer(&amp;x);<span class="comment">//传递进去是int * ，打印出来是1</span></span><br><span class="line">    <span class="keyword">while</span>((ch==getchar())!=<span class="string">&#x27;q&#x27;</span>)<span class="comment">//按q退出</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="string">&#x27;c&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            call_b(callback_c);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">&#x27;d&#x27;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            call_b(callback_d);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>函数指针的定义形式</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">returnType (*pointerName)(param <span class="built_in">list</span>);</span><br></pre></td></tr></table></figure>
+
+<p>示例代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//返回两个数中较大的一个</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a &gt; b ? a : b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> x, y, maxval;</span><br><span class="line">    <span class="comment">//定义函数指针</span></span><br><span class="line">    <span class="type">int</span> (*pmax)(<span class="type">int</span>, <span class="type">int</span>) = max;  <span class="comment">//也可以写作int (*pmax)(int a, int b) = max</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Input two numbers:&quot;</span>);</span><br><span class="line">    scanf_s(<span class="string">&quot;%d %d&quot;</span>, &amp;x, &amp;y);</span><br><span class="line">    maxval = (*pmax)(x, y);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Max value: %d</span></span><br><span class="line"><span class="string">&quot;</span>, maxval);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="结构体中定义函数指针"><a href="#结构体中定义函数指针" class="headerlink" title="结构体中定义函数指针"></a>结构体中定义函数指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">c语言中，如何在结构体中实现函数的功能？把结构体做成和类相似，让他的内部有属性，也有方法，</span><br><span class="line">这样的结构体一般称为协议类，提供参考： </span><br><span class="line"><span class="class"><span class="keyword">struct</span> &#123;</span> </span><br><span class="line">　　<span class="type">int</span> funcid; </span><br><span class="line">　　<span class="type">char</span> *funcname; </span><br><span class="line">　　<span class="type">int</span> (*funcint)();   <span class="comment">/* 函数指针 int 类型*/</span> </span><br><span class="line">　　<span class="type">void</span> (*funcvoid)();  <span class="comment">/* 函数指针 void类型*/</span> </span><br><span class="line">&#125;; </span><br><span class="line">每次都需要初始化，比较麻烦</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示例代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>  </span></span><br><span class="line"><span class="class">&#123;</span>  </span><br><span class="line">    <span class="type">int</span> a;  </span><br><span class="line">    <span class="type">void</span> (*pshow)(<span class="type">int</span>);  </span><br><span class="line">&#125;TMP;  </span><br><span class="line">      </span><br><span class="line"><span class="type">void</span> <span class="title function_">func</span><span class="params">(TMP *tmp)</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">if</span>(tmp-&gt;a &gt;<span class="number">10</span>)<span class="comment">//如果a&gt;10,则执行回调函数。  </span></span><br><span class="line">    &#123;  </span><br><span class="line">        (tmp-&gt;pshow)(tmp-&gt;a);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="type">void</span> <span class="title function_">show</span><span class="params">(<span class="type">int</span> a)</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;a的值是%d</span></span><br><span class="line"><span class="string">&quot;</span>,a);  </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span>  </span><br><span class="line">&#123;</span><br><span class="line">    TMP test;  </span><br><span class="line">    test.a = <span class="number">11</span>;  </span><br><span class="line">    test.pshow = show;  </span><br><span class="line">    func(&amp;test);  </span><br><span class="line">&#125;  </span><br><span class="line">终端显示：a的值是<span class="number">11</span>      </span><br><span class="line"> </span><br><span class="line"><span class="comment">/*一般回调函数的用法为： </span></span><br><span class="line"><span class="comment">甲方进行结构体的定义（成员中包括回调函数的指针） </span></span><br><span class="line"><span class="comment">     </span></span><br><span class="line"><span class="comment">乙方定义结构体变量，并向甲方注册， </span></span><br><span class="line"><span class="comment">甲方收集N个乙方的注册形成结构体链表，在某个特定时刻遍历链表，进行回调。 </span></span><br><span class="line"><span class="comment">当函数指针做为函数的参数，传递给一个被调用函数， </span></span><br><span class="line"><span class="comment">被调用函数就可以通过这个指针调用外部的函数，这就形成了回调</span></span><br><span class="line"><span class="comment">一般的程序中回调函数作用不是非常明显，可以不使用这种形式</span></span><br><span class="line"><span class="comment">最主要的用途就是当函数不处在同一个文件当中，比如动态库，要调用其他程序中的函数就只有采用回调的形式，通过函数指针参数将外部函数地址传入来实现调用</span></span><br><span class="line"><span class="comment">函数的代码作了修改，也不必改动库的代码，就可以正常实现调用便于程序的维护和升级</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> <span class="keyword">warning</span>(disable : 4996)</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="comment">//#include &lt;string.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">fun0</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s</span></span><br><span class="line"><span class="string">&quot;</span>, __FUNCTION__);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">fun1</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s</span></span><br><span class="line"><span class="string">&quot;</span>, __FUNCTION__);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">fun2</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s</span></span><br><span class="line"><span class="string">&quot;</span>, __FUNCTION__);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">typedef</span> <span class="title function_">void</span> <span class="params">(*pmax)</span><span class="params">()</span>;</span><br><span class="line">	pmax p1 = <span class="literal">NULL</span>;</span><br><span class="line">	<span class="type">int</span> i = <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i)</span><br><span class="line">	&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">		p1 = fun0;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">		p1 = fun1;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">		p1 = fun2;</span><br><span class="line">	<span class="keyword">default</span>:</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	p1();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<p>结构体指针—函数指针的封装</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//抽象化统一接口语言</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">DEVICE_OP_ST</span>//结构体里面定义的是这个对象/变量 可能包含的方法--&gt;</span>抽象出来</span><br><span class="line">&#123;<span class="comment">//简单理解成抽象方法</span></span><br><span class="line">    <span class="type">void</span>(*open)(<span class="type">void</span> * args);<span class="comment">//打开外设</span></span><br><span class="line">    <span class="type">void</span>(*close)();<span class="comment">//关闭外设</span></span><br><span class="line">    <span class="type">void</span>(*write)(<span class="type">void</span>* args);<span class="comment">//写入外设</span></span><br><span class="line">    <span class="type">void</span>(*read)(<span class="type">void</span>* args);<span class="comment">//读取外设</span></span><br><span class="line">&#125;device_op_st;</span><br><span class="line"><span class="comment">//举例说明---这个结构体串口可以使用，SPI也可以使用，I2C也可以使用</span></span><br><span class="line"><span class="comment">//虽然打开串口、打开SPI、打开I2C都不一样，但是都可以抽象成open，在这个基础上，把函数抽象出来</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化抽象方法</span></span><br><span class="line"><span class="type">static</span> device_op_st devices[]=&#123;</span><br><span class="line">    <span class="comment">//把我们重写的函数通过函数指针的方式赋值进去</span></span><br><span class="line">    <span class="comment">//定义一个UART设备</span></span><br><span class="line">    &#123;</span><br><span class="line">        .open=uart_open,<span class="comment">//比如说如果是串口的open方法指向的是串口打开</span></span><br><span class="line">        .close=uart_close,<span class="comment">//close  -&gt;   uart_close</span></span><br><span class="line">        .write=uart_write,<span class="comment">//指针指向的位置是后面那个的函数入口</span></span><br><span class="line">        .read=uart_read,</span><br><span class="line">    &#125;，</span><br><span class="line">    <span class="comment">//定义一个SPI设备</span></span><br><span class="line">    &#123;</span><br><span class="line">        .open=spi_open,</span><br><span class="line">        .close=spi_close,</span><br><span class="line">        .write=spi_write,</span><br><span class="line">        .read=spi_read,</span><br><span class="line">    &#125;，</span><br><span class="line">    <span class="comment">//定义非标准设备</span></span><br><span class="line">    <span class="comment">//……</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//具体重写  串口操作函数</span></span><br><span class="line"><span class="type">void</span> uart_open(<span class="type">void</span>* args)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;打开串口</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">uart_close</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;关闭串口</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">uart_write</span><span class="params">(<span class="type">void</span>* args)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;写入串口</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">uart_read</span><span class="params">(<span class="type">void</span>* args)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;读取串口</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//具体重写  SPI操作函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">spi_open</span><span class="params">(<span class="type">void</span>* args)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;打开SPI</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">spi_close</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;关闭SPI</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">spi_write</span><span class="params">(<span class="type">void</span>* args)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;写入SPI</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">spi_read</span><span class="params">(<span class="type">void</span>* args)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;读取SPI</span></span><br><span class="line"><span class="string">&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment">//假设要读取所有的外设的数据到缓冲区</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">read_device_revdto_buff</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> size= <span class="keyword">sizeof</span>(devices)/<span class="keyword">sizeof</span>(devices[<span class="number">0</span>]);</span><br><span class="line">    <span class="type">char</span> buff[<span class="number">4096</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>;i&lt;size;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//上层不需要知道具体做了什么</span></span><br><span class="line">        <span class="comment">//隐藏具体外设的敏感信息，达到很好的扩展性</span></span><br><span class="line">        devices[i].open(<span class="literal">NULL</span>);</span><br><span class="line">        devices[i].read(buff);</span><br><span class="line">        devices[i].write(buff);</span><br><span class="line">        devices[i].close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    reead_device_revdto_buff();<span class="comment">//有良好的抽象性和扩展性</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="函数指针举例说明—-打印机"><a href="#函数指针举例说明—-打印机" class="headerlink" title="函数指针举例说明—-打印机"></a>函数指针举例说明—-打印机</h2><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023555541-1361764848.png" alt="img"></p>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023630143-950481288.png" alt="img"><br><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023650077-743926018.png" alt="img"></p>
+<p>传入子函数的参数是母体原参数的复制体</p>
+<p>子函数对复制体进行操作是影响不到母体的</p>
+<p>如果要对母体进行操作，用指针直接对地址直接进行操作</p>
+<p>函数指针是指向函数的指针变量</p>
+<p>回调函数是函数指针最常见的用途</p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023713303-1424274716.png" alt="img"></p>
+<p>函数指针的基本概念：</p>
+<p>函数名可以被看做一个常量，保存了函数的内存地址（函数的内存地址存储了函数开始执行的位置）</p>
+<p>通过使用指针来保存函数的地址，可以创建指向函数的指针</p>
+<p>函数指针使得我们能够灵活的调用具有相同形式参数和返回值功能不同的函数，增加代码的灵活性</p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023749029-1513305415.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023820389-2106563607.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023840599-2012547527.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023859734-190944554.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023926753-1399102749.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226023943123-224640960.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226024003257-1856686428.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226024014653-708063090.png" alt="img"></p>
+<p>函数指针也可以作为函数参数传递给其他函数</p>
+<p>这样函数内部就可以根据函数指针所指向的不同函数来调用不同的功能<br><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226024055346-468212515.png" alt="img"></p>
+<p><img src="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226024111422-1055591209.png" alt="img"></p>
+<h1 id="面向对象的c编程–狗哥嵌入式"><a href="#面向对象的c编程–狗哥嵌入式" class="headerlink" title="面向对象的c编程–狗哥嵌入式"></a>面向对象的c编程–狗哥嵌入式</h1><h2 id="闲聊：高内聚低耦合"><a href="#闲聊：高内聚低耦合" class="headerlink" title="闲聊：高内聚低耦合"></a>闲聊：高内聚低耦合</h2><p>第一重：</p>
+<p>内聚：把逻辑封装到模块里面</p>
+<p>高内聚：自己的事情自己做（模块之外的都叫别人）</p>
+<p>低耦合：各人自扫门前雪，莫管他人瓦上霜（莫管！！！）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">按钮按下去之后，那概怎么办呢？</span><br><span class="line">放在回调里面去做，不管</span><br><span class="line">至于回调里面做什么，不管。   </span><br><span class="line">用户，用这个模块的人，他想要干什么，用回调函数去实现</span><br><span class="line">或者触发事件，需要到应用层里面去实现</span><br></pre></td></tr></table></figure>
+
+<p>第二重：</p>
+<p>  高内聚：做好自己，宽容他人（软件要有容错性：当你的输入产生一些错误的时候，要把他包容掉，剔除掉）</p>
+<p>（比如这个接口要允许他输入一个空指针，输入出错兼容掉）</p>
+<p>低耦合：不管索取，只求奉献（一个模块不能提供所需要的功能，需要提供更多的功能以产生柔性）</p>
+<p>第三重：</p>
+<p>高内聚：运筹帷幄之中</p>
+<p>（我只需要做好这个事情就可以了，我只要产生了想让其他的模块执行某功能的时候，九八这个信号把这个事件发出去，至于说人家接收不接受，不管。但是一旦对方接收，就算成功了，就产生了低耦合决胜千里之外的意思）</p>
+<p>（button是一个对象，状态机是一个对象，对象与对象之间就不会产生任何调用关系，耦合就更小了，小到中间只有一个无形的消息在传播（一个小变量））</p>
+<p>（每个对象之间仅仅只靠消息通信 ）</p>
+<p>低耦合：决胜千里之外</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2025/02/14/%E8%93%9D%E6%A1%A5%E6%9D%AFSTM32G431RBT6.18632804/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">蓝桥杯STM32G431RBT6</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2025 shenle
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
