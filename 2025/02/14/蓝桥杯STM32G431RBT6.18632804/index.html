@@ -9,15 +9,60 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Shenle的个人博客">
-<meta property="og:type" content="website">
+  <meta name="description" content="蓝桥杯注意事项 移植lcd之后要记得在main函数内LCD_Init();开启lcd。  如果lcd显示时led全亮大概率是PD2锁存器出问题  lcd显示最好都各自带一个char text[30];  按键按下表启动，进入下一步  adc一定要在main开启校准函数HAL_ADCEx_Calibration_Start(&amp;hadc2,ADC_SINGLE_ENDED);记住Calibra">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Shenle">
-<meta property="og:url" content="https://github.com/2575451471/2575451471.github.io/index.html">
+<meta property="og:url" content="https://github.com/2575451471/2575451471.github.io/2025/02/14/%E8%93%9D%E6%A1%A5%E6%9D%AFSTM32G431RBT6.18632804/index.html">
 <meta property="og:site_name" content="Shenle">
-<meta property="og:description" content="Shenle的个人博客">
+<meta property="og:description" content="蓝桥杯注意事项 移植lcd之后要记得在main函数内LCD_Init();开启lcd。  如果lcd显示时led全亮大概率是PD2锁存器出问题  lcd显示最好都各自带一个char text[30];  按键按下表启动，进入下一步  adc一定要在main开启校准函数HAL_ADCEx_Calibration_Start(&amp;hadc2,ADC_SINGLE_ENDED);记住Calibra">
 <meta property="og:locale">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145213778-1156661913.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145226150-1477612372.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145236364-1786037006.png">
+<meta property="og:image" content="https://img2024.cnblogs.com/blog/3084836/202403/3084836-20240305201721909-766061649.png">
+<meta property="og:image" content="https://img2024.cnblogs.com/blog/3084836/202403/3084836-20240305201731520-290218359.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145340315-2105967222.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145349328-1728508092.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145358081-738803786.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145416091-1417320624.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145426879-1384833541.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145455536-690115685.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145503285-1465449933.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145513653-1063012874.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145522261-1520339418.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145531033-1604068842.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145556700-329664734.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145606102-1384915171.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145735191-464030326.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145757363-985893058.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145847186-375666512.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145859916-1042493139.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150058666-756074026.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150147538-723373899.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150215127-1030533770.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150229307-518312236.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150236168-197936629.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150456928-724950511.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150506460-448004297.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150522056-971422901.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150607009-957528047.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150615719-1410740873.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150622589-659665334.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150825510-1388151447.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150932932-681865435.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226150941612-1996946804.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151031484-1848068133.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151037943-1376910969.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151046771-2015829617.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151216559-632211978.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151226070-171965260.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151234384-1429359630.png">
+<meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151441822-1226341101.png">
+<meta property="article:published_time" content="2025-02-14T13:14:31.192Z">
+<meta property="article:modified_time" content="2025-02-14T13:14:39.403Z">
 <meta property="article:author" content="shenle">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145213778-1156661913.png">
   
     <link rel="alternative" href="/atom.xml" title="Shenle" type="application/atom+xml">
   
@@ -150,9 +195,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-蓝桥杯STM32G431RBT6.18632804" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-蓝桥杯STM32G431RBT6.18632804" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2025/02/14/%E8%93%9D%E6%A1%A5%E6%9D%AFSTM32G431RBT6.18632804/" class="article-date">
@@ -305,17 +348,19 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2025/02/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -324,80 +369,6 @@
 
 
 
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2025/02/14/hello-world/" class="article-date">
-  	<time datetime="2025-02-14T13:04:00.000Z" itemprop="datePublished">2025-02-14</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2025/02/14/hello-world/">
-        Hello World
-        
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Trash/" rel="tag">Trash</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-      
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -423,8 +394,8 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
