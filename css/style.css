@@ -802,6 +802,17 @@ a {
   -ms-transform: rotate(0.7turn);
   transform: rotate(0.7turn);
 }
+#header .header-nav .social a.cnblogs {
+  background: url("/img/cnblogs.png") center no-repeat #005a87;
+  border: 1px solid #005a87;
+}
+#header .header-nav .social a.cnblogs:hover {
+  border: 1px solid #006b98;
+  -webkit-transform: rotate(0.7turn);
+  -moz-transform: rotate(0.7turn);
+  -ms-transform: rotate(0.7turn);
+  transform: rotate(0.7turn);
+}
 #header .switch-part {
   width: 100%;
   position: absolute;

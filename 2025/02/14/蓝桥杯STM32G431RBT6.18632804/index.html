@@ -9,12 +9,12 @@
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="# 蓝桥杯  注意事项 移植lcd之后要记得在main函数内LCD_Init();开启lcd。  如果lcd显示时led全亮大概率是PD2锁存器出问题  lcd显示最好都各自带一个char text[30];  按键按下表启动，进入下一步  adc一定要在main开启校准函数HAL_ADCEx_Calibration_Start(&amp;hadc2,ADC_SINGLE_ENDED);记住Ca">
+  <meta name="description" content="蓝桥杯注意事项 移植lcd之后要记得在main函数内LCD_Init();开启lcd。 如果lcd显示时led全亮大概率是PD2锁存器出问题 lcd显示最好都各自带一个char text[30]; 按键按下表启动，进入下一步 adc一定要在main开启校准函数HAL_ADCEx_Calibration_Start(&amp;hadc2,ADC_SINGLE_ENDED);记住Calibrati">
 <meta property="og:type" content="article">
 <meta property="og:title" content="蓝桥杯STM32G431RBT6">
 <meta property="og:url" content="https://github.com/2575451471/2575451471.github.io/2025/02/14/%E8%93%9D%E6%A1%A5%E6%9D%AFSTM32G431RBT6.18632804/index.html">
 <meta property="og:site_name" content="Shenle">
-<meta property="og:description" content="# 蓝桥杯  注意事项 移植lcd之后要记得在main函数内LCD_Init();开启lcd。  如果lcd显示时led全亮大概率是PD2锁存器出问题  lcd显示最好都各自带一个char text[30];  按键按下表启动，进入下一步  adc一定要在main开启校准函数HAL_ADCEx_Calibration_Start(&amp;hadc2,ADC_SINGLE_ENDED);记住Ca">
+<meta property="og:description" content="蓝桥杯注意事项 移植lcd之后要记得在main函数内LCD_Init();开启lcd。 如果lcd显示时led全亮大概率是PD2锁存器出问题 lcd显示最好都各自带一个char text[30]; 按键按下表启动，进入下一步 adc一定要在main开启校准函数HAL_ADCEx_Calibration_Start(&amp;hadc2,ADC_SINGLE_ENDED);记住Calibrati">
 <meta property="og:locale">
 <meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145213778-1156661913.png">
 <meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226145226150-1477612372.png">
@@ -59,7 +59,7 @@
 <meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151234384-1429359630.png">
 <meta property="og:image" content="https://img2023.cnblogs.com/blog/3084836/202412/3084836-20241226151441822-1226341101.png">
 <meta property="article:published_time" content="2025-02-14T13:17:00.000Z">
-<meta property="article:modified_time" content="2025-02-14T13:30:33.295Z">
+<meta property="article:modified_time" content="2025-02-14T16:24:53.441Z">
 <meta property="article:author" content="shenle">
 <meta property="article:tag" content="嵌入式32">
 <meta name="twitter:card" content="summary">
@@ -84,6 +84,12 @@
 
 
   
+      <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("your_app_id", "your_app_key");</script>
+
+<script src="/js/Counter.js"></script>
+
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
   <div id="container">
@@ -94,7 +100,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-				<img lazy-src="" class="js-avatar">
+				<img lazy-src="/img/header.png" class="js-avatar">
 			
 		</a>
 
@@ -127,8 +133,17 @@
 					<nav class="header-nav">
 						<div class="social">
 							
+								<a class="github" target="_blank" href="https://github.com/2575451471" title="github">github</a>
+					        
+								<a class="cnblogs" target="_blank" href="https://www.cnblogs.com/shenleblog" title="cnblogs">cnblogs</a>
+					        
 						</div>
 						<!-- music -->
+						
+							<!-- <div style="position: absolute; bottom: 120px; left: auto; width: 85%;"> -->
+							<div style="position: absolute; left: auto; width: 85%;">
+								<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=220 src="//music.163.com/outchain/player?type=0&id=2175871768&auto=1&height=220"></iframe>
+							</div>
 						
 					</nav>
 				</section>
@@ -155,7 +170,7 @@
 				
 				<section class="switch-part switch-part4">
 				
-					<div id="js-aboutme">I&#39;m a developer.</div>
+					<div id="js-aboutme">噜啦啦!</div>
 				</section>
 				
 			</div>
@@ -172,7 +187,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img lazy-src="" class="js-avatar">
+				<img lazy-src="/img/header.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author"></h1>
@@ -191,6 +206,10 @@
 			<nav class="header-nav">
 				<div class="social">
 					
+						<a class="github" target="_blank" href="https://github.com/2575451471" title="github">github</a>
+			        
+						<a class="cnblogs" target="_blank" href="https://www.cnblogs.com/shenleblog" title="cnblogs">cnblogs</a>
+			        
 				</div>
 			</nav>
 		</header>				
@@ -229,6 +248,16 @@
         
 
         
+          
+<div class="counter-tag counter">
+    <span id="/2025/02/14/%E8%93%9D%E6%A1%A5%E6%9D%AFSTM32G431RBT6.18632804/" class="leancloud_visitors post-title-link"
+          style="font-size: 12px" data-flag-title="蓝桥杯STM32G431RBT6">
+         &nbsp;
+        view
+    </span>
+</div>
+
+        
         <div class="clearfix"></div>
       </div>
       
@@ -236,37 +265,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <meta name="referrer" content="no-referrer"/>
-# 蓝桥杯
 
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
-<li><p>移植lcd之后要记得在main函数内LCD_Init();开启lcd。</p>
-</li>
-<li><p>如果lcd显示时led全亮大概率是PD2锁存器出问题</p>
-</li>
-<li><p>lcd显示最好都各自带一个char text[30];</p>
-</li>
-<li><p>按键按下表启动，进入下一步</p>
-</li>
-<li><p>adc一定要在main开启校准函数HAL_ADCEx_Calibration_Start(&amp;hadc2,ADC_SINGLE_ENDED);记住Calibration和ADC_SINGLE_ENDED</p>
-</li>
-<li><p>adc自写函数里每一次最好都开启一遍HAL_ADC_Start(hadc);</p>
-</li>
-<li><p>adc自写函数里value&#x3D;HAL_ADC_GetValue(hadc);用uint32_t存储，之后转换到float数</p>
-</li>
-<li><p>adc的转换先乘以3.3再除以4096，顺序反了就归零了</p>
-</li>
-<li><p>串口发送简单，接收需要中断函数void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)；</p>
-</li>
-<li><p>把串口接收单数据和数据数组分开写，用于接收的单数据是uint8_t类型，不是char类型</p>
-</li>
-<li><p>接收的数据数组是char类型</p>
-</li>
-<li><p>单数据接收函数HAL_UART_Receive_IT(&amp;huart1,&amp;data,1);最后接收的长度是1，而且中间的单数据必须取地址，这里接收函数最好用中断模式</p>
-</li>
-<li><p>要先在主函数写一个HAL_UART_Receive_IT(&amp;huart1,&amp;data,1);用来开启</p>
-</li>
-<li></li>
+<h1 id="蓝桥杯"><a href="#蓝桥杯" class="headerlink" title="蓝桥杯"></a>蓝桥杯</h1><h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li>移植lcd之后要记得在main函数内LCD_Init();开启lcd。</li>
+<li>如果lcd显示时led全亮大概率是PD2锁存器出问题</li>
+<li>lcd显示最好都各自带一个char text[30];</li>
+<li>按键按下表启动，进入下一步</li>
+<li>adc一定要在main开启校准函数HAL_ADCEx_Calibration_Start(&amp;hadc2,ADC_SINGLE_ENDED);记住Calibration和ADC_SINGLE_ENDED</li>
+<li>adc自写函数里每一次最好都开启一遍HAL_ADC_Start(hadc);</li>
+<li>adc自写函数里value&#x3D;HAL_ADC_GetValue(hadc);用uint32_t存储，之后转换到float数</li>
+<li>adc的转换先乘以3.3再除以4096，顺序反了就归零了</li>
+<li>串口发送简单，接收需要中断函数void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)；</li>
+<li>把串口接收单数据和数据数组分开写，用于接收的单数据是uint8_t类型，不是char类型</li>
+<li>接收的数据数组是char类型</li>
+<li>单数据接收函数HAL_UART_Receive_IT(&amp;huart1,&amp;data,1);最后接收的长度是1，而且中间的单数据必须取地址，这里接收函数最好用中断模式</li>
+<li>要先在主函数写一个HAL_UART_Receive_IT(&amp;huart1,&amp;data,1);用来开启</li>
 </ol>
+<span id="more"></span>
+<p>14. </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//串口接收函数，没有写道串口中断函数内部，注意</span></span><br><span class="line"><span class="keyword">if</span>(接收到的数据&gt;<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(接收到的数据==正常长度)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(接收到的数据==正常值)</span><br><span class="line">        &#123;</span><br><span class="line">            操作；</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            异常标记；</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">       异常标记；</span><br><span class="line">    &#125;</span><br><span class="line">    数据数组清零；</span><br><span class="line">    标记长度清零；</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>15. </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//主函数串口接收处理</span></span><br><span class="line"><span class="keyword">if</span>(接收长度！=<span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> 临时长度=接收长度；</span><br><span class="line">    延时<span class="number">1</span>ms；</span><br><span class="line">    <span class="keyword">if</span>(临时长度==接收长度)</span><br><span class="line">    &#123;</span><br><span class="line">        串口接收处理函数；</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -420,20 +436,40 @@
 <script>
 	var yiliaConfig = {
 		fancybox: true,
-		mathjax: false,
+		mathjax: true,
 		animate: true,
 		isHome: false,
 		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false
+		open_in_new: true
 	}
 </script>
 
 <script src="/js/main.js"></script>
 
 
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
 
 
   </div>
