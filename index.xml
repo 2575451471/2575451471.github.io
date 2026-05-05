@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>shenle_knowledge</title>
+      <title>shenle_blogs</title>
       <link>https://2575451471.github.io</link>
-      <description>最近的10条笔记 on shenle_knowledge</description>
+      <description>最近的10条笔记 on shenle_blogs</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>51study</title>
-    <link>https://2575451471.github.io/03_Learning/51study</link>
-    <guid>https://2575451471.github.io/03_Learning/51study</guid>
-    <description><![CDATA[ Hello World 江科大自化协（AT89C51） 八位数码管静态显示 unsigned char NixieTable[]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F}; void Nixie(unsigned char Location,Number) { switch(Location) { case 1:P2_4=1;P2_3=1;P2_2=1;break; case 2:P2_4=1;P2_3=1;P2_2=0;break; case 3:P2_4=1;P2_3=0;P2_2=1;break; case 4:P2_4=1;... ]]></description>
-    <pubDate>Tue, 05 May 2026 10:54:21 GMT</pubDate>
-  </item><item>
     <title>index</title>
     <link>https://2575451471.github.io/</link>
     <guid>https://2575451471.github.io/</guid>
-    <description><![CDATA[ 欢迎来到 shenle_knowledge 这是我的知识库主页。. ]]></description>
-    <pubDate>Tue, 05 May 2026 09:34:52 GMT</pubDate>
+    <description><![CDATA[ 欢迎来到 shenle_blogs 这是我的博客主页。. ]]></description>
+    <pubDate>Tue, 05 May 2026 11:16:05 GMT</pubDate>
+  </item><item>
+    <title>8086汇编学习</title>
+    <link>https://2575451471.github.io/page/8086%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0</link>
+    <guid>https://2575451471.github.io/page/8086%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0</guid>
+    <description><![CDATA[ 代码 移动数据存储位置 ;问题：利用变址寄存器，编写一段程序， ;把自1000H单元开始的100个数传送到自1070H开始的存储区（使用8086汇编语言） ; 假设数据已经存储在1000H到10FFH的内存区域中 ; 我们将使用SI作为源索引寄存器，DI作为目标索引寄存器 ; 计数器将使用CX寄存器，因为我们要传送100个字节 MOV AX,1000H;设置源地址到SI MOV SI,AX MOV AX,1070H;设置目的地址到DI MOV DI,AX MOV CX,100;设置计数器为100，因为我们传送100个字节 ;开始传送循环 REP MOVSB;重复移动字符串操作，SI指向源地址，... ]]></description>
+    <pubDate>Tue, 05 May 2026 11:15:46 GMT</pubDate>
+  </item><item>
+    <title>51study</title>
+    <link>https://2575451471.github.io/page/51study</link>
+    <guid>https://2575451471.github.io/page/51study</guid>
+    <description><![CDATA[ Hello World 江科大自化协（AT89C51） 八位数码管静态显示 unsigned char NixieTable[]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F}; void Nixie(unsigned char Location,Number) { switch(Location) { case 1:P2_4=1;P2_3=1;P2_2=1;break; case 2:P2_4=1;P2_3=1;P2_2=0;break; case 3:P2_4=1;P2_3=0;P2_2=1;break; case 4:P2_4=1;... ]]></description>
+    <pubDate>Tue, 05 May 2026 10:54:21 GMT</pubDate>
   </item>
     </channel>
   </rss>
