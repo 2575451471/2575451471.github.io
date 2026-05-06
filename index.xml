@@ -9,8 +9,62 @@
     <title>index</title>
     <link>https://2575451471.github.io/</link>
     <guid>https://2575451471.github.io/</guid>
-    <description><![CDATA[ 欢迎来到 shenle_blogs 这是我的博客主页。. ]]></description>
-    <pubDate>Wed, 06 May 2026 10:38:51 GMT</pubDate>
+    <description><![CDATA[ 欢迎来到 shenle_blogs 这是我的博客主页。 . ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>vhdl笔记</title>
+    <link>https://2575451471.github.io/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/vhdl%E7%AC%94%E8%AE%B0</link>
+    <guid>https://2575451471.github.io/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/vhdl%E7%AC%94%E8%AE%B0</guid>
+    <description><![CDATA[  # 考试真题 一、填空题（共20分） 1.EDA的含义是（电子设计自动化），VHDL的含义是（超高速硬件描述语言） 2.请列出三个VHDL语言的数据类型。利于实数数据类型、位数据类型等。（整型）（字符型）（字符串型） 3.VHDL的运算符中，优先级别最低的是（逻辑运算符），优先级别最高的是（NOT，ABS） 4.试定义一个变量A，数据类型为4位标准矢量：(variable A:STD_LOGIC_VECRTOR(3 DOWNTO 0);) 5.在VHDL的数据对象中，（信号）（变量）可以多次赋予不同的值，只能在定义是复值的是（常量） 6.VHDL的子程序有（函数）和（常量）两种 7.VHDL... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>数据结构与算法基础</title>
+    <link>https://2575451471.github.io/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80</link>
+    <guid>https://2575451471.github.io/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80</guid>
+    <description><![CDATA[  # 绪论 数据 数值型数据：整数，实数 非数值型数据：文字、图像、图形、声音 由数据元素组成 数据元素 数据的基本单位：元素，记录，结点，顶点 是集合的个体 数据项 构成数据元素的不可分割的最小单位 数据对象 性质相同的数据元素的集合，数据的一个子集 数据结构 数据元素相互之间的关系称为结构 数据结构是带结构的数据元素的集合 数据结构包括： 数据的逻辑结构（数据元素之间的逻辑关系） 数据的存储结构（数据元素及其关系在计算机内存中的表示-映像） 数据的运算和实现（对数据元素可以施加的操作以及这些操作在相应的存储结构上的实现） 数据结构的两个层次 逻辑结构 数据元素之间的逻辑关系 与数据的存储无... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>篮球规则</title>
+    <link>https://2575451471.github.io/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/%E7%AF%AE%E7%90%83%E8%A7%84%E5%88%99</link>
+    <guid>https://2575451471.github.io/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/%E7%AF%AE%E7%90%83%E8%A7%84%E5%88%99</guid>
+    <description><![CDATA[ 引入 这是大一学期选的体育课—《篮球裁判》的篮球规则笔记 虽然我不打篮球…… 第一章 比赛区域：比赛场地(长28米，宽15米)向外延伸2米（长32米，宽19米）,从界线的内沿丈量 时间：上场（第一场10分钟，休息2分钟，第二场10分钟），休息10分钟，下场（第三场10分钟，休息2分钟，第四场10分钟）。 中线是后场的一部分 三分线不是三分投篮线的一部分 无撞人半圆区示例： B在无撞人半圆区里，A正面撞倒B，投篮——&gt;可以 B在无撞人半圆区里，A撞倒B，传球给C——&gt;不可以 B在无撞人半圆区里，A从端线方向冲刺撞倒B——&gt;不可以 记录台 记录台面向比赛场地的左侧是主场 记录台面... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>cnblog批量上传图片脚本小记</title>
+    <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/cnblog%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%84%9A%E6%9C%AC%E5%B0%8F%E8%AE%B0</link>
+    <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/cnblog%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%84%9A%E6%9C%AC%E5%B0%8F%E8%AE%B0</guid>
+    <description><![CDATA[  # 原因 在博客园后台没发现能一次性上传多张图片的选项，功能 在vsc的插件里面也得每次先复制到粘贴板，再快捷键复制一张 之前某些情况上传需要上传多张图片，都是一张一张传的， 希望下次能有个简便的方法，所以用 ai 写了个py脚本 （非专业,ai生成较为臃肿） 依赖 脚本依赖 pip install requests #用来发送HTTP POST请求 链接博客园需要metaweblog访问令牌（博客园设置最下方） ) 测试脚本 测试能否成功连接博客园，顺便查看下自己的博客id import xmlrpc.client # 请将以下变量替换为你的真实凭证 API_URL = &quot;&qu... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>hexo配置小记</title>
+    <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/hexo%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0</link>
+    <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/hexo%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0</guid>
+    <description><![CDATA[  --- title: “hexo配置小记” date: “2025-02-15 05:56:44” tags: “小记” hidden: false top: false layout: post 流程 安装nodejs、npm (安装nodejs会自动安装npm) nodjs安装地址 winget install --id OpenJS.NodeJS -e --source winget --location &quot;E:\apps\Nodejs&quot; #命令行安装 node -v # 查看nodejs版本 npm -v # 查看npm版本 npm config set regi... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>proteus_51实验小记</title>
+    <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/proteus_51%E5%AE%9E%E9%AA%8C%E5%B0%8F%E8%AE%B0</link>
+    <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/proteus_51%E5%AE%9E%E9%AA%8C%E5%B0%8F%E8%AE%B0</guid>
+    <description><![CDATA[  实验六)) 元件 6116：2KB RAM，地址线 A0A10（11 根）、数据线 D0D7、控制端{WE}（写）、{OE}（读）、{CS}（片选）。 2716：2KB EPROM，地址线 A0A10、数据线 D0D7、控制端{OE}（读）、{CE}（片选）。 AT89C51：P0 口（地址 / 数据复用，需接锁存器 74HC573）、P2 口（高 8 位地址）。 连线 给 6116 和 2716 分配互不重叠的地址空间 eg:以 “6116 地址：0x20000x27FF；2716 地址：0x30000x37FF” 地址锁存 （P0 口→74HC573）： AT89C51 的ALE（地址锁... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>proteus_snake_pswd小记</title>
+    <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/proteus_snake_pswd%E5%B0%8F%E8%AE%B0</link>
+    <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/proteus_snake_pswd%E5%B0%8F%E8%AE%B0</guid>
+    <description><![CDATA[ 贪吃蛇代码 硬件连接 硬件功能引脚说明点阵列端口P08位列选，低电平有效（共阴）74HC595P3^6 (SH_CP)移位时钟74HC595P3^5 (ST_CP)存储时钟（锁存）74HC595P3^4 (DS)串行数据方向按键P2^7上，按键按下为低电平方向按键P2^6下，按键按下为低电平方向按键P2^5左，按键按下为低电平方向按键P2^4右，按键按下为低电平外部中断0P3^2 (INT0)用于重启游戏，下降沿触发 定义 #define COL_PORT P0 // 点阵列端口（共阴，低电平有效） P0连接点阵的列线，共阴极，低电平时点亮对应的列。 sbit SH_CP = P3^6; //... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>ros2+gazebo学习</title>
+    <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/ros2+gazebo%E5%AD%A6%E4%B9%A0</link>
+    <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/ros2+gazebo%E5%AD%A6%E4%B9%A0</guid>
+    <description><![CDATA[  &gt; 换环境了，这块不看了 ros2 1.2 wsl安装ros2 一键安装 wget fishros.com/install -O fishros &amp;&amp; bash fishros 1.3 运行你的第一个机器人 demo ros2 run turtlesim turtlesim_node ros2:主命令,调用ROS2框架提供的各种功能 run:ROS2的运行子命令，用于启动ROS2节点 turtlesim:指定要运行的ROS2功能包 turtlesim_node:指定要运行的ROS2功能包中的节点(可执行文件) [INFO] [1765116673.400203981] ... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
+  </item><item>
+    <title>vim批量处理小记</title>
+    <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/vim%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86%E5%B0%8F%E8%AE%B0</link>
+    <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/vim%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86%E5%B0%8F%E8%AE%B0</guid>
+    <description><![CDATA[  # 引入 前段时间考马原 舍友给了题库的word文档， 文档里面是题目和答案一并给出的 想把答案遮住，点开才能看的形式，这样复习会更加高效一点 怎么做呢，第一时间想到的是用vim vim给我的首印象就是能做到更加灵活的全局搜索替换 解决 首先观察到文件里面近乎所有的答案行都包含了“正确答案”这一关键字 在“正确答案”和 “:C”之间插入部分html代码，得到 &lt;details&gt;&lt;summary&gt;正确答案&lt;/summary&gt;：C&lt;/details&gt; 即可实现对答案隐藏 在“正确答案”前插入&lt;details&gt;&lt;summary&gt... ]]></description>
+    <pubDate>Wed, 06 May 2026 11:44:08 GMT</pubDate>
   </item>
     </channel>
   </rss>
