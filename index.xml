@@ -10,61 +10,7 @@
     <link>https://2575451471.github.io/</link>
     <guid>https://2575451471.github.io/</guid>
     <description><![CDATA[ 欢迎来到 shenle_blogs 这是我的博客主页。. ]]></description>
-    <pubDate>Wed, 06 May 2026 09:32:42 GMT</pubDate>
-  </item><item>
-    <title>论文内容</title>
-    <link>https://2575451471.github.io/%E8%AE%BA%E6%96%87%E5%86%85%E5%AE%B9</link>
-    <guid>https://2575451471.github.io/%E8%AE%BA%E6%96%87%E5%86%85%E5%AE%B9</guid>
-    <description><![CDATA[ 数字孪生驱动的工业机器人关键动力学参数辨识 [toc] 1. ]]></description>
-    <pubDate>Wed, 06 May 2026 09:32:42 GMT</pubDate>
-  </item><item>
-    <title>51study</title>
-    <link>https://2575451471.github.io/51study</link>
-    <guid>https://2575451471.github.io/51study</guid>
-    <description><![CDATA[ Hello World 江科大自化协（AT89C51） 八位数码管静态显示 unsigned char NixieTable[]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F}; void Nixie(unsigned char Location,Number) { switch(Location) { case 1:P2_4=1;P2_3=1;P2_2=1;break; case 2:P2_4=1;P2_3=1;P2_2=0;break; case 3:P2_4=1;P2_3=0;P2_2=1;break; case 4:P2_4=1;... ]]></description>
-    <pubDate>Tue, 05 May 2026 14:02:43 GMT</pubDate>
-  </item><item>
-    <title>8086汇编学习</title>
-    <link>https://2575451471.github.io/8086%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://2575451471.github.io/8086%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 代码 移动数据存储位置 ;问题：利用变址寄存器，编写一段程序， ;把自1000H单元开始的100个数传送到自1070H开始的存储区（使用8086汇编语言） ; 假设数据已经存储在1000H到10FFH的内存区域中 ; 我们将使用SI作为源索引寄存器，DI作为目标索引寄存器 ; 计数器将使用CX寄存器，因为我们要传送100个字节 MOV AX,1000H;设置源地址到SI MOV SI,AX MOV AX,1070H;设置目的地址到DI MOV DI,AX MOV CX,100;设置计数器为100，因为我们传送100个字节 ;开始传送循环 REP MOVSB;重复移动字符串操作，SI指向源地址，... ]]></description>
-    <pubDate>Tue, 05 May 2026 14:02:43 GMT</pubDate>
-  </item><item>
-    <title>C++学习</title>
-    <link>https://2575451471.github.io/C++%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://2575451471.github.io/C++%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 引入 根据菜鸟教程学习，供自用 打印hello world #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &quot;Hello World&quot; &lt;&lt; &quot;\n&quot;; return 0; } 现象 PS C:\Users\86177&gt; cd &quot;d:\DeskTop\cppstudy\&quot; ; if ($?) { g++ -std=c++11 hello.cpp -o a.exe } ; if ($?) { ./a.exe } Hell... ]]></description>
-    <pubDate>Tue, 05 May 2026 14:02:43 GMT</pubDate>
-  </item><item>
-    <title>HTML+css+js学习</title>
-    <link>https://2575451471.github.io/HTML+css+js%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://2575451471.github.io/HTML+css+js%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[  供个人使用，学习自菜鸟教程 为了博客自定义设计，来系统学习下相关的HTML+css+js语法 只是一个简单的语法了解 [toc] HTML语法学习 html5(HyperText Markup Language/超文本标记语言) 网页的[结构]和[内容] (网页的骨架) 后缀html,htm 基础 &lt;h1&gt;这是一个标题&lt;/h1&gt; &lt;p&gt;这是一个段落&lt;/p&gt; &lt;a href=&quot;www.cnblogs.com/shenleblog/&quot;&gt;这是一个链接&lt;/a&gt; &lt;img src=&quot;www.ru... ]]></description>
-    <pubDate>Tue, 05 May 2026 14:02:43 GMT</pubDate>
-  </item><item>
-    <title>Markdown学习</title>
-    <link>https://2575451471.github.io/Markdown%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://2575451471.github.io/Markdown%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 引入 跟随菜鸟教程学习，所以基本一致，自用 标题 使用 = 和 - 标记一级和二级标题 我展示的是一级标题 ================= 我展示的是二级标题 ----------------- 使用 # 号标记 # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题 ###### 六级标题 段落格式 段落的换行是使用两个以上空格加上回车。 当然也可以在段落后面使用一个空行来表示重新开始一个段落。 字体 *斜体文本* _斜体文本_ **粗体文本** __粗体文本__ ***粗斜体文本*** ___粗斜体文本___ 斜体文本 斜体文本 粗体文本 粗体文本 粗... ]]></description>
-    <pubDate>Tue, 05 May 2026 14:02:43 GMT</pubDate>
-  </item><item>
-    <title>ch32v307datesheet阅读学习</title>
-    <link>https://2575451471.github.io/ch32v307datesheet%E9%98%85%E8%AF%BB%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://2575451471.github.io/ch32v307datesheet%E9%98%85%E8%AF%BB%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 存储器地址映射表 FLASH部分 展示了从0x00000000到0x1FFFFFFF的地址空间分配情况 最底部（0x 0000 0000开始） 标注为【aliased to flash or system memory depending on BOOT pins】 这是启动地址映射区，芯片上电时会根据BOOT引脚的电平状态，决定从哪里加载并且执行第一行代码 如果BOOT引脚设置为【从FLASH启动】，这里就映射到下面的Code FLASH区域 如果设置为【从系统内存启动】，就映射到System FLASH区域(用于固件升级等等) Code FLASH区域（0x 0800 0000开始，最大4... ]]></description>
-    <pubDate>Tue, 05 May 2026 14:02:43 GMT</pubDate>
-  </item><item>
-    <title>cnblog批量上传图片脚本小记</title>
-    <link>https://2575451471.github.io/cnblog%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%84%9A%E6%9C%AC%E5%B0%8F%E8%AE%B0</link>
-    <guid>https://2575451471.github.io/cnblog%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%84%9A%E6%9C%AC%E5%B0%8F%E8%AE%B0</guid>
-    <description><![CDATA[ 原因 在博客园后台没发现能一次性上传多张图片的选项，功能 在vsc的插件里面也得每次先复制到粘贴板，再快捷键复制一张 之前某些情况上传需要上传多张图片，都是一张一张传的， 希望下次能有个简便的方法，所以用 ai 写了个py脚本 （非专业,ai生成较为臃肿） 依赖 脚本依赖 pip install requests #用来发送HTTP POST请求 链接博客园需要metaweblog访问令牌（博客园设置最下方） 测试脚本 测试能否成功连接博客园，顺便查看下自己的博客id import xmlrpc.client # 请将以下变量替换为你的真实凭证 API_URL = &quot;&quot; #... ]]></description>
-    <pubDate>Tue, 05 May 2026 14:02:43 GMT</pubDate>
-  </item><item>
-    <title>git学习</title>
-    <link>https://2575451471.github.io/git%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://2575451471.github.io/git%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[ 简介 git是一个开源的分布式版本控制系统 Git 不仅仅是一个简单的版本控制系统，更是一个内容管理系统（CMS）、工作管理系统等。 实现流程 在github上创建仓库 （添加仓库名、仓库描述、公开/私人、添加README.md） （复制仓库链接地址） 在VScode中克隆仓库 打开想拉取仓库的文件夹位置（在vscode中） 打开终端（Terminal） 输入命令：git clone +仓库链接地址 git clone github.com/2575451471/modei.git 拉取的相关命令 git init：该命令用于在当前目录中初始化一个新的Git仓库。它会创建一个名为.git的隐藏... ]]></description>
-    <pubDate>Tue, 05 May 2026 14:02:43 GMT</pubDate>
+    <pubDate>Wed, 06 May 2026 10:38:51 GMT</pubDate>
   </item>
     </channel>
   </rss>
