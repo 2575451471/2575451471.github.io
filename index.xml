@@ -6,6 +6,18 @@
       <description>最近的10条笔记 on shenle_blogs</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>index</title>
+    <link>https://2575451471.github.io/</link>
+    <guid>https://2575451471.github.io/</guid>
+    <description><![CDATA[ 欢迎来到 shenle_blogs 这是我的博客主页。 . ]]></description>
+    <pubDate>Wed, 06 May 2026 12:13:49 GMT</pubDate>
+  </item><item>
+    <title>C++学习</title>
+    <link>https://2575451471.github.io/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++%E5%AD%A6%E4%B9%A0</link>
+    <guid>https://2575451471.github.io/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++%E5%AD%A6%E4%B9%A0</guid>
+    <description><![CDATA[  # 引入 根据菜鸟教程学习，供自用 打印hello world #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &quot;Hello World&quot; &lt;&lt; &quot;\n&quot;; return 0; } 现象 PS C:\Users\86177&gt; cd &quot;d:\DeskTop\cppstudy\&quot; ; if ($?) { g++ -std=c++11 hello.cpp -o a.exe } ; if ($?) { ./a.exe } H... ]]></description>
+    <pubDate>Wed, 06 May 2026 12:13:49 GMT</pubDate>
+  </item><item>
     <title>8086汇编学习</title>
     <link>https://2575451471.github.io/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/8086%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0</link>
     <guid>https://2575451471.github.io/%E4%B8%8A%E8%AF%BE%E7%AC%94%E8%AE%B0/8086%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0</guid>
@@ -52,18 +64,6 @@
     <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/proteus_snake_pswd%E5%B0%8F%E8%AE%B0</link>
     <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/proteus_snake_pswd%E5%B0%8F%E8%AE%B0</guid>
     <description><![CDATA[ 贪吃蛇代码 硬件连接 硬件功能引脚说明点阵列端口P08位列选，低电平有效（共阴）74HC595P3^6 (SH_CP)移位时钟74HC595P3^5 (ST_CP)存储时钟（锁存）74HC595P3^4 (DS)串行数据方向按键P2^7上，按键按下为低电平方向按键P2^6下，按键按下为低电平方向按键P2^5左，按键按下为低电平方向按键P2^4右，按键按下为低电平外部中断0P3^2 (INT0)用于重启游戏，下降沿触发 定义 #define COL_PORT P0 // 点阵列端口（共阴，低电平有效） P0连接点阵的列线，共阴极，低电平时点亮对应的列。 sbit SH_CP = P3^6; //... ]]></description>
-    <pubDate>Wed, 06 May 2026 11:56:21 GMT</pubDate>
-  </item><item>
-    <title>ros2+gazebo学习</title>
-    <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/ros2+gazebo%E5%AD%A6%E4%B9%A0</link>
-    <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/ros2+gazebo%E5%AD%A6%E4%B9%A0</guid>
-    <description><![CDATA[  &gt; 换环境了，这块不看了 ros2 1.2 wsl安装ros2 一键安装 wget fishros.com/install -O fishros &amp;&amp; bash fishros 1.3 运行你的第一个机器人 demo ros2 run turtlesim turtlesim_node ros2:主命令,调用ROS2框架提供的各种功能 run:ROS2的运行子命令，用于启动ROS2节点 turtlesim:指定要运行的ROS2功能包 turtlesim_node:指定要运行的ROS2功能包中的节点(可执行文件) [INFO] [1765116673.400203981] ... ]]></description>
-    <pubDate>Wed, 06 May 2026 11:56:21 GMT</pubDate>
-  </item><item>
-    <title>vim批量处理小记</title>
-    <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/vim%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86%E5%B0%8F%E8%AE%B0</link>
-    <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/vim%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86%E5%B0%8F%E8%AE%B0</guid>
-    <description><![CDATA[  # 引入 前段时间考马原 舍友给了题库的word文档， 文档里面是题目和答案一并给出的 想把答案遮住，点开才能看的形式，这样复习会更加高效一点 怎么做呢，第一时间想到的是用vim vim给我的首印象就是能做到更加灵活的全局搜索替换 解决 首先观察到文件里面近乎所有的答案行都包含了“正确答案”这一关键字 在“正确答案”和 “:C”之间插入部分html代码，得到 &lt;details&gt;&lt;summary&gt;正确答案&lt;/summary&gt;：C&lt;/details&gt; 即可实现对答案隐藏 在“正确答案”前插入&lt;details&gt;&lt;summary&gt... ]]></description>
     <pubDate>Wed, 06 May 2026 11:56:21 GMT</pubDate>
   </item>
     </channel>
