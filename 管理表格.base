@@ -3,4 +3,5 @@ views:
     name: 表格
     order:
       - file.basename
+      - tags
       - publish
