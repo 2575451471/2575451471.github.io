@@ -24,12 +24,6 @@
     <description><![CDATA[  为了博客自定义设计，来系统学习下相关的HTML+css+js语法 只是一个简单的语法了解 [toc] HTML语法学习 html5(HyperText Markup Language/超文本标记语言) 网页的[结构]和[内容] (网页的骨架) 后缀html,htm 基础 &lt;h1&gt;这是一个标题&lt;/h1&gt; &lt;p&gt;这是一个段落&lt;/p&gt; &lt;a href=&quot;www.cnblogs.com/shenleblog/&quot;&gt;这是一个链接&lt;/a&gt; &lt;img src=&quot;www.runoob.com/wp-co... ]]></description>
     <pubDate>Tue, 20 Jan 2026 10:39:00 GMT</pubDate>
   </item><item>
-    <title>论文内容</title>
-    <link>https://2575451471.github.io/%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3/%E8%AE%BA%E6%96%87%E5%86%85%E5%AE%B9</link>
-    <guid>https://2575451471.github.io/%E6%9C%AC%E7%A7%91%E6%AF%95%E8%AE%BE%E8%AE%BA%E6%96%87%E7%9B%B8%E5%85%B3/%E8%AE%BA%E6%96%87%E5%86%85%E5%AE%B9</guid>
-    <description><![CDATA[ 摘 要 由于工业机器人动力学参数的精确辨识是实现高精度控制和高保真数字孪生建模的基础，因此传统离线辨识方法的种种不足变得十分明显：这些方法所得到的参数是静态的，不能进行动态更新，并且对低速摩擦、关节柔性等非线性因素极为敏感，从而无法直接满足数字孪生系统中虚实一致性持续改进的需求。 本设计选取UR12e六自由度工业机器人为研究对象，提出一种基于数字孪生闭环驱动的”离线标定—在线更新—残差补偿”一体化的动力学参数辨识框架。首先，详细阐述了动力学参数辨识问题，并基于牛顿-欧拉递推动力学建立了包含连杆惯性和库仑-黏性摩擦参数的线性回归模型。通过奇异值分解技术，将原始72维参数压缩至大约48维的最小参数... ]]></description>
-    <pubDate>Mon, 19 Jan 2026 07:32:00 GMT</pubDate>
-  </item><item>
     <title>cnblog批量上传图片脚本小记</title>
     <link>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/cnblog%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%84%9A%E6%9C%AC%E5%B0%8F%E8%AE%B0</link>
     <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/cnblog%E6%89%B9%E9%87%8F%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%84%9A%E6%9C%AC%E5%B0%8F%E8%AE%B0</guid>
@@ -65,6 +59,12 @@
     <guid>https://2575451471.github.io/%E4%BB%A3%E7%A0%81%E5%B0%8F%E8%AE%B0/hexo%E9%85%8D%E7%BD%AE%E5%B0%8F%E8%AE%B0</guid>
     <description><![CDATA[  --- title: &quot;hexo配置小记&quot; date: &quot;2025-02-15 05:56:44&quot; tags: &quot;小记&quot; hidden: false top: false layout: post 流程 安装nodejs、npm (安装nodejs会自动安装npm) nodjs安装地址 winget install --id OpenJS.NodeJS -e --source winget --location &quot;E:\apps\Nodejs&quot; #命令行安装 node -v # 查看nodejs版本 npm -v... ]]></description>
     <pubDate>Fri, 14 Feb 2025 21:56:00 GMT</pubDate>
+  </item><item>
+    <title>C++学习</title>
+    <link>https://2575451471.github.io/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++%E5%AD%A6%E4%B9%A0</link>
+    <guid>https://2575451471.github.io/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C++%E5%AD%A6%E4%B9%A0</guid>
+    <description><![CDATA[  # 引入 根据菜鸟教程学习，供自用 打印hello world #include &lt;iostream&gt; using namespace std; int main() { cout &lt;&lt; &quot;Hello World&quot; &lt;&lt; &quot;\n&quot;; return 0; } 现象 PS C:\Users\86177&gt; cd &quot;d:\DeskTop\cppstudy\&quot; ; if ($?) { g++ -std=c++11 hello.cpp -o a.exe } ; if ($?) { ./a.exe } H... ]]></description>
+    <pubDate>Sat, 11 Jan 2025 08:03:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
